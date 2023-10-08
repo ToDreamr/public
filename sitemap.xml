@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
+      <url>
+            <loc>https://nunocoracao.github.io/blowfish/example/</loc>
+            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://nunocoracao.github.io/blowfish/example/recent/</loc>
+            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://nunocoracao.github.io/blowfish/</loc>
+            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
       <url>
             <loc>https://nunocoracao.github.io/blowfish/friend/</loc>
             <lastmod>2023-10-07T23:36:33+08:00</lastmod>
@@ -22,25 +57,7 @@
   
     
       <url>
-            <loc>https://nunocoracao.github.io/blowfish/</loc>
-            <lastmod>2023-10-07T23:36:33+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
             <loc>https://nunocoracao.github.io/blowfish/all/</loc>
-            <lastmod>2023-10-07T23:29:10+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>https://nunocoracao.github.io/blowfish/example/</loc>
             <lastmod>2023-10-07T23:29:10+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
@@ -306,10 +323,6 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
-    
-  
     
   
     
