@@ -15,7 +15,7 @@
   
   
   
-  <link rel="canonical" href="https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/" />
+  <link rel="canonical" href="https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/" />
   
   
   
@@ -28,11 +28,11 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/blowfish/css/main.bundle.min.5775579083e26679417a451dd3d7c3e540c7be85426fba5a47019603552ac89b95e12dddb64138e0aa488d68bc318ec4b0820255a5859b4da3f1b45f140abf11.css"
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.5775579083e26679417a451dd3d7c3e540c7be85426fba5a47019603552ac89b95e12dddb64138e0aa488d68bc318ec4b0820255a5859b4da3f1b45f140abf11.css"
     integrity="sha512-V3VXkIPiZnlBekUd09fD5UDHvoVCb7paRwGWA1UqyJuV4S3dtkE44KpIjWi8MY7EsIICVaWFm02j8bRfFAq/EQ==" />
   
   
-  <script type="text/javascript" src="/blowfish/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
     integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
   
   
@@ -46,16 +46,16 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/blowfish/js/main.bundle.min.34dfb4e6b05b47b0a3599f50035f9bbb18c2d36a26aa4c0ea7acc4936489d4c2a55f65683d53e3c4215337e6a8c02e554881af2da86b5783c96837ae3d4e98f6.js"
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.34dfb4e6b05b47b0a3599f50035f9bbb18c2d36a26aa4c0ea7acc4936489d4c2a55f65683d53e3c4215337e6a8c02e554881af2da86b5783c96837ae3d4e98f6.js"
     integrity="sha512-NN&#43;05rBbR7CjWZ9QA1&#43;buxjC02omqkwOp6zEk2SJ1MKlX2VoPVPjxCFTN&#43;aowC5VSIGvLahrV4PJaDeuPU6Y9g==" data-copy="" data-copied=""></script>
   
-  <script src="/blowfish/js/zoom.min.js"></script>
+  <script src="/js/zoom.min.js"></script>
   
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/blowfish/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/blowfish/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/blowfish/favicon-16x16.png" />
-  <link rel="manifest" href="/blowfish/site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   
   
   
@@ -72,7 +72,7 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/" /><meta property="article:section" content="java" />
+<meta property="og:url" content="https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/" /><meta property="article:section" content="java" />
 <meta property="article:published_time" content="2023-10-03T19:49:34+08:00" />
 <meta property="article:modified_time" content="2023-10-03T19:49:34+08:00" />
 
@@ -97,7 +97,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     "abstract": "Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。\n不像重量级锁需要向系统申请互斥量，\nCAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程\n偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。\n锁的退化不可逆\n锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化\nJava内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存",
     "inLanguage": "en",
-    "url" : "https:\/\/nunocoracao.github.io\/blowfish\/java\/%E5%B9%B6%E5%8F%91\/juc\/",
+    "url" : "https:\/\/Todreamr.github.io\/java\/%E5%B9%B6%E5%8F%91\/juc\/",
     "author" : {
       "@type": "Person",
       "name": "春江花朝秋月夜"
@@ -134,7 +134,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   
   
 
-<script src="/blowfish/lib/jquery/jquery.slim.min.js" integrity=""></script>
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
 
 
 
@@ -213,10 +213,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     
     <div>
-        <a href="/blowfish" class="flex">
+        <a href="/" class="flex">
             <span class="sr-only">春江花朝秋月夜</span>
 
-            <img src="/blowfish/img/info.png" width="243" height="236"
+            <img src="/img/info.png" width="243" height="236"
                 class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="春江花朝秋月夜" />
 
         </a>
@@ -225,7 +225,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
 
-            <a href="/blowfish" class="text-base font-medium text-gray-500 hover:text-gray-900">春江花朝秋月夜</a>
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">春江花朝秋月夜</a>
 
 
         </nav>
@@ -234,7 +234,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
             
             
             
-  <a href="/blowfish/"  class="flex items-center">
+  <a href="/"  class="flex items-center">
     
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="春江花朝秋月夜">
         首页
@@ -244,7 +244,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
             
             
-  <a href="/blowfish/complex/"  class="flex items-center">
+  <a href="/complex/"  class="flex items-center">
     
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Complexes">
         笔记
@@ -254,7 +254,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
             
             
-  <a href="/blowfish/example/"  class="flex items-center">
+  <a href="/example/"  class="flex items-center">
     
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Examples">
         事项
@@ -264,7 +264,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
             
             
-  <a href="/blowfish/all/"  class="flex items-center">
+  <a href="/all/"  class="flex items-center">
     
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Alls">
         全部
@@ -274,7 +274,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
             
             
-  <a href="/blowfish/friend/"  class="flex items-center">
+  <a href="/friend/"  class="flex items-center">
     
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Friends">
         友链
@@ -494,7 +494,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     
   <li class="mt-1">
-    <a href="/blowfish/"  class="flex items-center">
+    <a href="/"  class="flex items-center">
         
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="春江花朝秋月夜">
             首页
@@ -508,7 +508,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     
   <li class="mt-1">
-    <a href="/blowfish/complex/"  class="flex items-center">
+    <a href="/complex/"  class="flex items-center">
         
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Complexes">
             笔记
@@ -522,7 +522,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     
   <li class="mt-1">
-    <a href="/blowfish/example/"  class="flex items-center">
+    <a href="/example/"  class="flex items-center">
         
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Examples">
             事项
@@ -536,7 +536,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     
   <li class="mt-1">
-    <a href="/blowfish/all/"  class="flex items-center">
+    <a href="/all/"  class="flex items-center">
         
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Alls">
             全部
@@ -550,7 +550,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     
   <li class="mt-1">
-    <a href="/blowfish/friend/"  class="flex items-center">
+    <a href="/friend/"  class="flex items-center">
         
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Friends">
             友链
@@ -695,7 +695,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/blowfish/img/bg_hubb8bd373e5abf4f573cc09223a8d2641_10295679_1200x0_resize_box_3.png);">
+    style="background-image:url(/img/bg_hubb8bd373e5abf4f573cc09223a8d2641_10295679_1200x0_resize_box_3.png);">
     
 
 
@@ -730,7 +730,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/blowfish/"
+      href="/"
       >春江花朝秋月夜</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
@@ -739,7 +739,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   <li class="inline ">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/blowfish/java/"
+      href="/java/"
       >Javas</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
@@ -748,7 +748,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/blowfish/java/%E5%B9%B6%E5%8F%91/juc/"
+      href="/java/%E5%B9%B6%E5%8F%91/juc/"
       >Juc</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
@@ -863,7 +863,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 <span class="mb-[2px]">
   <a
-    href="https://github.com/nunocoracao/blowfish/tree/main/exampleSite/content/java/%e5%b9%b6%e5%8f%91/juc.md"
+    href="#/java/%e5%b9%b6%e5%8f%91/juc.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -945,7 +945,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   
   
   <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
-    alt="春江花朝秋月夜" src="/blowfish/img/author2_hub6c74558734540774552b319ec2c6c70_1552535_192x192_fill_box_center_3.png" />
+    alt="春江花朝秋月夜" src="/img/author2_hub6c74558734540774552b319ec2c6c70_1552535_192x192_fill_box_center_3.png" />
   
   
   <div class="place-self-center">
@@ -1024,8 +1024,6 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </div>
     
 
-    
-    
     
 
     
@@ -1755,7 +1753,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;title=Juc"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;title=Juc"
       title="分享到 LinkedIn"
       aria-label="分享到 LinkedIn"
       >
@@ -1774,7 +1772,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;text=Juc"
+      href="https://twitter.com/intent/tweet/?url=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;text=Juc"
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
@@ -1793,7 +1791,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://reddit.com/submit/?url=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
       title="提交到 Reddit"
       aria-label="提交到 Reddit"
       >
@@ -1812,7 +1810,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://api.whatsapp.com/send?text=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://api.whatsapp.com/send?text=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
       title=""
       aria-label=""
       >
@@ -1831,7 +1829,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://t.me/share/url?url=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;resubmit=true&amp;title=Juc"
       title=""
       aria-label=""
       >
@@ -1850,7 +1848,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;description=Juc"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;description=Juc"
       title="钉到 Pinterest"
       aria-label="钉到 Pinterest"
       >
@@ -1869,7 +1867,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;quote=Juc"
+      href="https://www.facebook.com/sharer/sharer.php?u=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;quote=Juc"
       title="分享到 Facebook"
       aria-label="分享到 Facebook"
       >
@@ -1888,7 +1886,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/&amp;subject=Juc"
+      href="mailto:?body=https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/&amp;subject=Juc"
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
@@ -1914,11 +1912,11 @@ volatile关键字会禁止指令重排序。</p>
   
   
 
-  <a href="/blowfish/all/java/%E5%B9%B6%E5%8F%91/juc/" class="min-w-full">
+  <a href="/all/java/%E5%B9%B6%E5%8F%91/juc/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/blowfish/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
         
       
 
@@ -1926,7 +1924,7 @@ volatile关键字会禁止指令重排序。</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/blowfish/all/java/%E5%B9%B6%E5%8F%91/juc/">Juc</div>
+          href="/all/java/%E5%B9%B6%E5%8F%91/juc/">Juc</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -2054,11 +2052,11 @@ volatile关键字会禁止指令重排序。</p>
   
   
 
-  <a href="/blowfish/juc/" class="min-w-full">
+  <a href="/all/juc/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/blowfish/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
         
       
 
@@ -2066,147 +2064,7 @@ volatile关键字会禁止指令重排序。</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/blowfish/juc/">Juc</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  <time datetime="2023-10-03 19:31:01 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_juc.md" title="views">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
-  </span>
-
-</span>
-</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_juc.md" title="likes">0</span> 
-    
-    <span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
-  </span>
-
-</span>
-</span>
-  
-
-  
-  
-</div>
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-  
-  
-
-  <a href="/blowfish/all/juc/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/blowfish/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/blowfish/all/juc/">Juc</div>
+          href="/all/juc/">Juc</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -2334,11 +2192,11 @@ volatile关键字会禁止指令重排序。</p>
   
   
 
-  <a href="/blowfish/all/about/" class="min-w-full">
+  <a href="/juc/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/blowfish/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
         
       
 
@@ -2346,7 +2204,7 @@ volatile关键字会禁止指令重排序。</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/blowfish/all/about/">About</div>
+          href="/juc/">Juc</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -2389,9 +2247,9 @@ volatile关键字会禁止指令重排序。</p>
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-03 00:00:00 &#43;0000 UTC">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-03 19:31:01 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="views_all\about.md" title="views">0</span> 
+    <span id="views_juc.md" title="views">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -2403,7 +2261,7 @@ volatile关键字会禁止指令重排序。</p>
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_all\about.md" title="likes">0</span> 
+    <span id="likes_juc.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -2474,11 +2332,11 @@ volatile关键字会禁止指令重排序。</p>
   
   
 
-  <a href="/blowfish/about/" class="min-w-full">
+  <a href="/about/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/blowfish/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
         
       
 
@@ -2486,7 +2344,7 @@ volatile关键字会禁止指令重排序。</p>
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/blowfish/about/">About</div>
+          href="/about/">About</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -2612,6 +2470,146 @@ volatile关键字会禁止指令重排序。</p>
     </div>
   </a>
   
+  
+
+  <a href="/all/about/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/all/about/">About</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2023-10-03 00:00:00 &#43;0000 UTC">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="views_all\about.md" title="views">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+<path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg>
+  </span>
+
+</span>
+</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_all\about.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+  
 </section>
 
   
@@ -2623,7 +2621,7 @@ volatile关键字会禁止指令重排序。</p>
       </script>
       
       
-      <script type="text/javascript" src="/blowfish/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
   
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
@@ -2641,7 +2639,7 @@ volatile关键字会禁止指令重排序。</p>
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/blowfish/java/%E7%BC%93%E5%AD%98/redis/">
+            <a class="flex group mr-3" href="/java/%E7%BC%93%E5%AD%98/redis/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -2691,12 +2689,12 @@ volatile关键字会禁止指令重排序。</p>
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/blowfish/tags/"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
             title="Tags">Tags</a>
         </li>
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/blowfish/about/"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/about/"
             title="About">Authors</a>
         </li>
         
@@ -2738,13 +2736,13 @@ volatile关键字会禁止指令重排序。</p>
   </script>
   
   
-  <script type="text/javascript" src="/blowfish/js/process.min.35c1113bcc16c5a59bf031082f9e63822aa95280423881a7847a7ff33a16e6299ce6a840d9ef4e10d947e030a18f3f20359afb2ec0f35967484b9a9360ac3145.js" integrity="sha512-NcERO8wWxaWb8DEIL55jgiqpUoBCOIGnhHp/8zoW5imc5qhA2e9OENlH4DChjz8gNZr7LsDzWWdIS5qTYKwxRQ=="></script>
+  <script type="text/javascript" src="/js/process.min.35c1113bcc16c5a59bf031082f9e63822aa95280423881a7847a7ff33a16e6299ce6a840d9ef4e10d947e030a18f3f20359afb2ec0f35967484b9a9360ac3145.js" integrity="sha512-NcERO8wWxaWb8DEIL55jgiqpUoBCOIGnhHp/8zoW5imc5qhA2e9OENlH4DChjz8gNZr7LsDzWWdIS5qTYKwxRQ=="></script>
   
   
 </footer><div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="https://nunocoracao.github.io/blowfish"
+  data-url="https://Todreamr.github.io/"
   style="z-index:500"
 >
   <div

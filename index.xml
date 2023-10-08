@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>春江花朝秋月夜</title>
-    <link>https://nunocoracao.github.io/blowfish/</link>
+    <link>https://Todreamr.github.io/</link>
     <description>Recent content on 春江花朝秋月夜</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sun, 08 Oct 2023 17:12:50 +0800</lastBuildDate><atom:link href="https://nunocoracao.github.io/blowfish/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 17:12:50 +0800</lastBuildDate><atom:link href="https://Todreamr.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Generate Publication Markdown</title>
-      <link>https://nunocoracao.github.io/blowfish/example/recent/</link>
+      <link>https://Todreamr.github.io/example/recent/</link>
       <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/example/recent/</guid>
+      <guid>https://Todreamr.github.io/example/recent/</guid>
       <description>测试显示最近的文章</description>
       
     </item>
     
     <item>
       <title>Hello</title>
-      <link>https://nunocoracao.github.io/blowfish/friend/hello/</link>
+      <link>https://Todreamr.github.io/friend/hello/</link>
       <pubDate>Sat, 07 Oct 2023 23:36:33 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/friend/hello/</guid>
+      <guid>https://Todreamr.github.io/friend/hello/</guid>
       <description>你好我的朋友！！ # 需要添加友链请联系我的邮箱。</description>
       
     </item>
     
     <item>
       <title>Nn</title>
-      <link>https://nunocoracao.github.io/blowfish/all/example/nn/</link>
+      <link>https://Todreamr.github.io/all/example/nn/</link>
       <pubDate>Sat, 07 Oct 2023 23:29:10 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/example/nn/</guid>
+      <guid>https://Todreamr.github.io/all/example/nn/</guid>
       <description>fdsafds</description>
       
     </item>
     
     <item>
       <title>Nn</title>
-      <link>https://nunocoracao.github.io/blowfish/example/nn/</link>
+      <link>https://Todreamr.github.io/example/nn/</link>
       <pubDate>Sat, 07 Oct 2023 23:29:10 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/example/nn/</guid>
+      <guid>https://Todreamr.github.io/example/nn/</guid>
       <description>fdsafds</description>
       
     </item>
     
     <item>
       <title>如何通过hugo搭建自己的博客</title>
-      <link>https://nunocoracao.github.io/blowfish/all/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://Todreamr.github.io/all/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://Todreamr.github.io/all/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
       <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
 一是：小棉尾巴
 事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
@@ -69,10 +69,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>如何通过hugo搭建自己的博客</title>
-      <link>https://nunocoracao.github.io/blowfish/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://Todreamr.github.io/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://Todreamr.github.io/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
       <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
 一是：小棉尾巴
 事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
@@ -88,10 +88,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>科学上网</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <link>https://Todreamr.github.io/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
       <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <guid>https://Todreamr.github.io/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
       <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
 这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
 如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
@@ -101,10 +101,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>科学上网</title>
-      <link>https://nunocoracao.github.io/blowfish/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <link>https://Todreamr.github.io/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
       <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <guid>https://Todreamr.github.io/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
       <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
 这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
 如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
@@ -114,10 +114,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>对象间的关系</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <link>https://Todreamr.github.io/all/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:21 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <guid>https://Todreamr.github.io/all/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
       <description>1 综述 在Java中对象与对象的关系总体分为四类，分别是：依赖、关联、聚合和组合。
 （1）依赖(Dependency)关系是类与类之间的联接。依赖关系表示一个类依赖于另一个类的定义，一般而言，依赖关系在Java语言中体现为局域变量、方法的形参，或者对静态方法的调用。 （2）关联(Association）关系是类与类之间的联接，它使一个类知道另一个类的属性和方法。关联可以是双向的，也可以是单向的。在Java语言中，关联关系一般使用成员变量来实现 （3）聚合(Aggregation) 关系是关联关系的一种，是强的关联关系。聚合是整体和个体之间的关系 （4）组合(Composition) 关系是关联关系的一种，是比聚合关系强的关系。它要求普通的聚合关系中代表整体的对象负责代表部分对象的生命周期，组合关系是不能共享的
 依赖： # 个类A使用到了另一个类B，而这种使用关系是具有偶然性的、临时性的、非常弱的，但是B类的变化会影响到A
@@ -129,10 +129,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>对象间的关系</title>
-      <link>https://nunocoracao.github.io/blowfish/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <link>https://Todreamr.github.io/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:21 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <guid>https://Todreamr.github.io/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
       <description>1 综述 在Java中对象与对象的关系总体分为四类，分别是：依赖、关联、聚合和组合。
 （1）依赖(Dependency)关系是类与类之间的联接。依赖关系表示一个类依赖于另一个类的定义，一般而言，依赖关系在Java语言中体现为局域变量、方法的形参，或者对静态方法的调用。 （2）关联(Association）关系是类与类之间的联接，它使一个类知道另一个类的属性和方法。关联可以是双向的，也可以是单向的。在Java语言中，关联关系一般使用成员变量来实现 （3）聚合(Aggregation) 关系是关联关系的一种，是强的关联关系。聚合是整体和个体之间的关系 （4）组合(Composition) 关系是关联关系的一种，是比聚合关系强的关系。它要求普通的聚合关系中代表整体的对象负责代表部分对象的生命周期，组合关系是不能共享的
 依赖： # 个类A使用到了另一个类B，而这种使用关系是具有偶然性的、临时性的、非常弱的，但是B类的变化会影响到A
@@ -144,10 +144,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>关键字</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</link>
+      <link>https://Todreamr.github.io/all/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:12 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
+      <guid>https://Todreamr.github.io/all/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
       <description>Java中常用的关键字有以下分类： 访问控制 private protected public
 类,方法和变量修饰符 abstract class extends final implements interface native new static strictfp synchronized transient volatile
 程序控制 break continue return do while if else for instanceof switch case default</description>
@@ -156,10 +156,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>关键字</title>
-      <link>https://nunocoracao.github.io/blowfish/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</link>
+      <link>https://Todreamr.github.io/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:12 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
+      <guid>https://Todreamr.github.io/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
       <description>Java中常用的关键字有以下分类： 访问控制 private protected public
 类,方法和变量修饰符 abstract class extends final implements interface native new static strictfp synchronized transient volatile
 程序控制 break continue return do while if else for instanceof switch case default</description>
@@ -168,10 +168,10 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>实例化Node</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
+      <link>https://Todreamr.github.io/all/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:56 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
+      <guid>https://Todreamr.github.io/all/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
       <description>如何从 Java 中的 LinkedList 类外部声明 Node 类型？ # 标签 java linked-list 如何声明 Node 类型的变量？ Node是LinkedList的内部类，在我正在编写的程序的main方法中，我想创建一个Node变量。但在下面代码片段的最后一行中，我收到错误消息“Nose 在 LinkedList 中具有私有(private)访问权限”。为什么我不能使用 Node 类型？
 import java.util.LinkedList; public class MinSplit { public static long leastAmount; public static void main(String args[]) { LinkedList list = new LinkedList(); LinkedList.</description>
       
@@ -179,10 +179,10 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
     
     <item>
       <title>实例化Node</title>
-      <link>https://nunocoracao.github.io/blowfish/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
+      <link>https://Todreamr.github.io/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:56 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
+      <guid>https://Todreamr.github.io/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
       <description>如何从 Java 中的 LinkedList 类外部声明 Node 类型？ # 标签 java linked-list 如何声明 Node 类型的变量？ Node是LinkedList的内部类，在我正在编写的程序的main方法中，我想创建一个Node变量。但在下面代码片段的最后一行中，我收到错误消息“Nose 在 LinkedList 中具有私有(private)访问权限”。为什么我不能使用 Node 类型？
 import java.util.LinkedList; public class MinSplit { public static long leastAmount; public static void main(String args[]) { LinkedList list = new LinkedList(); LinkedList.</description>
       
@@ -190,30 +190,30 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
     
     <item>
       <title>数据结构篇</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
+      <link>https://Todreamr.github.io/all/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:20 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
+      <guid>https://Todreamr.github.io/all/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
       <description>数组： # 1 public class Demo1_Array { 2 public static void main(String[] args) { 3 String [] array=new String[5];//需要初始化长度 4 array[0]=&amp;#34;hello&amp;#34;; 5 array[1]=&amp;#34;world&amp;#34;; 6 array[4]=&amp;#34;Mufasa&amp;#34;; 7 // array[5]=&amp;#34;right or not&amp;#34;;//ArrayIndexOutOfBoundsException 8 for(String str:array){ 9 System.</description>
       
     </item>
     
     <item>
       <title>数据结构篇</title>
-      <link>https://nunocoracao.github.io/blowfish/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
+      <link>https://Todreamr.github.io/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:20 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
+      <guid>https://Todreamr.github.io/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
       <description>数组： # 1 public class Demo1_Array { 2 public static void main(String[] args) { 3 String [] array=new String[5];//需要初始化长度 4 array[0]=&amp;#34;hello&amp;#34;; 5 array[1]=&amp;#34;world&amp;#34;; 6 array[4]=&amp;#34;Mufasa&amp;#34;; 7 // array[5]=&amp;#34;right or not&amp;#34;;//ArrayIndexOutOfBoundsException 8 for(String str:array){ 9 System.</description>
       
     </item>
     
     <item>
       <title>ThreadLocal</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/javase/threadlocal/</link>
+      <link>https://Todreamr.github.io/all/java/javase/threadlocal/</link>
       <pubDate>Tue, 03 Oct 2023 20:51:27 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/javase/threadlocal/</guid>
+      <guid>https://Todreamr.github.io/all/java/javase/threadlocal/</guid>
       <description>ThreadLocal # 线程隔离，相互是隔离的，不影响的
 内部维护的是ThreadLocalMap，所以有key和value
 当key指向的值为null时，value不被清理，由于key是强引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
@@ -223,10 +223,10 @@ static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new 
     
     <item>
       <title>ThreadLocal</title>
-      <link>https://nunocoracao.github.io/blowfish/java/javase/threadlocal/</link>
+      <link>https://Todreamr.github.io/java/javase/threadlocal/</link>
       <pubDate>Tue, 03 Oct 2023 20:51:27 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/javase/threadlocal/</guid>
+      <guid>https://Todreamr.github.io/java/javase/threadlocal/</guid>
       <description>ThreadLocal # 线程隔离，相互是隔离的，不影响的
 内部维护的是ThreadLocalMap，所以有key和value
 当key指向的值为null时，value不被清理，由于key是强引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
@@ -236,10 +236,10 @@ static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new 
     
     <item>
       <title>Redis</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/%E7%BC%93%E5%AD%98/redis/</link>
+      <link>https://Todreamr.github.io/all/java/%E7%BC%93%E5%AD%98/redis/</link>
       <pubDate>Tue, 03 Oct 2023 20:31:04 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/%E7%BC%93%E5%AD%98/redis/</guid>
+      <guid>https://Todreamr.github.io/all/java/%E7%BC%93%E5%AD%98/redis/</guid>
       <description>Redis学习： # 通用命令 # 不要在主节点用：keys param 命令来查询，这查询速率很慢，单线程将会被阻塞 del param（可以是多个参数） :删除指定的key exists param(判断key是否存在) expire key time :设置有效期时间 ttl key :查看key的有效期
 String类型 # 最简单的Redis数据类型，value：string,int,float；最大空间不超过512M set key value get key
 Mset 批量 添加key-value</description>
@@ -248,10 +248,10 @@ Mset 批量 添加key-value</description>
     
     <item>
       <title>Redis</title>
-      <link>https://nunocoracao.github.io/blowfish/java/%E7%BC%93%E5%AD%98/redis/</link>
+      <link>https://Todreamr.github.io/java/%E7%BC%93%E5%AD%98/redis/</link>
       <pubDate>Tue, 03 Oct 2023 20:31:04 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/%E7%BC%93%E5%AD%98/redis/</guid>
+      <guid>https://Todreamr.github.io/java/%E7%BC%93%E5%AD%98/redis/</guid>
       <description>Redis学习： # 通用命令 # 不要在主节点用：keys param 命令来查询，这查询速率很慢，单线程将会被阻塞 del param（可以是多个参数） :删除指定的key exists param(判断key是否存在) expire key time :设置有效期时间 ttl key :查看key的有效期
 String类型 # 最简单的Redis数据类型，value：string,int,float；最大空间不超过512M set key value get key
 Mset 批量 添加key-value</description>
@@ -260,10 +260,10 @@ Mset 批量 添加key-value</description>
     
     <item>
       <title>Juc</title>
-      <link>https://nunocoracao.github.io/blowfish/all/java/%E5%B9%B6%E5%8F%91/juc/</link>
+      <link>https://Todreamr.github.io/all/java/%E5%B9%B6%E5%8F%91/juc/</link>
       <pubDate>Tue, 03 Oct 2023 19:49:34 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/java/%E5%B9%B6%E5%8F%91/juc/</guid>
+      <guid>https://Todreamr.github.io/all/java/%E5%B9%B6%E5%8F%91/juc/</guid>
       <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
 CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
@@ -276,10 +276,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>Juc</title>
-      <link>https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/</link>
+      <link>https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/</link>
       <pubDate>Tue, 03 Oct 2023 19:49:34 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/java/%E5%B9%B6%E5%8F%91/juc/</guid>
+      <guid>https://Todreamr.github.io/java/%E5%B9%B6%E5%8F%91/juc/</guid>
       <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
 CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
@@ -292,10 +292,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>Juc</title>
-      <link>https://nunocoracao.github.io/blowfish/all/juc/</link>
+      <link>https://Todreamr.github.io/all/juc/</link>
       <pubDate>Tue, 03 Oct 2023 19:31:01 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/juc/</guid>
+      <guid>https://Todreamr.github.io/all/juc/</guid>
       <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
 CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
@@ -308,10 +308,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>Juc</title>
-      <link>https://nunocoracao.github.io/blowfish/juc/</link>
+      <link>https://Todreamr.github.io/juc/</link>
       <pubDate>Tue, 03 Oct 2023 19:31:01 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/juc/</guid>
+      <guid>https://Todreamr.github.io/juc/</guid>
       <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
 CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
@@ -324,10 +324,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>About</title>
-      <link>https://nunocoracao.github.io/blowfish/about/</link>
+      <link>https://Todreamr.github.io/about/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/about/</guid>
+      <guid>https://Todreamr.github.io/about/</guid>
       <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
 白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
@@ -336,10 +336,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>About</title>
-      <link>https://nunocoracao.github.io/blowfish/all/about/</link>
+      <link>https://Todreamr.github.io/all/about/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/about/</guid>
+      <guid>https://Todreamr.github.io/all/about/</guid>
       <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
 白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
@@ -348,10 +348,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>Hello Friend</title>
-      <link>https://nunocoracao.github.io/blowfish/all/post/hello/</link>
+      <link>https://Todreamr.github.io/all/post/hello/</link>
       <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/all/post/hello/</guid>
+      <guid>https://Todreamr.github.io/all/post/hello/</guid>
       <description>我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 — 春江花朝秋月夜 S01E01</description>
       
@@ -359,10 +359,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     <item>
       <title>Hello Friend</title>
-      <link>https://nunocoracao.github.io/blowfish/post/hello/</link>
+      <link>https://Todreamr.github.io/post/hello/</link>
       <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/post/hello/</guid>
+      <guid>https://Todreamr.github.io/post/hello/</guid>
       <description>我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 — 春江花朝秋月夜 S01E01</description>
       

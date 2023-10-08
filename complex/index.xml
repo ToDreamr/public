@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Complexes on 春江花朝秋月夜</title>
-    <link>https://nunocoracao.github.io/blowfish/complex/</link>
+    <link>https://Todreamr.github.io/complex/</link>
     <description>Recent content in Complexes on 春江花朝秋月夜</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Tue, 03 Oct 2023 23:44:01 +0800</lastBuildDate><atom:link href="https://nunocoracao.github.io/blowfish/complex/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Oct 2023 23:44:01 +0800</lastBuildDate><atom:link href="https://Todreamr.github.io/complex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何通过hugo搭建自己的博客</title>
-      <link>https://nunocoracao.github.io/blowfish/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://Todreamr.github.io/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>https://nunocoracao.github.io/blowfish/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://Todreamr.github.io/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
       <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
 一是：小棉尾巴
 事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
