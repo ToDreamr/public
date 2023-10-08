@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sat, 07 Oct 2023 23:29:10 +0800</lastBuildDate><atom:link href="/all/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 17:12:50 +0800</lastBuildDate><atom:link href="/all/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Nn</title>
-      <link>/all/example/nn/</link>
-      <pubDate>Sat, 07 Oct 2023 23:29:10 +0800</pubDate>
+      <title>H</title>
+      <link>/all/example/recent/</link>
+      <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
       
-      <guid>/all/example/nn/</guid>
-      <description>fdsafds</description>
+      <guid>/all/example/recent/</guid>
+      <description>测试显示最近的文章</description>
       
     </item>
     
@@ -163,7 +163,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       <guid>/all/about/</guid>
       <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
-白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
+白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 所以，希望你在这儿可以玩的开心！！！</description>
       
     </item>
     

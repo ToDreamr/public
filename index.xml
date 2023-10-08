@@ -9,6 +9,16 @@
     <copyright>© 2023 春江花朝秋月夜</copyright>
     <lastBuildDate>Sun, 08 Oct 2023 17:12:50 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>H</title>
+      <link>/all/example/recent/</link>
+      <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
+      
+      <guid>/all/example/recent/</guid>
+      <description>测试显示最近的文章</description>
+      
+    </item>
+    
+    <item>
       <title>How to Generate Publication Markdown</title>
       <link>/example/recent/</link>
       <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
@@ -25,26 +35,6 @@
       
       <guid>/friend/hello/</guid>
       <description>你好我的朋友！！ # 需要添加友链请联系我的邮箱。</description>
-      
-    </item>
-    
-    <item>
-      <title>Nn</title>
-      <link>/all/example/nn/</link>
-      <pubDate>Sat, 07 Oct 2023 23:29:10 +0800</pubDate>
-      
-      <guid>/all/example/nn/</guid>
-      <description>fdsafds</description>
-      
-    </item>
-    
-    <item>
-      <title>Nn</title>
-      <link>/example/nn/</link>
-      <pubDate>Sat, 07 Oct 2023 23:29:10 +0800</pubDate>
-      
-      <guid>/example/nn/</guid>
-      <description>fdsafds</description>
       
     </item>
     
@@ -307,22 +297,6 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     </item>
     
     <item>
-      <title>Juc</title>
-      <link>/juc/</link>
-      <pubDate>Tue, 03 Oct 2023 19:31:01 +0800</pubDate>
-      
-      <guid>/juc/</guid>
-      <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
-不像重量级锁需要向系统申请互斥量，
-CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
-偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。
-锁的退化不可逆
-锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
-Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
-      
-    </item>
-    
-    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
@@ -342,7 +316,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       <guid>/all/about/</guid>
       <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
-白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
+白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 所以，希望你在这儿可以玩的开心！！！</description>
       
     </item>
     

@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+      <url>
+            <loc>/all/</loc>
+            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
   
     
       <url>
             <loc>/example/</loc>
+            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/all/example/recent/</loc>
             <lastmod>2023-10-08T17:12:50+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
@@ -50,33 +68,6 @@
       <url>
             <loc>/friend/hello/</loc>
             <lastmod>2023-10-07T23:36:33+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/all/</loc>
-            <lastmod>2023-10-07T23:29:10+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/all/example/nn/</loc>
-            <lastmod>2023-10-07T23:29:10+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/example/nn/</loc>
-            <lastmod>2023-10-07T23:29:10+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
@@ -265,15 +256,6 @@
     
       <url>
             <loc>/all/juc/</loc>
-            <lastmod>2023-10-03T19:31:01+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/juc/</loc>
             <lastmod>2023-10-03T19:31:01+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
