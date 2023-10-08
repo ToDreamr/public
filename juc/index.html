@@ -15,7 +15,7 @@
   
   
   
-  <link rel="canonical" href="https://Todreamr.github.io/juc/" />
+  <link rel="canonical" href="/juc/" />
   
   
   
@@ -72,7 +72,7 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://Todreamr.github.io/juc/" /><meta property="article:section" content="" />
+<meta property="og:url" content="/juc/" /><meta property="article:section" content="" />
 <meta property="article:published_time" content="2023-10-03T19:31:01+08:00" />
 <meta property="article:modified_time" content="2023-10-03T19:31:01+08:00" />
 
@@ -97,7 +97,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     
     "abstract": "Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。\n不像重量级锁需要向系统申请互斥量，\nCAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程\n偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。\n锁的退化不可逆\n锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化\nJava内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存",
     "inLanguage": "en",
-    "url" : "https:\/\/Todreamr.github.io\/juc\/",
+    "url" : "\/juc\/",
     "author" : {
       "@type": "Person",
       "name": "春江花朝秋月夜"
@@ -1742,7 +1742,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://Todreamr.github.io/juc/&amp;title=Juc"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/juc/&amp;title=Juc"
       title="分享到 LinkedIn"
       aria-label="分享到 LinkedIn"
       >
@@ -1761,7 +1761,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=https://Todreamr.github.io/juc/&amp;text=Juc"
+      href="https://twitter.com/intent/tweet/?url=/juc/&amp;text=Juc"
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
@@ -1780,7 +1780,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=https://Todreamr.github.io/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://reddit.com/submit/?url=/juc/&amp;resubmit=true&amp;title=Juc"
       title="提交到 Reddit"
       aria-label="提交到 Reddit"
       >
@@ -1799,7 +1799,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://api.whatsapp.com/send?text=https://Todreamr.github.io/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://api.whatsapp.com/send?text=/juc/&amp;resubmit=true&amp;title=Juc"
       title=""
       aria-label=""
       >
@@ -1818,7 +1818,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=https://Todreamr.github.io/juc/&amp;resubmit=true&amp;title=Juc"
+      href="https://t.me/share/url?url=/juc/&amp;resubmit=true&amp;title=Juc"
       title=""
       aria-label=""
       >
@@ -1837,7 +1837,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://pinterest.com/pin/create/bookmarklet/?url=https://Todreamr.github.io/juc/&amp;description=Juc"
+      href="https://pinterest.com/pin/create/bookmarklet/?url=/juc/&amp;description=Juc"
       title="钉到 Pinterest"
       aria-label="钉到 Pinterest"
       >
@@ -1856,7 +1856,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=https://Todreamr.github.io/juc/&amp;quote=Juc"
+      href="https://www.facebook.com/sharer/sharer.php?u=/juc/&amp;quote=Juc"
       title="分享到 Facebook"
       aria-label="分享到 Facebook"
       >
@@ -1875,7 +1875,7 @@ volatile关键字会禁止指令重排序。</p>
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=https://Todreamr.github.io/juc/&amp;subject=Juc"
+      href="mailto:?body=/juc/&amp;subject=Juc"
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
@@ -2451,7 +2451,7 @@ volatile关键字会禁止指令重排序。</p>
 </footer><div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="https://Todreamr.github.io/"
+  data-url="/"
   style="z-index:500"
 >
   <div
