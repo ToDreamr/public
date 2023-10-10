@@ -12,6 +12,10 @@
     
   
     
+  
+    
+  
+    
       <url>
             <loc>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</loc>
             <lastmod>2023-10-09T20:38:19+08:00</lastmod>
@@ -40,50 +44,6 @@
   
     
       <url>
-            <loc>/all/</loc>
-            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>/example/</loc>
-            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/all/example/recent/</loc>
-            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-      <url>
-            <loc>/example/recent/</loc>
-            <lastmod>2023-10-08T17:12:50+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
             <loc>/friend/</loc>
             <lastmod>2023-10-07T23:36:33+08:00</lastmod>
             <changefreq>always</changefreq>
@@ -95,6 +55,15 @@
       <url>
             <loc>/friend/hello/</loc>
             <lastmod>2023-10-07T23:36:33+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/all/</loc>
+            <lastmod>2023-10-03T23:44:01+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
@@ -128,6 +97,8 @@
     
   
     
+  
+    
       <url>
             <loc>/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
             <lastmod>2023-10-03T22:43:25+08:00</lastmod>
@@ -143,6 +114,8 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     
@@ -218,6 +191,8 @@
     
   
     
+  
+    
       <url>
             <loc>/all/java/javase/threadlocal/</loc>
             <lastmod>2023-10-03T20:51:27+08:00</lastmod>
@@ -251,6 +226,8 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     
@@ -305,6 +282,8 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     

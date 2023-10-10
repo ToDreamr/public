@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sun, 08 Oct 2023 17:12:50 +0800</lastBuildDate><atom:link href="/all/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>H</title>
-      <link>/all/example/recent/</link>
-      <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
-      
-      <guid>/all/example/recent/</guid>
-      <description>测试显示最近的文章</description>
-      
-    </item>
-    
+    <lastBuildDate>Tue, 03 Oct 2023 23:44:01 +0800</lastBuildDate><atom:link href="/all/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何通过hugo搭建自己的博客</title>
       <link>/all/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>

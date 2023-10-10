@@ -15,7 +15,7 @@
       
       <guid>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</guid>
       <description>线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
-//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&amp;lt;Runnable&amp;gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit.</description>
+//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&amp;lt;Runnable&amp;gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit.</description>
       
     </item>
     
@@ -32,26 +32,6 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁的退化不可逆
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
-      
-    </item>
-    
-    <item>
-      <title>H</title>
-      <link>/all/example/recent/</link>
-      <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
-      
-      <guid>/all/example/recent/</guid>
-      <description>测试显示最近的文章</description>
-      
-    </item>
-    
-    <item>
-      <title>How to Generate Publication Markdown</title>
-      <link>/example/recent/</link>
-      <pubDate>Sun, 08 Oct 2023 17:12:50 +0800</pubDate>
-      
-      <guid>/example/recent/</guid>
-      <description>测试显示最近的文章</description>
       
     </item>
     
