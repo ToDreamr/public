@@ -12,7 +12,7 @@
   <meta name="title" content="并发进阶 &middot; 春江花朝秋月夜" />
   
   <meta name="description" content="我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。" />
-  
+  <meta name="keywords" content="并发编程, " />
   
   
   <link rel="canonical" href="/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/" />
@@ -65,7 +65,7 @@
   
   <meta property="og:title" content="并发进阶" />
 <meta property="og:description" content="线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
-//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&lt;Runnable&gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit." />
+//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&lt;Runnable&gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/" /><meta property="article:section" content="java" />
 <meta property="article:published_time" content="2023-10-09T20:38:19+08:00" />
@@ -74,7 +74,7 @@
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="并发进阶"/>
 <meta name="twitter:description" content="线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
-//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&lt;Runnable&gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit."/>
+//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&lt;Runnable&gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit."/>
 
   
   <script type="application/ld+json">
@@ -85,7 +85,7 @@
     "name": "并发进阶",
     "headline": "并发进阶",
     
-    "abstract": "线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还\n\/\/构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,\/\/核心线程池大小 int maximumPoolSize,\/\/最大线程池大小 long keepAliveTime,\/\/线程最大空闲时间 TimeUnit unit,\/\/最大空闲时间单位 BlockingQueue\u0026lt;Runnable\u0026gt; workQueue\/\/线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),\/\/线程创建工厂，可自定义 defaultHandler\/\/拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, \/\/2个核心线程，最大线程数为4个 3, TimeUnit.",
+    "abstract": "线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还\n\/\/构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,\/\/核心线程池大小 int maximumPoolSize,\/\/最大线程池大小 long keepAliveTime,\/\/线程最大空闲时间 TimeUnit unit,\/\/最大空闲时间单位 BlockingQueue\u0026lt;Runnable\u0026gt; workQueue\/\/线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),\/\/线程创建工厂，可自定义 defaultHandler\/\/拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, \/\/2个核心线程，最大线程数为4个 3, TimeUnit.",
     "inLanguage": "en",
     "url" : "\/java\/%E5%B9%B6%E5%8F%91\/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6\/",
     "author" : {
@@ -98,10 +98,10 @@
     
     "dateModified": "2023-10-09T20:38:19\u002b08:00",
     
-    
+    "keywords": ["并发编程"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "96"
+    "wordCount": "189"
   }]
   </script>
 
@@ -244,9 +244,9 @@
 
             
             
-  <a href="/example/"  class="flex items-center">
+  <a href=""  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Examples">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
         事项
     </p>
 </a>
@@ -554,9 +554,9 @@
 
                     
   <li class="mt-1">
-    <a href="/example/"  class="flex items-center">
+    <a href=""  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Examples">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
             事项
         </p>
     </a>
@@ -889,7 +889,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-09 20:38:19 &#43;0800 CST">9 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>96 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-09 20:38:19 &#43;0800 CST">9 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>189 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_java\并发\并发进阶.md" title="likes">0</span> 
     
@@ -979,6 +979,19 @@
   
   
   
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    并发编程
+  </span>
+</span>
+
+  </span>
   
   
   
@@ -1114,11 +1127,23 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#线程池">线程池</a>
+    <li>
       <ul>
         <li><a href="#根据cpu类型分配线程池大小">根据CPU类型分配线程池大小</a></li>
       </ul>
     </li>
+    <li><a href="#threadpoolexecutor">ThreadPoolExecutor</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#arrayblockingqueue">ArrayBlockingQueue</a></li>
+            <li><a href="#线程池的拒绝策略">线程池的拒绝策略</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#executorservice">ExecutorService</a></li>
+    <li><a href="#执行带返回值的任务">执行带返回值的任务：</a></li>
   </ul>
 </nav>
   </div>
@@ -1132,11 +1157,23 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#线程池">线程池</a>
+    <li>
       <ul>
         <li><a href="#根据cpu类型分配线程池大小">根据CPU类型分配线程池大小</a></li>
       </ul>
     </li>
+    <li><a href="#threadpoolexecutor">ThreadPoolExecutor</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#arrayblockingqueue">ArrayBlockingQueue</a></li>
+            <li><a href="#线程池的拒绝策略">线程池的拒绝策略</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#executorservice">ExecutorService</a></li>
+    <li><a href="#执行带返回值的任务">执行带返回值的任务：</a></li>
   </ul>
 </nav>
   </div>
@@ -1192,13 +1229,13 @@
 
         <div class="max-w-prose mb-20">
           <div id="线程池" class="anchor"></div>
-<h2 class="relative group">线程池 
+<h1 class="relative group">线程池 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="锚点">#</a></span>        
     
-</h2>
+</h1>
 <blockquote>
 <p>new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁
 线程池是有限可重复使用的线程，用完需要归还</p>
@@ -1236,6 +1273,14 @@
             style="text-decoration-line: none !important;" href="#%e6%a0%b9%e6%8d%aecpu%e7%b1%bb%e5%9e%8b%e5%88%86%e9%85%8d%e7%ba%bf%e7%a8%8b%e6%b1%a0%e5%a4%a7%e5%b0%8f" aria-label="锚点">#</a></span>        
     
 </h3>
+<div id="threadpoolexecutor" class="anchor"></div>
+<h2 class="relative group">ThreadPoolExecutor 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#threadpoolexecutor" aria-label="锚点">#</a></span>        
+    
+</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">InterruptedException</span> <span class="o">{</span>
 </span></span><span class="line"><span class="cl">        <span class="n">ThreadPoolExecutor</span> <span class="n">executor</span> <span class="o">=</span>
 </span></span><span class="line"><span class="cl">                <span class="k">new</span> <span class="n">ThreadPoolExecutor</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>   <span class="c1">//2个核心线程，最大线程数为4个
@@ -1264,6 +1309,117 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//executor.shutdown();     同样可以关闭，但是会执行完等待队列中的任务再关闭
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><div id="arrayblockingqueue" class="anchor"></div>
+<h4 class="relative group">ArrayBlockingQueue 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#arrayblockingqueue" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>作为有界的阻塞队列，具有响应的容量，可以自行设置，对比SynchronousQueue没有容量，选这个会出现爆栈的问题，原因
+是线程池ThreadPoolExecutor发现容量超出时会poll线程，但SynchronousQueue没有容量poll无意义。
+在线程池里面的等待队列需要具有容量。</p>
+<div id="线程池的拒绝策略" class="anchor"></div>
+<h4 class="relative group">线程池的拒绝策略 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0%e7%9a%84%e6%8b%92%e7%bb%9d%e7%ad%96%e7%95%a5" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>线程池超过最大的容量时，需要拒绝这个任务。</p>
+<ul>
+<li>AbortPolicy(default): 直接抛异常</li>
+<li>CallerRunsPolicy: 直接让提交任务的线程运行这个任务，如果向主线程提交了任务就让主线程去执行这个任务，谁提交谁执行</li>
+<li>DiscardOldestPolicy: 丢弃队列中最近的任务，替换为当前任务</li>
+<li>DiscardPolicy: Do nothing</li>
+</ul>
+<p>自定义拒绝策略和线程生产工厂
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../../assets/post/img_1.png" alt="img_1.png" />
+      
+    </figure>
+  
+
+</p>
+<p>任务过程出现异常，线程池当中执行任务时发生异常，线程将会自动销毁</p>
+<div id="executorservice" class="anchor"></div>
+<h2 class="relative group">ExecutorService 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#executorservice" aria-label="锚点">#</a></span>        
+    
+</h2>
+<p>可以使用Executors工具类来快速创建线程池：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="n">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>   <span class="c1">//直接创建一个固定容量的线程池
+</span></span></span></code></pre></div><blockquote>
+<p>ExecutorService本质内部实现其实是ThreadPoolExecutor，所以创建的线程都不是核心线程</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//内部实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">ExecutorService</span> <span class="nf">newFixedThreadPool</span><span class="o">(</span><span class="kt">int</span> <span class="n">nThreads</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="n">ThreadPoolExecutor</span><span class="o">(</span><span class="n">nThreads</span><span class="o">,</span> <span class="n">nThreads</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                                  <span class="mi">0L</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                                  <span class="k">new</span> <span class="n">LinkedBlockingQueue</span><span class="o">&lt;</span><span class="n">Runnable</span><span class="o">&gt;());</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>直接将最大线程和核心线程数量设定为一样的，并且等待时间为0，因为压根不需要，并且采用的是一个无界的LinkedBlockingQueue作为等待队列。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//创建单个线程
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">ExecutorService</span> <span class="nf">newSingleThreadExecutor</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">new</span> <span class="n">FinalizableDelegatedExecutorService</span>
+</span></span><span class="line"><span class="cl">        <span class="o">(</span><span class="k">new</span> <span class="n">ThreadPoolExecutor</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">1</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="mi">0L</span><span class="o">,</span> <span class="n">TimeUnit</span><span class="o">.</span><span class="na">MILLISECONDS</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                                <span class="k">new</span> <span class="n">LinkedBlockingQueue</span><span class="o">&lt;</span><span class="n">Runnable</span><span class="o">&gt;()));</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>这里并不是直接创建的一个ThreadPoolExecutor对象，而是套了一层FinalizableDelegatedExecutorService，目的是内部套了一层，外部不可见，不可修改，保证安全性</p>
+<blockquote>
+<p>由于executorService内部直接最大容量为Integer.	MAX_VALUE,非常大，不安全</p>
+</blockquote>
+<div id="执行带返回值的任务" class="anchor"></div>
+<h2 class="relative group">执行带返回值的任务： 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%89%a7%e8%a1%8c%e5%b8%a6%e8%bf%94%e5%9b%9e%e5%80%bc%e7%9a%84%e4%bb%bb%e5%8a%a1" aria-label="锚点">#</a></span>        
+    
+</h2>
+<blockquote>
+<p>ExecutorService执行任务有两种方法：submit和execute</p>
+</blockquote>
+<p>接受返回值的只有submit</p>
+<p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../../assets/post/img_2.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">InterruptedException</span><span class="o">,</span> <span class="n">ExecutionException</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ExecutorService</span> <span class="n">executorService</span><span class="o">=</span><span class="n">Executors</span><span class="o">.</span><span class="na">newSingleThreadExecutor</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Future</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">future</span><span class="o">=</span> <span class="n">executorService</span><span class="o">.</span><span class="na">submit</span><span class="o">(()-&gt;{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="s">&#34;你好世界&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">});</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">future</span><span class="o">.</span><span class="na">cancel</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span><span class="c1">//取消任务，这时候里面的字串将不会再返回出来
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">executorService</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">future</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span></code></pre></div>
         </div>
                 
@@ -1486,6 +1642,19 @@
   
   
   
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    并发编程
+  </span>
+</span>
+
+  </span>
+  
+  
+  
   
   
   
@@ -1635,7 +1804,7 @@
   
   
 
-  <a href="/all/example/recent/" class="min-w-full">
+  <a href="/friend/hello/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
@@ -1647,7 +1816,7 @@
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/all/example/recent/">H</div>
+          href="/friend/hello/">Hello</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1690,9 +1859,9 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-08 17:12:50 &#43;0800 CST">8 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>1 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-07 23:36:33 &#43;0800 CST">7 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>3 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_all\example\recent.md" title="likes">0</span> 
+    <span id="likes_friend\hello.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -1715,10 +1884,6 @@
   
   
   
-     <div style="cursor: pointer;" onclick="window.open(&#34;/authors/%E6%98%A5%E6%B1%9F%E8%8A%B1%E6%9C%9D%E7%A7%8B%E6%9C%88%E5%A4%9C/&#34;,'_self')">春江花朝秋月夜</div>
-  
-  
-  
   
   
   
@@ -1743,19 +1908,6 @@
   
   
   
-  
-  
-  
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/java/&#34;,'_self');">
-    <span class="flex">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
-  >
-    Java
-  </span>
-</span>
-
-  </span>
   
   
   
