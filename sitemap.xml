@@ -4,6 +4,24 @@
   
     
       <url>
+            <loc>/all/</loc>
+            <lastmod>2023-10-12T23:51:04+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/all/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</loc>
+            <lastmod>2023-10-12T23:51:04+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
             <loc>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</loc>
             <lastmod>2023-10-12T23:51:04+08:00</lastmod>
             <changefreq>always</changefreq>
@@ -44,6 +62,15 @@
   
     
       <url>
+            <loc>/all/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</loc>
+            <lastmod>2023-10-12T19:01:39+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
             <loc>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</loc>
             <lastmod>2023-10-12T19:01:39+08:00</lastmod>
             <changefreq>always</changefreq>
@@ -56,6 +83,15 @@
     
       <url>
             <loc>/tasks/</loc>
+            <lastmod>2023-10-10T18:05:56+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/all/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</loc>
             <lastmod>2023-10-10T18:05:56+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
@@ -86,8 +122,26 @@
   
     
       <url>
+            <loc>/all/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</loc>
+            <lastmod>2023-10-09T20:38:19+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
             <loc>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</loc>
             <lastmod>2023-10-09T20:38:19+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/all/java/%E5%B9%B6%E5%8F%91/juc/</loc>
+            <lastmod>2023-10-09T19:49:34+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
@@ -113,7 +167,7 @@
   
     
       <url>
-            <loc>/friend/hello/</loc>
+            <loc>/all/friend/hello/</loc>
             <lastmod>2023-10-07T23:36:33+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
@@ -122,8 +176,8 @@
   
     
       <url>
-            <loc>/all/</loc>
-            <lastmod>2023-10-03T23:44:01+08:00</lastmod>
+            <loc>/friend/hello/</loc>
+            <lastmod>2023-10-07T23:36:33+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
@@ -288,15 +342,6 @@
           </url>
     
   
-    
-  
-    
-      <url>
-            <loc>/all/java/%E5%B9%B6%E5%8F%91/juc/</loc>
-            <lastmod>2023-10-03T19:49:34+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
     
   
     

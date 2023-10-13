@@ -10,6 +10,26 @@
     <lastBuildDate>Thu, 12 Oct 2023 23:51:04 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jvm</title>
+      <link>/all/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
+      <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
+      
+      <guid>/all/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</guid>
+      <description>概述 # JVM是模拟物理机实现的将javac编译为.class文件，jvm支持平台无关性。 class文件通过类加载器-》解释器-》硬件沟通
+Jvm基于HotSpot虚拟机架构同时也是基于栈实现的。与C语言不同，不同架构的操作系统编译输出的文件不同，jvm编译后产生的 文件完全相同。
+由于执行一段程序需要不断地编译和反编译，将热点执行的代买柜内为热点代码再转换为机器码提高执行效率。同时jdk1.2之后支持使用JNI来 调用C/C++代码提升代码执行效率
+指令 # 基本数据结构：堆栈+队列
+常见的编译命令：
+javap -g :vars xxx.java
+反编译： javap -v .class文件地址
+反编译后的代码栈顶元素作为操作数，当需要保存变量的时候，进入队列
+部分变量某些关键字无法保存将会保存到常量池里面。例如bipush只支持单字节数据
+环境部署 # Linux下下载相关依赖
+sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2-dev gawk zip libxtst-dev libxi-dev libxt-dev gobjc gcc 环境：</description>
+      
+    </item>
+    
+    <item>
+      <title>Jvm</title>
       <link>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
       <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
       
@@ -30,6 +50,20 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     
     <item>
       <title>状态机</title>
+      <link>/all/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</link>
+      <pubDate>Thu, 12 Oct 2023 19:01:39 +0800</pubDate>
+      
+      <guid>/all/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</guid>
+      <description>有限状态机 # 寄存器和组合时序逻辑电路构成硬件时序逻辑电路
+特点：只能在时钟沿发生跳变时才能完成状态转移，状态机可以在时钟跳变时完成复杂的任务。
+状态机的结构 # 状态寄存器由一组寄存器构成,n个寄存器可存储2^n个状态
+输出取决于状态和输入时，这样的状态机称为Mealy状态机，只和当前状态有关的称为Moore状态机
+描述有限状态机的方法： always语句和case语句</description>
+      
+    </item>
+    
+    <item>
+      <title>状态机</title>
       <link>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</link>
       <pubDate>Thu, 12 Oct 2023 19:01:39 +0800</pubDate>
       
@@ -39,6 +73,19 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
 状态机的结构 # 状态寄存器由一组寄存器构成,n个寄存器可存储2^n个状态
 输出取决于状态和输入时，这样的状态机称为Mealy状态机，只和当前状态有关的称为Moore状态机
 描述有限状态机的方法： always语句和case语句</description>
+      
+    </item>
+    
+    <item>
+      <title>学习计划</title>
+      <link>/all/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <pubDate>Tue, 10 Oct 2023 18:05:56 +0800</pubDate>
+      
+      <guid>/all/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      <description>希望会完成，南无阿弥陀佛🥲🥲🥲 # 1:主线学习内容，消息队列，操作系统，计算机网络（理论），分布式微服务，安全框架（Spring-Security)
+2:支线学习内容，了解csrf跨域问题，RBAC权限控制，防XSS攻击，JVM虚拟机，oauth2第三方登录（微信登录这块），ElasticSearch搜索引擎（ELK）。Zookeeper,Dubbo。容器技术Docker，K8s。
+3：深入了解（底层）：Redis底层数据结构与实现，Redis集群，哨兵模式，Redis协议，Mysql隔离级别，日志，锁，事务
+学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ❌ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ </description>
       
     </item>
     
@@ -57,12 +104,39 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     
     <item>
       <title>并发进阶</title>
+      <link>/all/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</link>
+      <pubDate>Mon, 09 Oct 2023 20:38:19 +0800</pubDate>
+      
+      <guid>/all/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</guid>
+      <description>线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
+//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&amp;lt;Runnable&amp;gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit.</description>
+      
+    </item>
+    
+    <item>
+      <title>并发进阶</title>
       <link>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</link>
       <pubDate>Mon, 09 Oct 2023 20:38:19 +0800</pubDate>
       
       <guid>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</guid>
       <description>线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
 //构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&amp;lt;Runnable&amp;gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit.</description>
+      
+    </item>
+    
+    <item>
+      <title>Java-Concurrent</title>
+      <link>/all/java/%E5%B9%B6%E5%8F%91/juc/</link>
+      <pubDate>Mon, 09 Oct 2023 19:49:34 +0800</pubDate>
+      
+      <guid>/all/java/%E5%B9%B6%E5%8F%91/juc/</guid>
+      <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
+不像重量级锁需要向系统申请互斥量，
+CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
+偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。
+锁的退化不可逆
+锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
+Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
       
     </item>
     
@@ -79,6 +153,16 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁的退化不可逆
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
+      
+    </item>
+    
+    <item>
+      <title>Hello</title>
+      <link>/all/friend/hello/</link>
+      <pubDate>Sat, 07 Oct 2023 23:36:33 +0800</pubDate>
+      
+      <guid>/all/friend/hello/</guid>
+      <description>你好我的朋友！！ # 需要添加友链请联系我的邮箱。</description>
       
     </item>
     
@@ -258,10 +342,13 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
       <pubDate>Tue, 03 Oct 2023 20:51:27 +0800</pubDate>
       
       <guid>/all/java/javase/threadlocal/</guid>
-      <description>ThreadLocal # 线程隔离，相互是隔离的，不影响的
+      <description>特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本
 内部维护的是ThreadLocalMap，所以有key和value
-当key指向的值为null时，value不被清理，由于key是强引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
-static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { /** * The entries in this hash map extend WeakReference, using * its main ref field as the key (which is always a * ThreadLocal object).</description>
+当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
+ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+引用关系：Thread-&amp;gt; ThreadLocal-&amp;gt;Entry（弱）-&amp;gt;key（弱）-&amp;gt;value(强)（不清除时容易发生内存泄露）
+//内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&amp;lt;ThreadLocal&amp;lt;?&amp;gt;&amp;gt; { /** The value associated with this ThreadLocal.</description>
       
     </item>
     
@@ -306,22 +393,6 @@ Mset 批量 添加key-value</description>
     </item>
     
     <item>
-      <title>Juc</title>
-      <link>/all/java/%E5%B9%B6%E5%8F%91/juc/</link>
-      <pubDate>Tue, 03 Oct 2023 19:49:34 +0800</pubDate>
-      
-      <guid>/all/java/%E5%B9%B6%E5%8F%91/juc/</guid>
-      <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
-不像重量级锁需要向系统申请互斥量，
-CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
-偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。
-锁的退化不可逆
-锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
-Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
-      
-    </item>
-    
-    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
@@ -341,7 +412,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       <guid>/all/about/</guid>
       <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
-白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 所以，希望你在这儿可以玩的开心！！！</description>
+白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
       
     </item>
     
