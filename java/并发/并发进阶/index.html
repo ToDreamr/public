@@ -101,7 +101,7 @@
     "keywords": ["并发编程"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "616"
+    "wordCount": "728"
   }]
   </script>
 
@@ -889,7 +889,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-09 20:38:19 &#43;0800 CST">9 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>616 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-09 20:38:19 &#43;0800 CST">9 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>728 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_java\并发\并发进阶.md" title="likes">0</span> 
     
@@ -1165,8 +1165,12 @@
       <ul>
         <li><a href="#计数器锁countdownlatch">计数器锁（CountDownLatch）</a></li>
         <li><a href="#循环屏障cyclicbarrier">循环屏障CyclicBarrier</a></li>
+        <li><a href="#信号量-semaphore">信号量 Semaphore</a></li>
+        <li><a href="#线程之间进行数据交换-exchanger">线程之间进行数据交换 Exchanger</a></li>
+        <li><a href="#forkjoin框架">Fork/Join框架</a></li>
       </ul>
     </li>
+    <li><a href="#end">END</a></li>
   </ul>
 </nav>
   </div>
@@ -1218,8 +1222,12 @@
       <ul>
         <li><a href="#计数器锁countdownlatch">计数器锁（CountDownLatch）</a></li>
         <li><a href="#循环屏障cyclicbarrier">循环屏障CyclicBarrier</a></li>
+        <li><a href="#信号量-semaphore">信号量 Semaphore</a></li>
+        <li><a href="#线程之间进行数据交换-exchanger">线程之间进行数据交换 Exchanger</a></li>
+        <li><a href="#forkjoin框架">Fork/Join框架</a></li>
       </ul>
     </li>
+    <li><a href="#end">END</a></li>
   </ul>
 </nav>
   </div>
@@ -1671,6 +1679,35 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">latch</span><span class="o">.</span><span class="na">await</span><span class="o">();</span>   <span class="c1">//这个操作可以同时被多个线程执行，一起等待，这里只演示了一个
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;所有子任务都完成！任务完成！！！&#34;</span><span class="o">);</span>
 </span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span></code></pre></div><p>例子： 用四个线程实现对1到10000完成累计加和</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">InterruptedException</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">long</span> <span class="n">begin</span><span class="o">=</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">       <span class="n">CountDownLatch</span> <span class="n">latch</span><span class="o">=</span><span class="k">new</span> <span class="n">CountDownLatch</span><span class="o">(</span><span class="mi">4</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">       <span class="kt">int</span> <span class="n">res</span><span class="o">[]=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">finalI</span><span class="o">=</span><span class="n">i</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">new</span> <span class="n">Thread</span><span class="o">(()-&gt;{</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">numbersPerThread</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">((</span><span class="kt">double</span><span class="o">)</span> <span class="mi">100</span><span class="o">/</span> <span class="mi">4</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">startNumber</span> <span class="o">=</span> <span class="n">finalI</span> <span class="o">*</span> <span class="n">numbersPerThread</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="kt">int</span> <span class="n">endNumber</span> <span class="o">=</span> <span class="o">(</span><span class="n">finalI</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">numbersPerThread</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span><span class="n">startNumber</span> <span class="o">;</span> <span class="n">j</span> <span class="o">&lt;=</span><span class="n">endNumber</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                  <span class="n">sum</span><span class="o">+=</span><span class="n">j</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">}</span>
+</span></span><span class="line"><span class="cl">                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sum</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">[</span><span class="n">finalI</span><span class="o">]=</span><span class="n">sum</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">                <span class="n">latch</span><span class="o">.</span><span class="na">countDown</span><span class="o">();</span>   <span class="c1">//每执行一次计数器都会-1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="o">}).</span><span class="na">start</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//开始等待所有的线程完成，当计数器为0时，恢复运行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">latch</span><span class="o">.</span><span class="na">await</span><span class="o">();</span>   <span class="c1">//这个操作可以同时被多个线程执行，一起等待，这里只演示了一个
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kt">int</span> <span class="n">result</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="o">(</span><span class="n">Integer</span> <span class="n">integer</span><span class="o">:</span><span class="n">res</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">result</span><span class="o">+=</span><span class="n">integer</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">long</span> <span class="n">end</span><span class="o">=</span><span class="n">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;所有子任务都完成！任务完成,结果是&#34;</span><span class="o">+</span><span class="n">result</span><span class="o">+</span><span class="s">&#34;花费时间：&#34;</span><span class="o">+(</span><span class="n">end</span><span class="o">-</span><span class="n">begin</span><span class="o">)+</span><span class="s">&#34;ms&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span></code></pre></div><p>实现效果：
 
 
@@ -1709,8 +1746,51 @@
 到达美好的明天。当然，屏障由于是可循环的，所以它在被冲破后，会重新开始计数，继续阻挡后续的线程：</p>
 </blockquote>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">CyclicBarrier</span> <span class="n">barrier</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CyclicBarrier</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>  <span class="c1">//创建一个初始值为5的循环屏障
-</span></span></span></code></pre></div><p>屏障最大容量：parties</p>
+</span></span></span></code></pre></div><p>屏障最大容量：parties
+特点：等待线程冲破阻碍的时候才可以 一起完成任务，完成任务之后继续等待，直到下一次达到最大值 。</p>
 <p>当await状态下的线程被中断，屏障将会被破坏，这一轮不能使用，除非重新开始</p>
+<div id="信号量-semaphore" class="anchor"></div>
+<h3 class="relative group">信号量 Semaphore 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e4%bf%a1%e5%8f%b7%e9%87%8f-semaphore" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>限制信号容量，在一段任务中，要求
+只能部分线程完成这段工作的时候完成</p>
+<div id="线程之间进行数据交换-exchanger" class="anchor"></div>
+<h3 class="relative group">线程之间进行数据交换 Exchanger 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e4%b9%8b%e9%97%b4%e8%bf%9b%e8%a1%8c%e6%95%b0%e6%8d%ae%e4%ba%a4%e6%8d%a2-exchanger" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>实现两个线程之间进行数据交换的通信，只有当两个线程完成交换之后才可以完成任务，否则线程阻塞。</p>
+<div id="forkjoin框架" class="anchor"></div>
+<h3 class="relative group">Fork/Join框架 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#forkjoin%e6%a1%86%e6%9e%b6" aria-label="锚点">#</a></span>        
+    
+</h3>
+<blockquote>
+<p>ForkJoinPool pool = new ForkJoinPool();</p>
+</blockquote>
+<ul>
+<li>fork指的是划分任务，任务约分越细</li>
+<li>join指的是加入任务，任务开始执行</li>
+</ul>
+<div id="end" class="anchor"></div>
+<h2 class="relative group">END 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#end" aria-label="锚点">#</a></span>        
+    
+</h2>
 
         </div>
                 

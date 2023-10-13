@@ -7,7 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Tue, 10 Oct 2023 18:05:56 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Oct 2023 23:51:04 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jvm</title>
+      <link>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
+      <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
+      
+      <guid>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</guid>
+      <description>概述 # JVM是模拟物理机实现的将javac编译为.class文件，jvm支持平台无关性。 class文件通过类加载器-》解释器-》硬件沟通
+Jvm基于HotSpot虚拟机架构同时也是基于栈实现的。与C语言不同，不同架构的操作系统编译输出的文件不同，jvm编译后产生的 文件完全相同。
+由于执行一段程序需要不断地编译和反编译，将热点执行的代买柜内为热点代码再转换为机器码提高执行效率。同时jdk1.2之后支持使用JNI来 调用C/C++代码提升代码执行效率
+指令 # 基本数据结构：堆栈+队列
+常见的编译命令：
+javap -g :vars xxx.java
+反编译： javap -v .class文件地址
+反编译后的代码栈顶元素作为操作数，当需要保存变量的时候，进入队列
+部分变量某些关键字无法保存将会保存到常量池里面。例如bipush只支持单字节数据
+环境部署 # Linux下下载相关依赖
+sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2-dev gawk zip libxtst-dev libxi-dev libxt-dev gobjc gcc 环境：</description>
+      
+    </item>
+    
+    <item>
+      <title>状态机</title>
+      <link>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</link>
+      <pubDate>Thu, 12 Oct 2023 19:01:39 +0800</pubDate>
+      
+      <guid>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</guid>
+      <description>有限状态机 # 寄存器和组合时序逻辑电路构成硬件时序逻辑电路
+特点：只能在时钟沿发生跳变时才能完成状态转移，状态机可以在时钟跳变时完成复杂的任务。
+状态机的结构 # 状态寄存器由一组寄存器构成,n个寄存器可存储2^n个状态
+输出取决于状态和输入时，这样的状态机称为Mealy状态机，只和当前状态有关的称为Moore状态机
+描述有限状态机的方法： always语句和case语句</description>
+      
+    </item>
+    
     <item>
       <title>学习计划</title>
       <link>/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
@@ -237,10 +271,13 @@ static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new 
       <pubDate>Tue, 03 Oct 2023 20:51:27 +0800</pubDate>
       
       <guid>/java/javase/threadlocal/</guid>
-      <description>ThreadLocal # 线程隔离，相互是隔离的，不影响的
+      <description>特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本
 内部维护的是ThreadLocalMap，所以有key和value
-当key指向的值为null时，value不被清理，由于key是强引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
-static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { /** * The entries in this hash map extend WeakReference, using * its main ref field as the key (which is always a * ThreadLocal object).</description>
+当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
+ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+引用关系：Thread-&amp;gt; ThreadLocal-&amp;gt;Entry（弱）-&amp;gt;key（弱）-&amp;gt;value(强)（不清除时容易发生内存泄露）
+//内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&amp;lt;ThreadLocal&amp;lt;?&amp;gt;&amp;gt; { /** The value associated with this ThreadLocal.</description>
       
     </item>
     

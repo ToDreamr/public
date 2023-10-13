@@ -52,10 +52,13 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
       <pubDate>Tue, 03 Oct 2023 20:51:27 +0800</pubDate>
       
       <guid>/java/javase/threadlocal/</guid>
-      <description>ThreadLocal # 线程隔离，相互是隔离的，不影响的
+      <description>特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本
 内部维护的是ThreadLocalMap，所以有key和value
-当key指向的值为null时，value不被清理，由于key是强引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
-static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { /** * The entries in this hash map extend WeakReference, using * its main ref field as the key (which is always a * ThreadLocal object).</description>
+当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
+ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+引用关系：Thread-&amp;gt; ThreadLocal-&amp;gt;Entry（弱）-&amp;gt;key（弱）-&amp;gt;value(强)（不清除时容易发生内存泄露）
+//内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&amp;lt;ThreadLocal&amp;lt;?&amp;gt;&amp;gt; { /** The value associated with this ThreadLocal.</description>
       
     </item>
     
