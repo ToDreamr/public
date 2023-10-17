@@ -10,18 +10,6 @@
     <lastBuildDate>Tue, 03 Oct 2023 20:31:04 +0800</lastBuildDate><atom:link href="/tags/%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis</title>
-      <link>/all/java/%E7%BC%93%E5%AD%98/redis/</link>
-      <pubDate>Tue, 03 Oct 2023 20:31:04 +0800</pubDate>
-      
-      <guid>/all/java/%E7%BC%93%E5%AD%98/redis/</guid>
-      <description>Redis学习： # 通用命令 # 不要在主节点用：keys param 命令来查询，这查询速率很慢，单线程将会被阻塞 del param（可以是多个参数） :删除指定的key exists param(判断key是否存在) expire key time :设置有效期时间 ttl key :查看key的有效期
-String类型 # 最简单的Redis数据类型，value：string,int,float；最大空间不超过512M set key value get key
-Mset 批量 添加key-value</description>
-      
-    </item>
-    
-    <item>
-      <title>Redis</title>
       <link>/java/%E7%BC%93%E5%AD%98/redis/</link>
       <pubDate>Tue, 03 Oct 2023 20:31:04 +0800</pubDate>
       
