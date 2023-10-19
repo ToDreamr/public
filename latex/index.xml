@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latices on 春江花朝秋月夜</title>
+    <link>/latex/</link>
+    <description>Recent content in Latices on 春江花朝秋月夜</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 春江花朝秋月夜</copyright>
+    <lastBuildDate>Thu, 19 Oct 2023 15:55:16 +0800</lastBuildDate><atom:link href="/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latex语法</title>
+      <link>/latex/latex%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 19 Oct 2023 15:55:16 +0800</pubDate>
+      
+      <guid>/latex/latex%E8%AF%AD%E6%B3%95/</guid>
+      <description>\PassOptionsToPackage{quiet}{fontspec} %在document{}前加上就可以解决啦！简单暴力! \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页 \usepackage{ctex} \usepackage{multicol} \usepackage{amsmath} \usepackage{amssymb} \usepackage{mathrsfs} \usepackage{graphics} \usepackage{subfigure} \usepackage{float} \usepackage{booktabs} \usepackage{color} \usepackage{xcolor} \usepackage{listings} \bibliographystyle{unsrt} %导入的参考文献风格 \usepackage{hyperref} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} %改变颜色 \hypersetup{ colorlinks=true, linkcolor=blue, filecolor=blue, urlcolor=blue, citecolor=cyan, } \title{\LaTeX 教学} \author{陈创禧} %正文区 \begin{document} \maketitle \section*{序言} Word 的“所见即所得”是一种幻觉。大家都觉得很方便，但是要排版出一篇精美的了论文难度却很大。图片表格经常且不说乱飞，编辑公式的时候，头都大了。有想删除Office的冲动!</description>
+      
+    </item>
+    
+  </channel>
+</rss>
