@@ -119,7 +119,7 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     "keywords": ["虚拟机"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "95"
+    "wordCount": "231"
   }]
   </script>
 
@@ -901,7 +901,7 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>95 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>231 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_虚拟机\jvm.md" title="likes">0</span> 
     
@@ -1147,7 +1147,20 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     </li>
     <li><a href="#jvm内存管理">JVM内存管理</a>
       <ul>
-        <li><a href="#内存区域划分">内存区域划分</a></li>
+        <li>
+          <ul>
+            <li><a href="#jni">JNI</a></li>
+          </ul>
+        </li>
+        <li><a href="#虚拟机栈">虚拟机栈</a></li>
+        <li><a href="#堆">堆</a></li>
+        <li><a href="#方法区重点">方法区（重点）</a>
+          <ul>
+            <li><a href="#new方式">new方式</a></li>
+            <li><a href="#直接方式">直接方式</a></li>
+            <li><a href="#intern方法">intern方法</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1171,7 +1184,20 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     </li>
     <li><a href="#jvm内存管理">JVM内存管理</a>
       <ul>
-        <li><a href="#内存区域划分">内存区域划分</a></li>
+        <li>
+          <ul>
+            <li><a href="#jni">JNI</a></li>
+          </ul>
+        </li>
+        <li><a href="#虚拟机栈">虚拟机栈</a></li>
+        <li><a href="#堆">堆</a></li>
+        <li><a href="#方法区重点">方法区（重点）</a>
+          <ul>
+            <li><a href="#new方式">new方式</a></li>
+            <li><a href="#直接方式">直接方式</a></li>
+            <li><a href="#intern方法">intern方法</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1408,14 +1434,21 @@ javap -v .class文件地址</p>
 </span></span></code></pre></div><blockquote>
 <p>一旦出现内存问题，我们就无法像C/C++那样对所管理的内存进行合理地处理，因为所有的内存操作都是由JVM在进行，只有了解了JVM的内存管理机制，我们才能够在出现内存相关问题时找到解决方案。</p>
 </blockquote>
-<div id="内存区域划分" class="anchor"></div>
-<h3 class="relative group">内存区域划分 
+<div id="jni" class="anchor"></div>
+<h4 class="relative group">JNI 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%86%85%e5%ad%98%e5%8c%ba%e5%9f%9f%e5%88%92%e5%88%86" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#jni" aria-label="锚点">#</a></span>        
     
-</h3>
+</h4>
+<p>调用本地方法，调用C语言，关键字native,通过静态代码块调用C/C++的实现部分</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">    public static void main(String[] args) <span class="nb">{</span>
+</span></span><span class="line"><span class="cl">        System.out.println(sum(1,2));
+</span></span><span class="line"><span class="cl">    <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    private static native int sum(int a, int b);//原生的方法不可以具有函数实现
+</span></span></code></pre></div><p>内存区域划分</p>
 <p>
 
 
@@ -1431,6 +1464,204 @@ javap -v .class文件地址</p>
   
 
 </p>
+<ul>
+<li>内存区域划分为：方法区（线程共享），堆（线程共享），虚拟机栈，本地方法栈，程序计数器</li>
+<li>方法区和堆栈随JVM生消，虚拟机栈，本地方法栈，程序计数器不共享彼此</li>
+</ul>
+<p>创新作业：40页创新计划书，电子档2份，纸质档1份
+商业模式和团队，按照第8章和第7章模式，12周周五交-&gt;老师办公室</p>
+<ul>
+<li>
+<p>程序计数器 ：作为内存地址，每个地址指向下一条即将指令执行，自动更新，在jvm字节码解释器工作时改变时改变值确定指令位置    public static void main(String[] args) {
+System.out.println(sum(1,2));
+}</p>
+<p>private static native int sum(int a, int b);//原生的方法不可以具有函数实现</p>
+</li>
+<li>
+<p>虚拟机栈 （关键部分），内次当java虚拟机创建的时候即可同步一个栈帧（栈里面的元素），栈帧包含了当前方法的一些元素信息：（局部变量表，操作数栈，动态链接，方法出口）</p>
+</li>
+</ul>
+<div id="虚拟机栈" class="anchor"></div>
+<h3 class="relative group">虚拟机栈 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%99%9a%e6%8b%9f%e6%9c%ba%e6%a0%88" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../img/img.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<p>每个栈帧保存一个可以<strong>指向当前方法所在类 的常量池</strong>，目的是：当前方法8中如果需要调用其他方法的时候，能够从运行时常量池中找到对应的符号引用，然后将符号引用转换为直接引用，
+然后就能直接调用对应方法，这就是动态链接</p>
+<p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../img/img_1.png" alt="img" />
+      
+    </figure>
+  
+
+
+在虚拟机栈里面执行的行为就是对方法不断压栈出栈的过程，只有当所有方法出栈之后才可以执行主函数栈</p>
+<div id="堆" class="anchor"></div>
+<h3 class="relative group">堆 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%a0%86" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>作为虚拟机中最大的一块内存空间，区域职责是作为存放对象和数组，垃圾回收器也作用于此</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+  <iframe
+          src="//player.bilibili.com/player.html?bvid=BV1Er4y1r7as&page=8"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          style="position:absolute; height: 100%; width: 100%;"
+  >
+  </iframe>
+</div>
+
+<div id="方法区重点" class="anchor"></div>
+<h3 class="relative group">方法区（重点） 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e6%96%b9%e6%b3%95%e5%8c%ba%e9%87%8d%e7%82%b9" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>所有程序共享区域，存储类信息，静态变量，动态编译缓存部分，分为两大部分：类信息表+运行时常量池
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="img/img_2.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<p>编译生成的常量也可以加入常量池里面。</p>
+<blockquote>
+<p>面试题：String的常量池，常量池优化</p>
+</blockquote>
+<div id="new方式" class="anchor"></div>
+<h4 class="relative group">new方式 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#new%e6%96%b9%e5%bc%8f" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">public static void main(String[] args) <span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    String str1 = new String(&#34;abc&#34;);
+</span></span><span class="line"><span class="cl">    String str2 = new String(&#34;abc&#34;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    System.out.println(str1 == str2);
+</span></span><span class="line"><span class="cl">    System.out.println(str1.equals(str2));
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%使用==判断时，比较地址得到的结果false
+</span></span></span><span class="line"><span class="cl"><span class="c">%而使用equals时因为比较的是值，所以得到true
+</span></span></span></code></pre></div><div id="直接方式" class="anchor"></div>
+<h4 class="relative group">直接方式 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%9b%b4%e6%8e%a5%e6%96%b9%e5%bc%8f" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">public static void main(String[] args) <span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    String str1 = &#34;abc&#34;;
+</span></span><span class="line"><span class="cl">    String str2 = &#34;abc&#34;;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    System.out.println(str1 == str2);
+</span></span><span class="line"><span class="cl">    System.out.println(str1.equals(str2));
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">%是因为我们直接使用双引号赋值
+</span></span></span><span class="line"><span class="cl"><span class="c">%会先在常量池中查找是否存在相同的字符串，若存在，则将引用直接指向该字符串；
+</span></span></span><span class="line"><span class="cl"><span class="c">%若不存在，则在常量池中生成一个字符串，再将引用指向该字符串：
+</span></span></span></code></pre></div><p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="img/img_3.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<div id="intern方法" class="anchor"></div>
+<h4 class="relative group">intern方法 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#intern%e6%96%b9%e6%b3%95" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">public static void main(String[] args) <span class="nb">{</span>
+</span></span><span class="line"><span class="cl">    //不能直接写&#34;abc&#34;，双引号的形式，写了就直接在常量池里面吧abc创好了
+</span></span><span class="line"><span class="cl">    String str1 = new String(&#34;ab&#34;)+new String(&#34;c&#34;);
+</span></span><span class="line"><span class="cl">    String str2 = new String(&#34;ab&#34;)+new String(&#34;c&#34;);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    System.out.println(str1.intern() == str2.intern());
+</span></span><span class="line"><span class="cl">    System.out.println(str1.equals(str2));
+</span></span><span class="line"><span class="cl"><span class="nb">}</span>
+</span></span></code></pre></div><p>
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="img/img_4.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<ul>
+<li>（线程独有）程序计数器：保存当前程序的执行位置。</li>
+<li>（线程独有）虚拟机栈：通过栈帧来维持方法调用顺序，帮助控制程序有序运行。</li>
+<li>（线程独有）本地方法栈：同上，作用与本地方法。</li>
+<li>堆：所有的对象和数组都在这里保存。</li>
+<li>方法区：类信息、即时编译器的代码缓存、运行时常量池。</li>
+</ul>
 
         </div>
                 
@@ -1986,46 +2217,6 @@ javap -v .class文件地址</p>
   <footer class="pt-8 max-w-prose print:hidden">
 
     
-  
-    
-    
-    
-      
-      
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
-      <div class="flex justify-between pt-3">
-        <span>
-          
-            <a class="flex group mr-3" href="/%E8%99%9A%E6%8B%9F%E6%9C%BA/xuni/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Xuni</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2023-10-15 14:55:09 &#43;0800 CST">15 October 2023</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-        </span>
-      </div>
-    </div>
   
 
 
