@@ -119,7 +119,7 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
     "keywords": ["虚拟机"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "231"
+    "wordCount": "320"
   }]
   </script>
 
@@ -949,7 +949,7 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>231 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>320 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_虚拟机\jvm.md" title="likes">0</span> 
     
@@ -1206,7 +1206,12 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
           <ul>
             <li><a href="#new方式">new方式</a></li>
             <li><a href="#直接方式">直接方式</a></li>
-            <li><a href="#intern方法">intern方法</a></li>
+            <li><a href="#intern方法native方法底层实现是c">intern方法(native方法。底层实现是C++)</a></li>
+          </ul>
+        </li>
+        <li><a href="#内存爆炸和爆栈">内存爆炸和爆栈</a>
+          <ul>
+            <li><a href="#申请堆外内存">申请堆外内存</a></li>
           </ul>
         </li>
       </ul>
@@ -1243,7 +1248,12 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
           <ul>
             <li><a href="#new方式">new方式</a></li>
             <li><a href="#直接方式">直接方式</a></li>
-            <li><a href="#intern方法">intern方法</a></li>
+            <li><a href="#intern方法native方法底层实现是c">intern方法(native方法。底层实现是C++)</a></li>
+          </ul>
+        </li>
+        <li><a href="#内存爆炸和爆栈">内存爆炸和爆栈</a>
+          <ul>
+            <li><a href="#申请堆外内存">申请堆外内存</a></li>
           </ul>
         </li>
       </ul>
@@ -1620,6 +1630,18 @@ System.out.println(sum(1,2));
 <blockquote>
 <p>面试题：String的常量池，常量池优化</p>
 </blockquote>
+<blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"></code></pre></div></blockquote>
+<p>String a=&ldquo;I am a student&rdquo;;
+//        String b=&ldquo;I am a student&rdquo;;
+//        String a=new String(&ldquo;I am a student&rdquo;);
+//        String b=new String(&ldquo;I am a student&rdquo;);
+String a=new String(&ldquo;I am &ldquo;)+new String(&ldquo;a student&rdquo;);
+String b=new String(&ldquo;I am &ldquo;)+new String(&ldquo;a student&rdquo;);
+System.out.println(a.intern()==b.intern());
+System.out.println(a.equals(b));</p>
+<blockquote>
+<pre tabindex="0"><code></code></pre></blockquote>
 <div id="new方式" class="anchor"></div>
 <h4 class="relative group">new方式 
     <span
@@ -1670,12 +1692,12 @@ System.out.println(sum(1,2));
   
 
 </p>
-<div id="intern方法" class="anchor"></div>
-<h4 class="relative group">intern方法 
+<div id="intern方法native方法底层实现是c" class="anchor"></div>
+<h4 class="relative group">intern方法(native方法。底层实现是C++) 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#intern%e6%96%b9%e6%b3%95" aria-label="锚点">#</a></span>        
+            style="text-decoration-line: none !important;" href="#intern%e6%96%b9%e6%b3%95native%e6%96%b9%e6%b3%95%e5%ba%95%e5%b1%82%e5%ae%9e%e7%8e%b0%e6%98%afc" aria-label="锚点">#</a></span>        
     
 </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">public static void main(String[] args) <span class="nb">{</span>
@@ -1703,12 +1725,94 @@ System.out.println(sum(1,2));
 </p>
 <ul>
 <li>（线程独有）程序计数器：保存当前程序的执行位置。</li>
-<li>（线程独有）虚拟机栈：通过栈帧来维持方法调用顺序，帮助控制程序有序运行。</li>
+<li>（线程独有）虚拟机栈：通过栈帧，多线程里面的markword就维护在这里，
+来维持方法调用顺序，帮助控制程序有序运行。</li>
 <li>（线程独有）本地方法栈：同上，作用与本地方法。</li>
 <li>堆：所有的对象和数组都在这里保存。</li>
 <li>方法区：类信息、即时编译器的代码缓存、运行时常量池。</li>
 </ul>
+<div id="内存爆炸和爆栈" class="anchor"></div>
+<h3 class="relative group">内存爆炸和爆栈 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%86%85%e5%ad%98%e7%88%86%e7%82%b8%e5%92%8c%e7%88%86%e6%a0%88" aria-label="锚点">#</a></span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl"> int[]arr=new int[Integer.MAX<span class="nb">_</span>VALUE];
+</span></span></code></pre></div><p>下面来个重磅的哈哈，直接爆栈4个G</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">   static class Test<span class="nb">{</span> <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        public static void main(String[] args) <span class="nb">{</span>
+</span></span><span class="line"><span class="cl">            List&lt;Test&gt; list = new ArrayList&lt;&gt;();
+</span></span><span class="line"><span class="cl">            while (true)<span class="nb">{</span>
+</span></span><span class="line"><span class="cl">                list.add(new Test());    //无限创建Test对象并丢进List中
+</span></span><span class="line"><span class="cl">            <span class="nb">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nb">}</span>
+</span></span></code></pre></div><p>
 
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../imgs/img_5.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<p>好家伙，我这里直接new了一亿个Test对象
+
+
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../imgs/img_6.png" alt="img" />
+      
+    </figure>
+  
+
+</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+  <iframe
+          src="//player.bilibili.com/player.html?bvid=BV1Er4y1r7as&page=10"
+          scrolling="no"
+          border="0"
+          frameborder="no"
+          framespacing="0"
+          allowfullscreen="true"
+          style="position:absolute; height: 100%; width: 100%;"
+  >
+  </iframe>
+</div>
+
+<p>虚拟机栈是有限制的，无线递归压栈将会导致虚拟机栈爆炸</p>
+<div id="申请堆外内存" class="anchor"></div>
+<h4 class="relative group">申请堆外内存 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%94%b3%e8%af%b7%e5%a0%86%e5%a4%96%e5%86%85%e5%ad%98" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">  Field unsafe= Unsafe.class.getDeclaredFields()[0];
+</span></span><span class="line"><span class="cl">            unsafe.setAccessible(true);
+</span></span><span class="line"><span class="cl">            Unsafe unsafe1= (Unsafe) unsafe.get(null);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            //申请内存空间
+</span></span><span class="line"><span class="cl">            long memory = unsafe1.allocateMemory(4);
+</span></span><span class="line"><span class="cl">            unsafe1.putChar(22,&#39;c&#39;);
+</span></span><span class="line"><span class="cl">            System.out.println(unsafe1.getAddress(22));
+</span></span><span class="line"><span class="cl">            System.out.println(memory);
+</span></span></code></pre></div>
         </div>
                 
         
