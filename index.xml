@@ -14,7 +14,12 @@
       <pubDate>Thu, 19 Oct 2023 15:55:16 +0800</pubDate>
       
       <guid>/latex/latex%E8%AF%AD%E6%B3%95/</guid>
-      <description>\PassOptionsToPackage{quiet}{fontspec} %在document{}前加上就可以解决啦！简单暴力! \documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页 \usepackage{ctex} \usepackage{multicol} \usepackage{amsmath} \usepackage{amssymb} \usepackage{mathrsfs} \usepackage{graphics} \usepackage{subfigure} \usepackage{float} \usepackage{booktabs} \usepackage{color} \usepackage{xcolor} \usepackage{listings} \bibliographystyle{unsrt} %导入的参考文献风格 \usepackage{hyperref} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} %改变颜色 \hypersetup{ colorlinks=true, linkcolor=blue, filecolor=blue, urlcolor=blue, citecolor=cyan, } \title{\LaTeX 教学} \author{陈创禧} %正文区 \begin{document} \maketitle \section*{序言} Word 的“所见即所得”是一种幻觉。大家都觉得很方便，但是要排版出一篇精美的了论文难度却很大。图片表格经常且不说乱飞，编辑公式的时候，头都大了。有想删除Office的冲动!</description>
+      <description>环境设置： # \begin{center} \end{center} 这样就是一个环境，所有的都是隔离的。
+头部文件 # \documentclass{setting} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{graphicx} \usepackage[]{setspace} 在头部设置文件排版样式，导入依赖包，基本在本地
+运行部分 # \begin{document} 选择合适的编译器才可以编译，否则出错
+导入自定义式样 # 更新命令：texhash 式样文件的后缀：.cls文件，在里面自定义命令和样式实现排版布局
+例如下面：
+\newcommand{\role}[2]{ {\par \textit{#1} ~ #2 \par} \vspace{0.5ex} } \newcommand{\biInfo}[2]{ {#1 \quad #2} } \newcommand{\tripleInfo}[3]{ {#1 \quad #2 \quad #3} } </description>
       
     </item>
     
@@ -98,7 +103,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       <pubDate>Sat, 07 Oct 2023 23:36:33 +0800</pubDate>
       
       <guid>/friend/hello/</guid>
-      <description>你好我的朋友！！ # 需要添加友链请联系我的邮箱。</description>
+      <description>你好我的朋友！！ # 需要添加友链请联系我的邮箱：aruixrain@gmail.com。</description>
       
     </item>
     
@@ -203,9 +208,10 @@ Mset 批量 添加key-value</description>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
+      <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 这个博客网站在下面的支持下完成
-白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！</description>
+白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！
+本人简历： # 本人简历</description>
       
     </item>
     
