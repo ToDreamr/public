@@ -2,67 +2,67 @@
 <html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
   data-auto-appearance="true"><head>
   <meta charset="utf-8" />
-  
+
   <meta http-equiv="content-language" content="en" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  
+
   <title>Juc &middot; 春江花朝秋月夜</title>
   <meta name="title" content="Juc &middot; 春江花朝秋月夜" />
-  
+
   <meta name="description" content="我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。" />
-  
-  
-  
+
+
+
   <link rel="canonical" href="/juc/" />
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.5775579083e26679417a451dd3d7c3e540c7be85426fba5a47019603552ac89b95e12dddb64138e0aa488d68bc318ec4b0820255a5859b4da3f1b45f140abf11.css"
     integrity="sha512-V3VXkIPiZnlBekUd09fD5UDHvoVCb7paRwGWA1UqyJuV4S3dtkE44KpIjWi8MY7EsIICVaWFm02j8bRfFAq/EQ==" />
-  
-  
+
+
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
     integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
   <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.34dfb4e6b05b47b0a3599f50035f9bbb18c2d36a26aa4c0ea7acc4936489d4c2a55f65683d53e3c4215337e6a8c02e554881af2da86b5783c96837ae3d4e98f6.js"
     integrity="sha512-NN&#43;05rBbR7CjWZ9QA1&#43;buxjC02omqkwOp6zEk2SJ1MKlX2VoPVPjxCFTN&#43;aowC5VSIGvLahrV4PJaDeuPU6Y9g==" data-copy="" data-copied=""></script>
-  
+
   <script src="/js/zoom.min.js"></script>
-  
-  
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <meta property="og:title" content="Juc" />
 <meta property="og:description" content="Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
@@ -86,7 +86,7 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存"/>
 
-  
+
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
@@ -94,7 +94,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     "articleSection": "春江花朝秋月夜",
     "name": "Juc",
     "headline": "Juc",
-    
+
     "abstract": "Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。\n不像重量级锁需要向系统申请互斥量，\nCAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程\n偏向锁 # 当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法 保存hash值，偏向锁直接退化为轻量级锁。\n锁的退化不可逆\n锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化\nJava内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存",
     "inLanguage": "en",
     "url" : "\/juc\/",
@@ -105,34 +105,34 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     "copyrightYear": "2023",
     "dateCreated": "2023-10-03T19:31:01\u002b08:00",
     "datePublished": "2023-10-03T19:31:01\u002b08:00",
-    
+
     "dateModified": "2023-10-03T19:31:01\u002b08:00",
-    
-    
-    
+
+
+
     "mainEntityOfPage": "true",
     "wordCount": "536"
   }]
   </script>
 
 
-  
-  
+
+
   <meta name="author" content="春江花朝秋月夜" />
-  
-  
-  
+
+
+
   <link href="https://space.bilibili.com/159283119?spm_id_from=333.1007.0.0" rel="me" />
-  
-  
+
+
   <link href="https://gitee.com/rainyheights" rel="me" />
-  
-  
+
+
   <link href="https://github.com/ToDreamr" rel="me" />
-  
-  
-  
-  
+
+
+
+
 
 <script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
 
@@ -153,8 +153,8 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-  
-  
+
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEDMYR1V0K"></script>
 <script>
@@ -165,12 +165,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   gtag('config', 'G-PEDMYR1V0K');
 </script>
 
-  
-  
+
+
   <meta name="theme-color"/>
-  
-  
-  
+
+
+
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
@@ -191,8 +191,8 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     var auth = firebase.auth();
 
   </script>
-  
-  
+
+
 </head>
 <body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
@@ -201,17 +201,17 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       href="#main-content"><span
         class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span></a>
   </div>
-  
-  
+
+
   <div class="min-h-[148px]"></div>
 <div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
   <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
   <div class="relative max-w-[64rem] ml-auto mr-auto">
     <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
-    
-    
-    
+
+
+
     <div>
         <a href="/" class="flex">
             <span class="sr-only">春江花朝秋月夜</span>
@@ -221,7 +221,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
         </a>
     </div>
-    
+
     <div class="flex flex-1 items-center justify-between">
         <nav class="flex space-x-3">
 
@@ -231,63 +231,63 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
         </nav>
         <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
 
-            
-            
-            
+
+
+
   <a href="/"  class="flex items-center">
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="春江花朝秋月夜">
         首页
     </p>
 </a>
 
 
-            
-            
+
+
   <a href="/complex/"  class="flex items-center">
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Complexes">
         笔记
     </p>
 </a>
 
 
-            
-            
+
+
   <a href="/example/"  class="flex items-center">
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Examples">
         事项
     </p>
 </a>
 
 
-            
-            
+
+
   <a href="/all/"  class="flex items-center">
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Alls">
         全部
     </p>
 </a>
 
 
-            
-            
+
+
   <a href="/friend/"  class="flex items-center">
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Friends">
         友链
     </p>
 </a>
 
 
-            
-            
+
+
   <a href="https://github.com/ToDreamr"  target="_blank"  class="flex items-center">
-    
+
     <span >
-        
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -296,23 +296,23 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
     </span>
-    
+
     <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
-        
+
     </p>
 </a>
 
 
-            
-             
+
+
   <div>
   <div class="cursor-pointer flex items-center nested-menu">
-    
+
     <a  class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
       归类
     </a>
     <span>
-      
+
 
   <span class="relative block icon">
     <svg
@@ -336,21 +336,21 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   <div class="absolute menuhide">
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
-        
+
         <a href=""  class="flex items-center">
-          
+
           <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
             java
           </p>
         </a>
-        
+
         <a href=""  class="flex items-center">
-          
+
           <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
             时间线
           </p>
         </a>
-        
+
       </div>
     </div>
   </div>
@@ -358,16 +358,16 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-            
-            
-
-            
 
 
-            
+
+
+
+
+
             <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400 h-12"
                 title="">
-                
+
 
   <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
@@ -376,16 +376,16 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
             </button>
-            
 
 
-            
-            
+
+
+
             <div
                 class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
                 <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
                     <div class="flex items-center justify-center h-12 dark:hidden">
-                        
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
@@ -395,7 +395,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                     </div>
                     <div class="items-center justify-center hidden h-12 dark:flex">
-                        
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
@@ -406,20 +406,20 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
                     </div>
                 </button>
             </div>
-            
+
 
         </nav>
         <div class="flex md:hidden items-center space-x-5 md:ml-12">
 
             <span></span>
 
-            
 
 
-            
+
+
             <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
                 title="">
-                
+
 
   <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
@@ -428,13 +428,13 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
             </button>
-            
 
-            
-            
+
+
+
             <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
                 <div class="flex items-center justify-center h-12 dark:hidden">
-                    
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
@@ -444,7 +444,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                 </div>
                 <div class="items-center justify-center hidden h-12 dark:flex">
-                    
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
@@ -454,7 +454,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
                 </div>
             </button>
-            
+
 
         </div>
     </div>
@@ -463,7 +463,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
         <label id="menu-button" for="menu-controller" class="block">
             <input type="checkbox" id="menu-controller" class="hidden" />
             <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
-                
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
@@ -489,13 +489,13 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </span>
                     </li>
 
-                    
-                    
 
-                    
+
+
+
   <li class="mt-1">
     <a href="/"  class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="春江花朝秋月夜">
             首页
         </p>
@@ -504,12 +504,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
 
-                    
+
+
   <li class="mt-1">
     <a href="/complex/"  class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Complexes">
             笔记
         </p>
@@ -518,12 +518,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
 
-                    
+
+
   <li class="mt-1">
     <a href="/example/"  class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Examples">
             事项
         </p>
@@ -532,12 +532,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
 
-                    
+
+
   <li class="mt-1">
     <a href="/all/"  class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Alls">
             全部
         </p>
@@ -546,12 +546,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
 
-                    
+
+
   <li class="mt-1">
     <a href="/friend/"  class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Friends">
             友链
         </p>
@@ -560,14 +560,14 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
 
-                    
+
+
   <li class="mt-1">
     <a href="https://github.com/ToDreamr"  target="_blank"  class="flex items-center">
-        
+
         <div >
-            
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -576,26 +576,26 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
         </div>
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
-            
+
         </p>
     </a>
 </li>
 
 
 
-                    
 
-                     
+
+
   <li class="mt-1">
     <a class="flex items-center">
-        
+
         <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
             归类
         </p>
         <span>
-            
+
 
   <span class="relative block icon">
     <svg
@@ -620,7 +620,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 <li class="mt-1">
     <a href=""  class="flex items-center">
-        
+
         <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
             java
         </p>
@@ -629,7 +629,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 <li class="mt-1">
     <a href=""  class="flex items-center">
-        
+
         <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
             时间线
         </p>
@@ -640,11 +640,11 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 
-                    
-                    
+
+
 
                 </ul>
-                
+
 
             </div>
         </label>
@@ -675,28 +675,28 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   });
 </script>
 
-  
+
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
-      
+
 
 
 <article>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 
 
 <div id="hero" class="h-[150px] md:h-[200px]"></div>
 
 
-    
+
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
     style="background-image:url(/img/bg_hubb8bd373e5abf4f573cc09223a8d2641_10295679_1200x0_resize_box_3.png);">
-    
+
 
 
     <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
@@ -715,16 +715,16 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     });
 </script>
 
-  
-  
+
+
 
   <header id="single_header" class="mt-5 max-w-prose">
-    
+
     <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
-  
-  
-    
-  
+
+
+
+
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
@@ -733,7 +733,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
-  
+
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
@@ -745,12 +745,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </ol>
 
 
-    
+
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
       Juc
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-      
+
 
 
 
@@ -794,12 +794,12 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
+
+
   <time datetime="2023-10-03 19:31:01 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_juc.md" title="views">0</span> 
-    
+
+    <span id="views_juc.md" title="views">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -809,9 +809,9 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_juc.md" title="likes">0</span> 
-    
+
+    <span id="likes_juc.md" title="likes">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -845,10 +845,10 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </span><span class="px-2 text-primary-500">&middot;</span>
 
 
-  
-    
-  
-  
+
+
+
+
 
 <span class="mb-[2px]">
   <a
@@ -867,92 +867,92 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </span></a
   >
 </span>
-  
 
-  
-  
+
+
+
 </div>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
     </div>
 
-    
-    
-    
-    
-    
 
-    
-    
-    
+
+
+
+
+
+
+
+
 <div class="flex">
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
     alt="春江花朝秋月夜" src="/img/author2_hub6c74558734540774552b319ec2c6c70_1552535_192x192_fill_box_center_3.png" />
-  
-  
+
+
   <div class="place-self-center">
-    
+
     <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
       作者
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
       春江花朝秋月夜
     </div>
-    
-    
+
+
     <div class="text-sm text-neutral-700 dark:text-neutral-400">我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。</div>
-    
+
     <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
-    
-      
+
+
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
           href="https://space.bilibili.com/159283119?spm_id_from=333.1007.0.0"
@@ -968,9 +968,9 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 </span></a
         >
-      
-    
-      
+
+
+
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
           href="https://gitee.com/rainyheights"
@@ -986,9 +986,9 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 </span></a
         >
-      
-    
-      
+
+
+
         <a
           class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
           href="https://github.com/ToDreamr"
@@ -1004,27 +1004,27 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 
 </span></a
         >
-      
-    
+
+
   </div>
 
 </div>
   </div>
 </div>
-    
 
-    
 
-    
 
-    
+
+
+
+
     <div class="mb-5"></div>
-    
-  
+
+
   </header>
-  
+
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
-    
+
      <div
       class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
       <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
@@ -1032,7 +1032,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
          <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
   <summary
     class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    
+
   </summary>
   <div
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
@@ -1087,7 +1087,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 <details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
   <summary
     class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    
+
   </summary>
   <div
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
@@ -1140,7 +1140,7 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
   </div>
 </details>
 
- 
+
 <script>
   (function () {
     var $toc = $('#TableOfContents');
@@ -1157,23 +1157,23 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
             id = e.attr('id');
           }
         });
-        var active = $toc.find('a.active');      
+        var active = $toc.find('a.active');
         if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
 
         active.each(function (i, e) {
-          
+
             $(e).removeClass('active');
-          
+
         });
         $toc.find('a[href="#' + id + '"]').addClass('active')
         $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
-          $(e).children('a').parents('ul').show();          
+          $(e).children('a').parents('ul').show();
         });
       }
 
       $window.on('scroll', onScroll);
       $(document).ready(function () {
-        
+
         onScroll();
       });
     }
@@ -1181,101 +1181,101 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </script>
    </div>
       </div>
-      
+
 
       <div class="min-w-0 min-h-0 max-w-fit">
-        
-        
+
+
 
 
         <div class="max-w-prose mb-20">
           <div id="java-并发编程" class="anchor"></div>
-<h1 class="relative group">Java 并发编程 
+<h1 class="relative group">Java 并发编程
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#java-%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#java-%e5%b9%b6%e5%8f%91%e7%bc%96%e7%a8%8b" aria-label="锚点">#</a></span>
+
 </h1>
 <div id="轻量级锁" class="anchor"></div>
-<h3 class="relative group">轻量级锁： 
+<h3 class="relative group">轻量级锁：
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%bd%bb%e9%87%8f%e7%ba%a7%e9%94%81" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e8%bd%bb%e9%87%8f%e7%ba%a7%e9%94%81" aria-label="锚点">#</a></span>
+
 </h3>
 <p>检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个
 锁记录，复制并存储当前对象的mark word 信息。</p>
 <p>不像重量级锁需要向系统申请互斥量，</p>
 <div id="cas无锁算法" class="anchor"></div>
-<h3 class="relative group">CAS（无锁算法） 
+<h3 class="relative group">CAS（无锁算法）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cas%e6%97%a0%e9%94%81%e7%ae%97%e6%b3%95" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#cas%e6%97%a0%e9%94%81%e7%ae%97%e6%b3%95" aria-label="锚点">#</a></span>
+
 </h3>
 <p>
 
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/img_3.png" alt="img_3.png" />
-      
+
     </figure>
-  
+
 
 </p>
 <p>显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查
 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆)
 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程</p>
 <div id="偏向锁" class="anchor"></div>
-<h3 class="relative group">偏向锁 
+<h3 class="relative group">偏向锁
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%81%8f%e5%90%91%e9%94%81" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e5%81%8f%e5%90%91%e9%94%81" aria-label="锚点">#</a></span>
+
 </h3>
 <p>当某个锁频繁的被同一个线程获取，对轻量级锁进行优化，所以偏向锁专门为单个线程服务，此时，无须再进行CAS操作，当其他线程
 又开始抢锁，偏向锁可能退化为轻量级锁。注意当调用对象的hashCode（）方法，由于mark word 数据结构无法
 保存hash值，偏向锁直接退化为轻量级锁。</p>
 <p><b> 锁的退化不可逆</b></p>
 <div id="锁消除和锁优化" class="anchor"></div>
-<h3 class="relative group">锁消除和锁优化 
+<h3 class="relative group">锁消除和锁优化
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%94%81%e6%b6%88%e9%99%a4%e5%92%8c%e9%94%81%e4%bc%98%e5%8c%96" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e9%94%81%e6%b6%88%e9%99%a4%e5%92%8c%e9%94%81%e4%bc%98%e5%8c%96" aria-label="锚点">#</a></span>
+
 </h3>
 <p>代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化</p>
 <div id="java内存模型jmm" class="anchor"></div>
-<h2 class="relative group">Java内存模型（JMM） 
+<h2 class="relative group">Java内存模型（JMM）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#java%e5%86%85%e5%ad%98%e6%a8%a1%e5%9e%8bjmm" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#java%e5%86%85%e5%ad%98%e6%a8%a1%e5%9e%8bjmm" aria-label="锚点">#</a></span>
+
 </h2>
 <p>
 
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/img_6.png" alt="img_6.png" />
-      
+
     </figure>
-  
+
 
 </p>
 <p>主内存： 存放对象实例的部分
@@ -1302,35 +1302,35 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
 </span></span><span class="line"><span class="cl">  <span class="o">}</span>
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><div id="重排序" class="anchor"></div>
-<h3 class="relative group">重排序 
+<h3 class="relative group">重排序
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%87%8d%e6%8e%92%e5%ba%8f" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e9%87%8d%e6%8e%92%e5%ba%8f" aria-label="锚点">#</a></span>
+
 </h3>
 <p>由于JVM虚拟机和编译器的优化，指令可能出现重排序，在这种情况下可能出现不符合预期的情况</p>
 <div id="volatile关键字无法保证原子性但能保证可见性" class="anchor"></div>
-<h3 class="relative group">volatile关键字（无法保证原子性，但能保证可见性） 
+<h3 class="relative group">volatile关键字（无法保证原子性，但能保证可见性）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#volatile%e5%85%b3%e9%94%ae%e5%ad%97%e6%97%a0%e6%b3%95%e4%bf%9d%e8%af%81%e5%8e%9f%e5%ad%90%e6%80%a7%e4%bd%86%e8%83%bd%e4%bf%9d%e8%af%81%e5%8f%af%e8%a7%81%e6%80%a7" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#volatile%e5%85%b3%e9%94%ae%e5%ad%97%e6%97%a0%e6%b3%95%e4%bf%9d%e8%af%81%e5%8e%9f%e5%ad%90%e6%80%a7%e4%bd%86%e8%83%bd%e4%bf%9d%e8%af%81%e5%8f%af%e8%a7%81%e6%80%a7" aria-label="锚点">#</a></span>
+
 </h3>
 <p>
 
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/img_7.png" alt="img_7.png" />
-      
+
     </figure>
-  
+
 
 </p>
 <p>load和save操作，将主内存中的变量拷贝到本地，只对本地变量进行操作。</p>
@@ -1341,18 +1341,18 @@ volatile关键字会禁止指令重排序。</p>
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/img_8.png" alt="img_8.png" />
-      
+
     </figure>
-  
+
 
 </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">VolatileTest</span><span class="o">{</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">volatile</span> <span class="kt">int</span> <span class="n">sum</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="c1">//成员变量,这样的变量必须是当前的对象所拥有的
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//加入了volatile关键字之后，线程之间可以感知彼此的值,但还是无法保证原子性操作，不能达到预期效果
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nd">@Test</span>
@@ -1375,48 +1375,48 @@ volatile关键字会禁止指令重排序。</p>
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></div><p>JVM编译器下面的顺序执行：</p>
 <div id="happens-before-原则之前的对之后的可见" class="anchor"></div>
-<h3 class="relative group">Happens Before 原则（之前的对之后的可见） 
+<h3 class="relative group">Happens Before 原则（之前的对之后的可见）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#happens-before-%e5%8e%9f%e5%88%99%e4%b9%8b%e5%89%8d%e7%9a%84%e5%af%b9%e4%b9%8b%e5%90%8e%e7%9a%84%e5%8f%af%e8%a7%81" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#happens-before-%e5%8e%9f%e5%88%99%e4%b9%8b%e5%89%8d%e7%9a%84%e5%af%b9%e4%b9%8b%e5%90%8e%e7%9a%84%e5%8f%af%e8%a7%81" aria-label="锚点">#</a></span>
+
 </h3>
 <p>程序次序规则，监视器锁原则，volatile关键字原则（写操作在读操作之前），</p>
 <div id="start线程启动规则" class="anchor"></div>
-<h4 class="relative group">start(线程启动规则) 
+<h4 class="relative group">start(线程启动规则)
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#start%e7%ba%bf%e7%a8%8b%e5%90%af%e5%8a%a8%e8%a7%84%e5%88%99" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#start%e7%ba%bf%e7%a8%8b%e5%90%af%e5%8a%a8%e8%a7%84%e5%88%99" aria-label="锚点">#</a></span>
+
 </h4>
 <p>A线程用start调用B线程，那么A在B之前（A happens before B）</p>
 <div id="join线程加入规则" class="anchor"></div>
-<h4 class="relative group">join线程加入规则 
+<h4 class="relative group">join线程加入规则
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#join%e7%ba%bf%e7%a8%8b%e5%8a%a0%e5%85%a5%e8%a7%84%e5%88%99" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#join%e7%ba%bf%e7%a8%8b%e5%8a%a0%e5%85%a5%e8%a7%84%e5%88%99" aria-label="锚点">#</a></span>
+
 </h4>
 <p>A线程join线程B，那么B在A之前（B happens before A）</p>
 <div id="程和线程的区别" class="anchor"></div>
-<h4 class="relative group">程和线程的区别 
+<h4 class="relative group">程和线程的区别
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="锚点">#</a></span>
+
 </h4>
 <p>程序软件 &gt; 进程 &gt; 线程</p>
 <div id="锁的框lock" class="anchor"></div>
-<h3 class="relative group">锁的框：Lock 
+<h3 class="relative group">锁的框：Lock
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%94%81%e7%9a%84%e6%a1%86lock" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e9%94%81%e7%9a%84%e6%a1%86lock" aria-label="锚点">#</a></span>
+
 </h3>
 <p>为了代替传统的synchronized,notify,wait,notifyAll关键字，Lock接口-&gt;ReentrantLock可重入锁</p>
 <p>
@@ -1424,47 +1424,47 @@ volatile关键字会禁止指令重排序。</p>
 
 
 
-  
-  
-  
+
+
+
     <figure>
-      <img class="my-0 rounded-md" src="java/assets/img_9.png" alt="img_9.png" />
-      
+      <img class="my-0 rounded-md" src="../java/assets/img_9.png" alt="img_9.png" />
+
     </figure>
-  
+
 
 </p>
 <div id="可重入锁排他锁" class="anchor"></div>
-<h2 class="relative group">可重入锁（排他锁） 
+<h2 class="relative group">可重入锁（排他锁）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%8f%af%e9%87%8d%e5%85%a5%e9%94%81%e6%8e%92%e4%bb%96%e9%94%81" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e5%8f%af%e9%87%8d%e5%85%a5%e9%94%81%e6%8e%92%e4%bb%96%e9%94%81" aria-label="锚点">#</a></span>
+
 </h2>
 <p>多次加锁，其他线程想要得到锁需要把多次的锁释放才可以获取这把锁</p>
 <p>当存在线程想要获取锁但是锁没有释放的时候，此时这些线程将会进入线程队列里面</p>
 <div id="公平锁和非公平锁aqs" class="anchor"></div>
-<h3 class="relative group">公平锁和非公平锁（AQS） 
+<h3 class="relative group">公平锁和非公平锁（AQS）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%85%ac%e5%b9%b3%e9%94%81%e5%92%8c%e9%9d%9e%e5%85%ac%e5%b9%b3%e9%94%81aqs" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e5%85%ac%e5%b9%b3%e9%94%81%e5%92%8c%e9%9d%9e%e5%85%ac%e5%b9%b3%e9%94%81aqs" aria-label="锚点">#</a></span>
+
 </h3>
 <p>
 
 
 
 
-  
-  
-  
+
+
+
     <figure>
-      <img class="my-0 rounded-md" src="java/assets/img_10.png" alt="img_10.png" />
-      
+      <img class="my-0 rounded-md" src="../java/assets/img_10.png" alt="img_10.png" />
+
     </figure>
-  
+
 
 </p>
 <p>公平锁始终保持先到先得到锁，非公平锁则是在等待队列中所有等待线程同时尝试获取锁，获取不到则再次进入等待队列</p>
@@ -1481,12 +1481,12 @@ volatile关键字会禁止指令重排序。</p>
 </span></span><span class="line"><span class="cl">            new Thread(runnable,&#34;T&#34;+i).start();
 </span></span><span class="line"><span class="cl">        }
 </span></span></code></pre></div><div id="读写锁" class="anchor"></div>
-<h3 class="relative group">读写锁： 
+<h3 class="relative group">读写锁：
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e8%af%bb%e5%86%99%e9%94%81" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e8%af%bb%e5%86%99%e9%94%81" aria-label="锚点">#</a></span>
+
 </h3>
 <blockquote>
 <p>除了可重入锁之外，还有一种类型的锁叫做读写锁，当然它并不是专门用作读写操作的锁，
@@ -1499,21 +1499,21 @@ volatile关键字会禁止指令重排序。</p>
 然后释放写锁，此时其他的线程又可以获取读锁，只剩下读锁，此时称之为“锁降级”。
 在仅仅持有读锁的时候去申请写锁，称为“锁升级”，这时候ReentryReadWriteLock类不支持。</p>
 <div id="队列同步器aqsabstractqueuedsynchronizer" class="anchor"></div>
-<h3 class="relative group">队列同步器AQS（AbstractQueuedSynchronizer） 
+<h3 class="relative group">队列同步器AQS（AbstractQueuedSynchronizer）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%98%9f%e5%88%97%e5%90%8c%e6%ad%a5%e5%99%a8aqsabstractqueuedsynchronizer" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e9%98%9f%e5%88%97%e5%90%8c%e6%ad%a5%e5%99%a8aqsabstractqueuedsynchronizer" aria-label="锚点">#</a></span>
+
 </h3>
 <p>继承关系：Lock-&gt; Sync -&gt; AbstractQueuedSynchronizer</p>
 <div id="多线程并发环境下的aba问题" class="anchor"></div>
-<h3 class="relative group">多线程并发环境下的ABA问题 
+<h3 class="relative group">多线程并发环境下的ABA问题
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%a4%9a%e7%ba%bf%e7%a8%8b%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%e7%9a%84aba%e9%97%ae%e9%a2%98" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e5%a4%9a%e7%ba%bf%e7%a8%8b%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%e7%9a%84aba%e9%97%ae%e9%a2%98" aria-label="锚点">#</a></span>
+
 </h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//ABA问题的版本号解决方法
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">AtomicReference</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">atomicReference</span><span class="o">=</span><span class="k">new</span> <span class="n">AtomicReference</span><span class="o">&lt;&gt;(</span><span class="s">&#34;A&#34;</span><span class="o">);</span>
@@ -1530,12 +1530,12 @@ volatile关键字会禁止指令重排序。</p>
 </span></span></code></pre></div><p>可以看到多个线程尝试去修改的时候出现了一个true</p>
 <p>解决办法：添加版本号，每次修改的时候对版本号（stamp）进行修正</p>
 <div id="并发容器" class="anchor"></div>
-<h2 class="relative group">并发容器 
+<h2 class="relative group">并发容器
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e5%b9%b6%e5%8f%91%e5%ae%b9%e5%99%a8" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e5%b9%b6%e5%8f%91%e5%ae%b9%e5%99%a8" aria-label="锚点">#</a></span>
+
 </h2>
 <p>比如在对链表添加元素的时候，还没有完成对链表扩容之前，其他线程插队，非法插入元素，就会造成数组越界的报错。</p>
 <ul>
@@ -1564,12 +1564,12 @@ volatile关键字会禁止指令重排序。</p>
 </span></span><span class="line"><span class="cl">        <span class="o">}</span>
 </span></span><span class="line"><span class="cl">        <span class="n">TimeUnit</span><span class="o">.</span><span class="na">SECONDS</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
 </span></span></code></pre></div><div id="阻塞队列blokingqueue" class="anchor"></div>
-<h3 class="relative group">阻塞队列（BlokingQueue） 
+<h3 class="relative group">阻塞队列（BlokingQueue）
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e9%98%bb%e5%a1%9e%e9%98%9f%e5%88%97blokingqueue" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e9%98%bb%e5%a1%9e%e9%98%9f%e5%88%97blokingqueue" aria-label="锚点">#</a></span>
+
 </h3>
 <p>生产者消费之模型：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"> <span class="c1">//测试阻塞队列实现生产者消费者模型
@@ -1643,12 +1643,12 @@ volatile关键字会禁止指令重排序。</p>
 </span></span><span class="line"><span class="cl">        <span class="o">}</span>
 </span></span><span class="line"><span class="cl">    <span class="o">}</span>
 </span></span></code></pre></div><div id="synchronousqueue没有任何容量插入和取出是一一对应的" class="anchor"></div>
-<h4 class="relative group">SynchronousQueue(没有任何容量，插入和取出是一一对应的) 
+<h4 class="relative group">SynchronousQueue(没有任何容量，插入和取出是一一对应的)
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#synchronousqueue%e6%b2%a1%e6%9c%89%e4%bb%bb%e4%bd%95%e5%ae%b9%e9%87%8f%e6%8f%92%e5%85%a5%e5%92%8c%e5%8f%96%e5%87%ba%e6%98%af%e4%b8%80%e4%b8%80%e5%af%b9%e5%ba%94%e7%9a%84" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#synchronousqueue%e6%b2%a1%e6%9c%89%e4%bb%bb%e4%bd%95%e5%ae%b9%e9%87%8f%e6%8f%92%e5%85%a5%e5%92%8c%e5%8f%96%e5%87%ba%e6%98%af%e4%b8%80%e4%b8%80%e5%af%b9%e5%ba%94%e7%9a%84" aria-label="锚点">#</a></span>
+
 </h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">SynchronousQueue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span><span class="o">=</span><span class="k">new</span> <span class="n">SynchronousQueue</span><span class="o">&lt;&gt;();</span>
 </span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="n">Thread</span><span class="o">(()-&gt;{</span>
@@ -1666,24 +1666,24 @@ volatile关键字会禁止指令重排序。</p>
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/tansfer.png" alt="image.png" />
-      
+
     </figure>
-  
+
 
 </p>
 </blockquote>
 <div id="主要常见的阻塞队列总结如下" class="anchor"></div>
-<h4 class="relative group">主要常见的阻塞队列总结如下： 
+<h4 class="relative group">主要常见的阻塞队列总结如下：
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e4%b8%bb%e8%a6%81%e5%b8%b8%e8%a7%81%e7%9a%84%e9%98%bb%e5%a1%9e%e9%98%9f%e5%88%97%e6%80%bb%e7%bb%93%e5%a6%82%e4%b8%8b" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e4%b8%bb%e8%a6%81%e5%b8%b8%e8%a7%81%e7%9a%84%e9%98%bb%e5%a1%9e%e9%98%9f%e5%88%97%e6%80%bb%e7%bb%93%e5%a6%82%e4%b8%8b" aria-label="锚点">#</a></span>
+
 </h4>
 <ul>
 <li>ArrayBlokingQueue底层通过数组实现的阻塞队列，可以设置初始的容量，换句话容量是固定的</li>
@@ -1693,23 +1693,23 @@ volatile关键字会禁止指令重排序。</p>
 <li>DelayQueue能够实现延迟获取元素，同样支持优先级，要求加入的元素必须继承Delayed接口</li>
 </ul>
 <div id="数据字典" class="anchor"></div>
-<h3 class="relative group">数据字典 
+<h3 class="relative group">数据字典
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e6%95%b0%e6%8d%ae%e5%ad%97%e5%85%b8" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e6%95%b0%e6%8d%ae%e5%ad%97%e5%85%b8" aria-label="锚点">#</a></span>
+
 </h3>
 <p>常见的常用的数据，具有分级的特点，现在将比如省份县市地点的信息维护成一张表就可以是实现
 据字典，通常具有id，parent_id这些字段，维护父级和子级的关系。</p>
 <p>关于ElementUi的数据字典的显示方法就是检查hasChildren字段的值进行渲染</p>
 <div id="线程池" class="anchor"></div>
-<h3 class="relative group">线程池 
+<h3 class="relative group">线程池
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="锚点">#</a></span>        
-    
+            style="text-decoration-line: none !important;" href="#%e7%ba%bf%e7%a8%8b%e6%b1%a0" aria-label="锚点">#</a></span>
+
 </h3>
 <p>引入原因：频繁创建和销毁线程对系统资源的浪费十分严重，为了合理分配和调用系统资源，产生了线程池的技术</p>
 <p>实现原理：将已创建的线程复用，利用池化技术，就像数据库连接池一样，我们也可以创建很多个线程，然后反复地使用这些线程，而不对它们进行销毁。</p>
@@ -1719,26 +1719,26 @@ volatile关键字会禁止指令重排序。</p>
 
 
 
-  
-  
-  
+
+
+
     <figure>
       <img class="my-0 rounded-md" src="java/assets/ThreadPool.png" alt="image.png" />
-      
+
     </figure>
-  
+
 
 </p>
 
         </div>
-                
-        
 
-        
-  
+
+
+
+
   <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
-    
-      
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1746,7 +1746,7 @@ volatile关键字会禁止指令重排序。</p>
       title="分享到 LinkedIn"
       aria-label="分享到 LinkedIn"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
@@ -1755,9 +1755,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1765,7 +1765,7 @@ volatile关键字会禁止指令重排序。</p>
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
@@ -1774,9 +1774,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1784,7 +1784,7 @@ volatile关键字会禁止指令重排序。</p>
       title="提交到 Reddit"
       aria-label="提交到 Reddit"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
@@ -1793,9 +1793,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1803,7 +1803,7 @@ volatile关键字会禁止指令重排序。</p>
       title=""
       aria-label=""
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
@@ -1812,9 +1812,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1822,7 +1822,7 @@ volatile关键字会禁止指令重排序。</p>
       title=""
       aria-label=""
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
@@ -1831,9 +1831,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1841,7 +1841,7 @@ volatile关键字会禁止指令重排序。</p>
       title="钉到 Pinterest"
       aria-label="钉到 Pinterest"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/></svg>
@@ -1850,9 +1850,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1860,7 +1860,7 @@ volatile关键字会禁止指令重排序。</p>
       title="分享到 Facebook"
       aria-label="分享到 Facebook"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
@@ -1869,9 +1869,9 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
-      
+
+
+
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
@@ -1879,7 +1879,7 @@ volatile关键字会禁止指令重排序。</p>
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
-      
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
@@ -1888,36 +1888,36 @@ volatile关键字会禁止指令重排序。</p>
 
 
     </a>
-      
-    
+
+
   </section>
 
 
-        
+
 
 
 <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
 <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  
-  
+
+
 
   <a href="/all/juc/" class="min-w-full">
-    
+
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
-        
+
         <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
-        
-      
+
+
 
       <div class="px-6 py-4">
 
-        
+
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
           href="/all/juc/">Juc</div>
-        
+
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
+
 
 
 
@@ -1954,12 +1954,12 @@ volatile关键字会禁止指令重排序。</p>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
+
+
   <time datetime="2023-10-03 19:31:01 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_all\juc.md" title="views">0</span> 
-    
+
+    <span id="views_all\juc.md" title="views">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -1969,9 +1969,9 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_all\juc.md" title="likes">0</span> 
-    
+
+    <span id="likes_all\juc.md" title="likes">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -1981,83 +1981,83 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span>
-  
 
-  
-  
+
+
+
 </div>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
         </div>
 
-        
+
       </div>
       <div class="px-6 pt-4 pb-2">
 
       </div>
     </div>
   </a>
-  
-  
+
+
 
   <a href="/about/" class="min-w-full">
-    
+
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
-        
+
         <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
-        
-      
+
+
 
       <div class="px-6 py-4">
 
-        
+
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
           href="/about/">About</div>
-        
+
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
+
 
 
 
@@ -2094,12 +2094,12 @@ volatile关键字会禁止指令重排序。</p>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
+
+
   <time datetime="2023-10-03 00:00:00 &#43;0000 UTC">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_about.md" title="views">0</span> 
-    
+
+    <span id="views_about.md" title="views">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -2109,9 +2109,9 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_about.md" title="likes">0</span> 
-    
+
+    <span id="likes_about.md" title="likes">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -2121,83 +2121,83 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span>
-  
 
-  
-  
+
+
+
 </div>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
         </div>
 
-        
+
       </div>
       <div class="px-6 pt-4 pb-2">
 
       </div>
     </div>
   </a>
-  
-  
+
+
 
   <a href="/all/about/" class="min-w-full">
-    
+
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
-        
+
         <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/card_huc859b380a6802061bd4a5a39280f6a3c_1028519_600x0_resize_q75_box.jpg);"></div>
-        
-      
+
+
 
       <div class="px-6 py-4">
 
-        
+
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
           href="/all/about/">About</div>
-        
+
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
+
 
 
 
@@ -2234,12 +2234,12 @@ volatile关键字会禁止指令重排序。</p>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
+
+
   <time datetime="2023-10-03 00:00:00 &#43;0000 UTC">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="views_all\about.md" title="views">0</span> 
-    
+
+    <span id="views_all\about.md" title="views">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -2249,9 +2249,9 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span><span class="px-2 text-primary-500">&middot;</span><span>
-    
-    <span id="likes_all\about.md" title="likes">0</span> 
-    
+
+    <span id="likes_all\about.md" title="likes">0</span>
+
     <span class="inline-block align-text-bottom">
 
   <span class="relative block icon">
@@ -2261,96 +2261,96 @@ volatile关键字会禁止指令重排序。</p>
 
 </span>
 </span>
-  
 
-  
-  
+
+
+
 </div>
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
 
 <div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
 
         </div>
 
-        
+
       </div>
       <div class="px-6 pt-4 pb-2">
 
       </div>
     </div>
   </a>
-  
+
 </section>
 
-  
+
       </div>
-     
+
      <script>
         var oid = "views_juc.md"
         var oid_likes = "likes_juc.md"
       </script>
-      
-      
+
+
       <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
-  
+
     </section>
   <footer class="pt-8 max-w-prose print:hidden">
 
-    
-  
-    
-    
-    
-      
-      
-    
+
+
+
+
+
+
+
+
     <div class="pt-8">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
-          
+
         </span>
         <span>
-          
+
             <a class="flex text-right group ml-3" href="/about/">
               <span class="flex flex-col">
                 <span
@@ -2358,9 +2358,9 @@ volatile关键字会禁止指令重排序。</p>
                   >About</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
+
                     <time datetime="2023-10-03 00:00:00 &#43;0000 UTC">3 October 2023</time>
-                  
+
                 </span>
               </span>
               <span
@@ -2372,14 +2372,14 @@ volatile关键字会禁止指令重排序。</p>
                 >&larr;</span
               >
             </a>
-          
+
         </span>
       </div>
     </div>
-  
 
 
-    
+
+
   </footer>
 </article>
 
@@ -2391,63 +2391,63 @@ volatile关键字会禁止指令重排序。</p>
   </a>
 </div>
     </main><footer id="site-footer" class="py-10 print:hidden">
-  
-  
-    
+
+
+
     <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
       <ul class="flex flex-col list-none sm:flex-row">
-        
+
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
           <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/tags/"
             title="Tags">Tags</a>
         </li>
-        
+
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
           <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2" href="/about/"
             title="About">Authors</a>
         </li>
-        
+
       </ul>
     </nav>
-    
-  
+
+
   <div class="flex items-center justify-between">
 
-    
-    
+
+
     <p class="text-sm text-neutral-500 dark:text-neutral-400">
       &copy;
       2023
       春江花朝秋月夜
     </p>
-    
 
-    
-    
+
+
+
     <p class="text-xs text-neutral-500 dark:text-neutral-400">
-      
-      
+
+
       由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
         href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
         href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
     </p>
-    
+
 
   </div>
   <script>
-    
+
     mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
       margin: 24,
       background: 'rgba(0,0,0,0.5)',
       scrollOffset: 0,
     })
-    
+
   </script>
-  
-  
+
+
   <script type="text/javascript" src="/js/process.min.35c1113bcc16c5a59bf031082f9e63822aa95280423881a7847a7ff33a16e6299ce6a840d9ef4e10d947e030a18f3f20359afb2ec0f35967484b9a9360ac3145.js" integrity="sha512-NcERO8wWxaWb8DEIL55jgiqpUoBCOIGnhHp/8zoW5imc5qhA2e9OENlH4DChjz8gNZr7LsDzWWdIS5qTYKwxRQ=="></script>
-  
-  
+
+
 </footer><div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
@@ -2461,7 +2461,7 @@ volatile关键字会禁止指令重排序。</p>
     <header class="relative z-10 flex items-center justify-between flex-none px-2">
       <form class="flex items-center flex-auto min-w-0">
         <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
-          
+
 
   <span class="relative block icon">
     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
@@ -2483,7 +2483,7 @@ volatile关键字会禁止指令重排序。</p>
         class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
         title=""
       >
-        
+
 
   <span class="relative block icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
@@ -2495,7 +2495,7 @@ volatile关键字会禁止指令重排序。</p>
     </header>
     <section class="flex-auto px-2 overflow-auto">
       <ul id="search-results">
-        
+
       </ul>
     </section>
   </div>

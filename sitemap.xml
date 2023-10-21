@@ -59,8 +59,19 @@
   
     
       <url>
-            <loc>/java/%E5%B9%B6%E5%8F%91/</loc>
-            <lastmod>2023-10-09T19:49:34+08:00</lastmod>
+            <loc>/java/</loc>
+            <lastmod>2023-10-09T20:38:19+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>/java/%E8%BF%9B%E9%98%B6/</loc>
+            <lastmod>2023-10-09T20:38:19+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
@@ -68,13 +79,11 @@
   
     
       <url>
-            <loc>/java/</loc>
+            <loc>/java/%E5%B9%B6%E5%8F%91/</loc>
             <lastmod>2023-10-09T19:49:34+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
     
   
     
