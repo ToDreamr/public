@@ -10,6 +10,17 @@
     <lastBuildDate>Fri, 03 Oct 2003 00:00:00 +0000</lastBuildDate><atom:link href="/tags/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Friend</title>
+      <link>/la/post/</link>
+      <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
+      
+      <guid>/la/post/</guid>
+      <description>我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
+— 春江花朝秋月夜 S01E01</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/post/featured.png" />
+    </item>
+    
+    <item>
+      <title>Hello Friend</title>
       <link>/post/</link>
       <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
       
