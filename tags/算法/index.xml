@@ -10,12 +10,12 @@
     <lastBuildDate>Tue, 03 Oct 2023 20:52:20 +0800</lastBuildDate><atom:link href="/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据结构篇</title>
-      <link>/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
+      <link>/java/javase/datastruct/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:20 +0800</pubDate>
       
-      <guid>/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
+      <guid>/java/javase/datastruct/</guid>
       <description>数组： # 1 public class Demo1_Array { 2 public static void main(String[] args) { 3 String [] array=new String[5];//需要初始化长度 4 array[0]=&amp;#34;hello&amp;#34;; 5 array[1]=&amp;#34;world&amp;#34;; 6 array[4]=&amp;#34;Mufasa&amp;#34;; 7 // array[5]=&amp;#34;right or not&amp;#34;;//ArrayIndexOutOfBoundsException 8 for(String str:array){ 9 System.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/javase/datastruct/featured.jpg" />
     </item>
     
   </channel>

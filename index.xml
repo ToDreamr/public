@@ -10,25 +10,25 @@
     <lastBuildDate>Thu, 19 Oct 2023 15:55:16 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latex语法</title>
-      <link>/latex/latex%E8%AF%AD%E6%B3%95/</link>
+      <link>/latex/</link>
       <pubDate>Thu, 19 Oct 2023 15:55:16 +0800</pubDate>
       
-      <guid>/latex/latex%E8%AF%AD%E6%B3%95/</guid>
+      <guid>/latex/</guid>
       <description>环境设置： # \begin{center} \end{center} 这样就是一个环境，所有的都是隔离的。
 头部文件 # \documentclass{setting} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{graphicx} \usepackage[]{setspace} 在头部设置文件排版样式，导入依赖包，基本在本地
 运行部分 # \begin{document} 选择合适的编译器才可以编译，否则出错
 导入自定义式样 # 更新命令：texhash 式样文件的后缀：.cls文件，在里面自定义命令和样式实现排版布局
 例如下面：
 \newcommand{\role}[2]{ {\par \textit{#1} ~ #2 \par} \vspace{0.5ex} } \newcommand{\biInfo}[2]{ {#1 \quad #2} } \newcommand{\tripleInfo}[3]{ {#1 \quad #2 \quad #3} } </description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/latex/featured.png" />
     </item>
     
     <item>
       <title>Jvm</title>
-      <link>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
+      <link>/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
       <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
       
-      <guid>/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</guid>
+      <guid>/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
       <description>概述 # JVM是模拟物理机实现的将javac编译为.class文件，jvm支持平台无关性。 class文件通过类加载器-》解释器-》硬件沟通
 Jvm基于HotSpot虚拟机架构同时也是基于栈实现的。与C语言不同，不同架构的操作系统编译输出的文件不同，jvm编译后产生的 文件完全相同。
 由于执行一段程序需要不断地编译和反编译，将热点执行的代买柜内为热点代码再转换为机器码提高执行效率。同时jdk1.2之后支持使用JNI来 调用C/C++代码提升代码执行效率
@@ -40,53 +40,42 @@ javap -g :vars xxx.java
 部分变量某些关键字无法保存将会保存到常量池里面。例如bipush只支持单字节数据
 环境部署 # Linux下下载相关依赖
 sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2-dev gawk zip libxtst-dev libxi-dev libxt-dev gobjc gcc 环境：</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/%E8%99%9A%E6%8B%9F%E6%9C%BA/featured.png" />
     </item>
     
     <item>
       <title>状态机</title>
-      <link>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</link>
+      <link>/vhdl/</link>
       <pubDate>Thu, 12 Oct 2023 19:01:39 +0800</pubDate>
       
-      <guid>/vhdl/%E7%8A%B6%E6%80%81%E6%9C%BA/</guid>
+      <guid>/vhdl/</guid>
       <description>有限状态机 # 寄存器和组合时序逻辑电路构成硬件时序逻辑电路
 特点：只能在时钟沿发生跳变时才能完成状态转移，状态机可以在时钟跳变时完成复杂的任务。
 状态机的结构 # 状态寄存器由一组寄存器构成,n个寄存器可存储2^n个状态
 输出取决于状态和输入时，这样的状态机称为Mealy状态机，只和当前状态有关的称为Moore状态机
 描述有限状态机的方法： always语句和case语句</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/vhdl/featured.jpg" />
     </item>
     
     <item>
       <title>学习计划</title>
-      <link>/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</link>
+      <link>/tasks/</link>
       <pubDate>Tue, 10 Oct 2023 18:05:56 +0800</pubDate>
       
-      <guid>/tasks/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</guid>
+      <guid>/tasks/</guid>
       <description>希望会完成，南无阿弥陀佛🥲🥲🥲 # 1:主线学习内容，消息队列，操作系统，计算机网络（理论），分布式微服务，安全框架（Spring-Security)
 2:支线学习内容，了解csrf跨域问题，RBAC权限控制，防XSS攻击，JVM虚拟机，oauth2第三方登录（微信登录这块），ElasticSearch搜索引擎（ELK）。Zookeeper,Dubbo。容器技术Docker，K8s。
 3：深入了解（底层）：Redis底层数据结构与实现，Redis集群，哨兵模式，Redis协议，Mysql隔离级别，日志，锁，事务
 学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ❌ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ </description>
-      
-    </item>
-    
-    <item>
-      <title>并发进阶</title>
-      <link>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</link>
-      <pubDate>Mon, 09 Oct 2023 20:38:19 +0800</pubDate>
-      
-      <guid>/java/%E5%B9%B6%E5%8F%91/%E5%B9%B6%E5%8F%91%E8%BF%9B%E9%98%B6/</guid>
-      <description>线程池 # new Thread缺点：频繁创建和销毁，浪费了线程资源，短时间创建大量线程和销毁 线程池是有限可重复使用的线程，用完需要归还
-//构造方法，含有七个参数 public ThreadPoolExecutor(int corePoolSize,//核心线程池大小 int maximumPoolSize,//最大线程池大小 long keepAliveTime,//线程最大空闲时间 TimeUnit unit,//最大空闲时间单位 BlockingQueue&amp;lt;Runnable&amp;gt; workQueue//线程等待队列，当超出最大容量时，任务进入等待队列) { this(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, Executors.defaultThreadFactory(),//线程创建工厂，可自定义 defaultHandler//拒绝策略，实在不能加入新的任务时，拒绝任务); } 根据CPU类型分配线程池大小 # ThreadPoolExecutor # public static void main(String[] args) throws InterruptedException { ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 4, //2个核心线程，最大线程数为4个 3, TimeUnit.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/tasks/featured.png" />
     </item>
     
     <item>
       <title>Java-Concurrent</title>
-      <link>/java/%E5%B9%B6%E5%8F%91/juc/</link>
+      <link>/java/%E5%B9%B6%E5%8F%91/</link>
       <pubDate>Mon, 09 Oct 2023 19:49:34 +0800</pubDate>
       
-      <guid>/java/%E5%B9%B6%E5%8F%91/juc/</guid>
+      <guid>/java/%E5%B9%B6%E5%8F%91/</guid>
       <description>Java 并发编程 # 轻量级锁： # 检查当前对象的mark word是否有被其他线程占用，假如没有就会在当前栈帧里面建立一个 锁记录，复制并存储当前对象的mark word 信息。
 不像重量级锁需要向系统申请互斥量，
 CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入了这个同步代码块，这个时候，虚拟机将会检查 当前对象的mark word是否指向当前对象的栈帧，是的话就说明当前已经获得锁，否则不是-》退化为重量级锁(不可逆) 解锁时，同样使用CAS算法操作，同时唤醒挂起的线程
@@ -94,25 +83,25 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁的退化不可逆
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/%E5%B9%B6%E5%8F%91/featured.png" />
     </item>
     
     <item>
       <title>Hello</title>
-      <link>/friend/hello/</link>
+      <link>/friend/</link>
       <pubDate>Sat, 07 Oct 2023 23:36:33 +0800</pubDate>
       
-      <guid>/friend/hello/</guid>
+      <guid>/friend/</guid>
       <description>你好我的朋友！！ # 我的朋友们： # 与你分享我的眼睛： https://viyi.cc/ 小绵尾巴： https://cuttontail.blog/ 笔记： # markdown：https://xianbai.me/learn-md/index.html 需要添加友链请联系我的邮箱：aruixrain@gmail.com。</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/friend/featured.jpg" />
     </item>
     
     <item>
       <title>如何通过hugo搭建自己的博客</title>
-      <link>/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+      <link>/complex/</link>
       <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>/complex/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>/complex/</guid>
       <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
 一是：小棉尾巴
 事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
@@ -123,15 +112,15 @@ winget install Hugo.Hugo.Extended 等待下载完成重启Shell命令窗口即�
 检查是否安装成功：
 hugo version 第二部创建Hugo博客项目 # 只需要在文件夹下面新建终端使用如下命令，hugo将会自动创建你的项目名称文件夹 ，同时弹出一个主题链接
 hugo new site +你的项目名称 现在你需要进入你的项目也就是命令： cd 你的项目名称</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/complex/featured.jpg" />
     </item>
     
     <item>
       <title>对象间的关系</title>
-      <link>/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
+      <link>/java/javase/object/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:21 +0800</pubDate>
       
-      <guid>/java/javase/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
+      <guid>/java/javase/object/%E5%AF%B9%E8%B1%A1%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</guid>
       <description>1 综述 在Java中对象与对象的关系总体分为四类，分别是：依赖、关联、聚合和组合。
 （1）依赖(Dependency)关系是类与类之间的联接。依赖关系表示一个类依赖于另一个类的定义，一般而言，依赖关系在Java语言中体现为局域变量、方法的形参，或者对静态方法的调用。 （2）关联(Association）关系是类与类之间的联接，它使一个类知道另一个类的属性和方法。关联可以是双向的，也可以是单向的。在Java语言中，关联关系一般使用成员变量来实现 （3）聚合(Aggregation) 关系是关联关系的一种，是强的关联关系。聚合是整体和个体之间的关系 （4）组合(Composition) 关系是关联关系的一种，是比聚合关系强的关系。它要求普通的聚合关系中代表整体的对象负责代表部分对象的生命周期，组合关系是不能共享的
 依赖： # 个类A使用到了另一个类B，而这种使用关系是具有偶然性的、临时性的、非常弱的，但是B类的变化会影响到A
@@ -143,22 +132,22 @@ hugo new site +你的项目名称 现在你需要进入你的项目也就是命�
     
     <item>
       <title>关键字</title>
-      <link>/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</link>
+      <link>/java/javase/words/</link>
       <pubDate>Tue, 03 Oct 2023 20:53:12 +0800</pubDate>
       
-      <guid>/java/javase/%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
+      <guid>/java/javase/words/</guid>
       <description>Java中常用的关键字有以下分类： 访问控制 private protected public
 类,方法和变量修饰符 abstract class extends final implements interface native new static strictfp synchronized transient volatile
 程序控制 break continue return do while if else for instanceof switch case default</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/javase/words/featured.png" />
     </item>
     
     <item>
       <title>实例化Node</title>
-      <link>/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
+      <link>/java/javase/node/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:56 +0800</pubDate>
       
-      <guid>/java/javase/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
+      <guid>/java/javase/node/%E5%AE%9E%E4%BE%8B%E5%8C%96node/</guid>
       <description>如何从 Java 中的 LinkedList 类外部声明 Node 类型？ # 标签 java linked-list 如何声明 Node 类型的变量？ Node是LinkedList的内部类，在我正在编写的程序的main方法中，我想创建一个Node变量。但在下面代码片段的最后一行中，我收到错误消息“Nose 在 LinkedList 中具有私有(private)访问权限”。为什么我不能使用 Node 类型？
 import java.util.LinkedList; public class MinSplit { public static long leastAmount; public static void main(String args[]) { LinkedList list = new LinkedList(); LinkedList.</description>
       
@@ -166,12 +155,12 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
     
     <item>
       <title>数据结构篇</title>
-      <link>/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
+      <link>/java/javase/datastruct/</link>
       <pubDate>Tue, 03 Oct 2023 20:52:20 +0800</pubDate>
       
-      <guid>/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
+      <guid>/java/javase/datastruct/</guid>
       <description>数组： # 1 public class Demo1_Array { 2 public static void main(String[] args) { 3 String [] array=new String[5];//需要初始化长度 4 array[0]=&amp;#34;hello&amp;#34;; 5 array[1]=&amp;#34;world&amp;#34;; 6 array[4]=&amp;#34;Mufasa&amp;#34;; 7 // array[5]=&amp;#34;right or not&amp;#34;;//ArrayIndexOutOfBoundsException 8 for(String str:array){ 9 System.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/javase/datastruct/featured.jpg" />
     </item>
     
     <item>
@@ -184,22 +173,22 @@ import java.util.LinkedList; public class MinSplit { public static long leastAmo
 内部维护的是ThreadLocalMap，所以有key和value
 当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
 ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
-弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清除
 引用关系：Thread-&amp;gt; ThreadLocal-&amp;gt;Entry（弱）-&amp;gt;key（弱）-&amp;gt;value(强)（不清除时容易发生内存泄露）
 //内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&amp;lt;ThreadLocal&amp;lt;?&amp;gt;&amp;gt; { /** The value associated with this ThreadLocal.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/javase/threadlocal/featured.png" />
     </item>
     
     <item>
       <title>Redis</title>
-      <link>/java/%E7%BC%93%E5%AD%98/redis/</link>
+      <link>/java/%E7%BC%93%E5%AD%98/</link>
       <pubDate>Tue, 03 Oct 2023 20:31:04 +0800</pubDate>
       
-      <guid>/java/%E7%BC%93%E5%AD%98/redis/</guid>
+      <guid>/java/%E7%BC%93%E5%AD%98/</guid>
       <description>Redis学习： # 通用命令 # 不要在主节点用：keys param 命令来查询，这查询速率很慢，单线程将会被阻塞 del param（可以是多个参数） :删除指定的key exists param(判断key是否存在) expire key time :设置有效期时间 ttl key :查看key的有效期
 String类型 # 最简单的Redis数据类型，value：string,int,float；最大空间不超过512M set key value get key
 Mset 批量 添加key-value</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/java/%E7%BC%93%E5%AD%98/featured.png" />
     </item>
     
     <item>
@@ -217,13 +206,33 @@ Mset 批量 添加key-value</description>
     
     <item>
       <title>Hello Friend</title>
-      <link>/post/hello/</link>
+      <link>/post/</link>
       <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
       
-      <guid>/post/hello/</guid>
+      <guid>/post/</guid>
       <description>我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
 — 春江花朝秋月夜 S01E01</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/post/featured.png" />
+    </item>
+    
+    <item>
+      <title>all</title>
+      <link>/all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
+      <guid>/all/</guid>
+      <description>Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;25 字&amp;middot;1 分钟&amp;middot;0 规划Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;13 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 postindex1 January 0001&amp;middot;0 dasdsa</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>/featured/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/featured/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/featured/featured.png" />
     </item>
     
   </channel>

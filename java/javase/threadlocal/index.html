@@ -68,21 +68,22 @@
 内部维护的是ThreadLocalMap，所以有key和value
 当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
 ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
-弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清除
 引用关系：Thread-&gt; ThreadLocal-&gt;Entry（弱）-&gt;key（弱）-&gt;value(强)（不清除时容易发生内存泄露）
 //内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&lt;ThreadLocal&lt;?&gt;&gt; { /** The value associated with this ThreadLocal." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/java/javase/threadlocal/" /><meta property="article:section" content="java" />
+<meta property="og:url" content="/java/javase/threadlocal/" /><meta property="og:image" content="/java/javase/threadlocal/featured.png"/><meta property="article:section" content="java" />
 <meta property="article:published_time" content="2023-10-03T20:51:27+08:00" />
 <meta property="article:modified_time" content="2023-10-03T20:51:27+08:00" />
 
-  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/java/javase/threadlocal/featured.png"/>
 <meta name="twitter:title" content="ThreadLocal"/>
 <meta name="twitter:description" content="特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本
 内部维护的是ThreadLocalMap，所以有key和value
 当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。
 ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值
-弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚
+弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清除
 引用关系：Thread-&gt; ThreadLocal-&gt;Entry（弱）-&gt;key（弱）-&gt;value(强)（不清除时容易发生内存泄露）
 //内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference&lt;ThreadLocal&lt;?&gt;&gt; { /** The value associated with this ThreadLocal."/>
 
@@ -95,7 +96,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
     "name": "ThreadLocal",
     "headline": "ThreadLocal",
     
-    "abstract": "特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本\n内部维护的是ThreadLocalMap，所以有key和value\n当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。\nThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值\n弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚\n引用关系：Thread-\u0026gt; ThreadLocal-\u0026gt;Entry（弱）-\u0026gt;key（弱）-\u0026gt;value(强)（不清除时容易发生内存泄露）\n\/\/内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference\u0026lt;ThreadLocal\u0026lt;?\u0026gt;\u0026gt; { \/** The value associated with this ThreadLocal.",
+    "abstract": "特点：线程隔离，相互是隔离的，不影响的,每个线程都自己玩自己的，只操作自己的单独的变量副本\n内部维护的是ThreadLocalMap，所以有key和value\n当key指向的值为null时，value不被清理，由于key是弱引用，此时就会造成内存泄露，所以必须要通过ThreadLocal里面的remove方法手动删除值，避免内存泄露。\nThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 由ThreadLocal来设置值，删除值\n弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清除\n引用关系：Thread-\u0026gt; ThreadLocal-\u0026gt;Entry（弱）-\u0026gt;key（弱）-\u0026gt;value(强)（不清除时容易发生内存泄露）\n\/\/内部类，实=实现 static ThreadLocalMap createInheritedMap(ThreadLocalMap parentMap) { return new ThreadLocalMap(parentMap); } static class ThreadLocalMap { static class Entry extends WeakReference\u0026lt;ThreadLocal\u0026lt;?\u0026gt;\u0026gt; { \/** The value associated with this ThreadLocal.",
     "inLanguage": "en",
     "url" : "\/java\/javase\/threadlocal\/",
     "author" : {
@@ -246,7 +247,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
             
   <a href="/complex/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Complexes">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="如何通过hugo搭建自己的博客">
         笔记
     </p>
 </a>
@@ -256,7 +257,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
             
   <a href="/tasks/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tasks">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="学习计划">
         事项
     </p>
 </a>
@@ -264,9 +265,9 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 
             
             
-  <a href="/tags/"  class="flex items-center">
+  <a href="/all/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Tags">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="all">
         全部
     </p>
 </a>
@@ -276,7 +277,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
             
   <a href="/friend/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Friends">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Hello">
         友链
     </p>
 </a>
@@ -330,23 +331,23 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
           </p>
         </a>
         
-        <a href="/java/%E5%B9%B6%E5%8F%91/juc/"  class="flex items-center">
+        <a href=""  class="flex items-center">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Java-Concurrent">
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
             并发
           </p>
         </a>
         
         <a href="/%E8%99%9A%E6%8B%9F%E6%9C%BA/"  class="flex items-center">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="虚拟机s">
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Jvm">
             时间线
           </p>
         </a>
         
         <a href="/friend/"  class="flex items-center">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Friends">
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Hello">
             盆友们
           </p>
         </a>
@@ -510,7 +511,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   <li class="mt-1">
     <a href="/complex/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Complexes">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="如何通过hugo搭建自己的博客">
             笔记
         </p>
     </a>
@@ -524,7 +525,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   <li class="mt-1">
     <a href="/tasks/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Tasks">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="学习计划">
             事项
         </p>
     </a>
@@ -536,9 +537,9 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 
                     
   <li class="mt-1">
-    <a href="/tags/"  class="flex items-center">
+    <a href="/all/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Tags">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="all">
             全部
         </p>
     </a>
@@ -552,7 +553,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   <li class="mt-1">
     <a href="/friend/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Friends">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Hello">
             友链
         </p>
     </a>
@@ -612,9 +613,9 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 </li>
 
 <li class="mt-1">
-    <a href="/java/%E5%B9%B6%E5%8F%91/juc/"  class="flex items-center">
+    <a href=""  class="flex items-center">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Java-Concurrent">
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
             并发
         </p>
     </a>
@@ -623,7 +624,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 <li class="mt-1">
     <a href="/%E8%99%9A%E6%8B%9F%E6%9C%BA/"  class="flex items-center">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="虚拟机s">
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Jvm">
             时间线
         </p>
     </a>
@@ -632,7 +633,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 <li class="mt-1">
     <a href="/friend/"  class="flex items-center">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Friends">
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Hello">
             盆友们
         </p>
     </a>
@@ -829,7 +830,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 
     
     <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
-    style="background-image:url(/img/info/107651596_p0_master1200_hu85e367d087a9ef9d585a07b401169790_1021358_1200x0_resize_q75_box.jpg);">
+    style="background-image:url(/java/javase/threadlocal/featured_hu4d759d4e5d019680058731cf1d32addc_2123664_1200x0_resize_box_3.png);">
     
 
 
@@ -943,7 +944,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   
   <time datetime="2023-10-03 20:51:27 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>229 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_java\javase\ThreadLocal.md" title="likes">0</span> 
+    <span id="likes_java\javase\threadlocal\index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -1192,7 +1193,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 
 
 由ThreadLocal来设置值，删除值</p>
-<p>弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清楚</p>
+<p>弱引用非常容易GC，很容易造成内存泄露，所以需要将key为null的entry清除</p>
 <p>引用关系：Thread-&gt; ThreadLocal-&gt;Entry（弱）-&gt;key（弱）-&gt;value(强)（不清除时容易发生内存泄露）</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//内部类，实=实现
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">static</span> <span class="n">ThreadLocalMap</span> <span class="nf">createInheritedMap</span><span class="o">(</span><span class="n">ThreadLocalMap</span> <span class="n">parentMap</span><span class="o">)</span> <span class="o">{</span>
@@ -1379,11 +1380,11 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   
   
 
-  <a href="/java/%E7%BC%93%E5%AD%98/redis/" class="min-w-full">
+  <a href="/java/%E7%BC%93%E5%AD%98/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
         
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/info/107706430_p0_hu46370d4ccd3481872546da16224d0daa_1972225_600x0_resize_box_3.png);"></div>
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/java/%E7%BC%93%E5%AD%98/featured_hua0ceea336368c2b5da8818142adc90bd_8145_600x0_resize_box_3.png);"></div>
         
       
 
@@ -1391,7 +1392,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
 
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/java/%E7%BC%93%E5%AD%98/redis/">Redis</div>
+          href="/java/%E7%BC%93%E5%AD%98/">Redis</div>
         
 
         <div class="text-sm text-neutral-500 dark:text-neutral-400">
@@ -1436,7 +1437,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
   
   <time datetime="2023-10-03 20:31:04 &#43;0800 CST">3 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>357 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
-    <span id="likes_java\缓存\redis.md" title="likes">0</span> 
+    <span id="likes_java\缓存\index.md" title="likes">0</span> 
     
     <span class="inline-block align-text-bottom">
 
@@ -1652,8 +1653,8 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
       </div>
      
      <script>
-        var oid = "views_java\\javase\\ThreadLocal.md"
-        var oid_likes = "likes_java\\javase\\ThreadLocal.md"
+        var oid = "views_java\\javase\\threadlocal\\index.md"
+        var oid_likes = "likes_java\\javase\\threadlocal\\index.md"
       </script>
       
       
@@ -1675,7 +1676,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/java/javase/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/">
+            <a class="flex group mr-3" href="/java/javase/datastruct/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1700,7 +1701,7 @@ ThreadLocalMap里面面由一个个由数组组成的key-value，组成了Entry 
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/java/%E7%BC%93%E5%AD%98/redis/">
+            <a class="flex text-right group ml-3" href="/java/%E7%BC%93%E5%AD%98/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
