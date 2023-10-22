@@ -35,7 +35,16 @@
   
     
       <url>
-            <loc>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+            <loc>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</loc>
+            <lastmod>2023-10-12T23:51:04+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</loc>
             <lastmod>2023-10-12T23:51:04+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>

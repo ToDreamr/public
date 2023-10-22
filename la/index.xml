@@ -25,10 +25,10 @@
     
     <item>
       <title>Jvm</title>
-      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
       <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
       
-      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</guid>
       <description>概述 # JVM是模拟物理机实现的将javac编译为.class文件，jvm支持平台无关性。 class文件通过类加载器-》解释器-》硬件沟通
 Jvm基于HotSpot虚拟机架构同时也是基于栈实现的。与C语言不同，不同架构的操作系统编译输出的文件不同，jvm编译后产生的 文件完全相同。
 由于执行一段程序需要不断地编译和反编译，将热点执行的代买柜内为热点代码再转换为机器码提高执行效率。同时jdk1.2之后支持使用JNI来 调用C/C++代码提升代码执行效率
@@ -40,7 +40,25 @@ javap -g :vars xxx.java
 部分变量某些关键字无法保存将会保存到常量池里面。例如bipush只支持单字节数据
 环境部署 # Linux下下载相关依赖
 sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2-dev gawk zip libxtst-dev libxi-dev libxt-dev gobjc gcc 环境：</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/featured.png" />
+    </item>
+    
+    <item>
+      <title>垃圾回收机制</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</link>
+      <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</guid>
+      <description>垃圾回收机制 # 引用计数法 # 创建引用变量
+循环引用,当对象成为null就没办法了
+可达性分析算法：
+最终判定过程，此过程可以最后挽留对象
+重写finalize方法，最后可以救赎被gc的对象
+比如下面这个情况
+注意：
+同时，这个方法只能生效一次，躲得过初一躲不过十五
+分代收集机制: # 方法区使用永久代实现</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/featured.png" />
     </item>
     
     <item>

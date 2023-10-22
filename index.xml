@@ -25,10 +25,10 @@
     
     <item>
       <title>Jvm</title>
-      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</link>
       <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
       
-      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/</guid>
       <description>概述 # JVM是模拟物理机实现的将javac编译为.class文件，jvm支持平台无关性。 class文件通过类加载器-》解释器-》硬件沟通
 Jvm基于HotSpot虚拟机架构同时也是基于栈实现的。与C语言不同，不同架构的操作系统编译输出的文件不同，jvm编译后产生的 文件完全相同。
 由于执行一段程序需要不断地编译和反编译，将热点执行的代买柜内为热点代码再转换为机器码提高执行效率。同时jdk1.2之后支持使用JNI来 调用C/C++代码提升代码执行效率
@@ -40,7 +40,25 @@ javap -g :vars xxx.java
 部分变量某些关键字无法保存将会保存到常量池里面。例如bipush只支持单字节数据
 环境部署 # Linux下下载相关依赖
 sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2-dev gawk zip libxtst-dev libxi-dev libxt-dev gobjc gcc 环境：</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/jvm/featured.png" />
+    </item>
+    
+    <item>
+      <title>垃圾回收机制</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</link>
+      <pubDate>Thu, 12 Oct 2023 23:51:04 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/</guid>
+      <description>垃圾回收机制 # 引用计数法 # 创建引用变量
+循环引用,当对象成为null就没办法了
+可达性分析算法：
+最终判定过程，此过程可以最后挽留对象
+重写finalize方法，最后可以救赎被gc的对象
+比如下面这个情况
+注意：
+同时，这个方法只能生效一次，躲得过初一躲不过十五
+分代收集机制: # 方法区使用永久代实现</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/featured.png" />
     </item>
     
     <item>
@@ -66,7 +84,7 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
       <description>希望会完成，南无阿弥陀佛🥲🥲🥲 # 1:主线学习内容，消息队列，操作系统，计算机网络（理论），分布式微服务，安全框架（Spring-Security)
 2:支线学习内容，了解csrf跨域问题，RBAC权限控制，防XSS攻击，JVM虚拟机，oauth2第三方登录（微信登录这块），ElasticSearch搜索引擎（ELK）。Zookeeper,Dubbo。容器技术Docker，K8s。
 3：深入了解（底层）：Redis底层数据结构与实现，Redis集群，哨兵模式，Redis协议，Mysql隔离级别，日志，锁，事务
-学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ❌ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ </description>
+学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ❌ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ 时间轴 AWESOME其他例子 date - presentAwesome Subheader插入代码 Coffee Tea Milk </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/tasks/featured.png" />
     </item>
     
@@ -242,7 +260,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;25 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;13 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
+      <description>Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机垃圾回收机制12 October 2023&amp;middot;15 字&amp;middot;1 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;37 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;13 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
