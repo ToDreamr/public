@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mainsections on 春江花朝秋月夜</title>
+    <link>/mainsection/</link>
+    <description>Recent content in Mainsections on 春江花朝秋月夜</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 春江花朝秋月夜</copyright>
+    <lastBuildDate>Thu, 19 Oct 2023 15:55:16 +0800</lastBuildDate><atom:link href="/mainsection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latex语法</title>
+      <link>/mainsection/latex/</link>
+      <pubDate>Thu, 19 Oct 2023 15:55:16 +0800</pubDate>
+      
+      <guid>/mainsection/latex/</guid>
+      <description>环境设置： # \begin{center} \end{center} 这样就是一个环境，所有的都是隔离的。
+头部文件 # \documentclass{setting} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{graphicx} \usepackage[]{setspace} 在头部设置文件排版样式，导入依赖包，基本在本地
+运行部分 # \begin{document} 选择合适的编译器才可以编译，否则出错
+导入自定义式样 # 更新命令：texhash 式样文件的后缀：.cls文件，在里面自定义命令和样式实现排版布局
+例如下面：
+\newcommand{\role}[2]{ {\par \textit{#1} ~ #2 \par} \vspace{0.5ex} } \newcommand{\biInfo}[2]{ {#1 \quad #2} } \newcommand{\tripleInfo}[3]{ {#1 \quad #2 \quad #3} } </description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/mainsection/latex/featured.png" />
+    </item>
+    
+    <item>
+      <title>Hello Friend</title>
+      <link>/mainsection/post/</link>
+      <pubDate>Fri, 03 Oct 2003 00:00:00 +0000</pubDate>
+      
+      <guid>/mainsection/post/</guid>
+      <description>我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
+— 春江花朝秋月夜 S01E01</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/mainsection/post/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
