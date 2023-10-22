@@ -23,20 +23,5 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/latex/featured.png" />
     </item>
     
-    <item>
-      <title>Latex语法</title>
-      <link>/latex/</link>
-      <pubDate>Thu, 19 Oct 2023 15:55:16 +0800</pubDate>
-      
-      <guid>/latex/</guid>
-      <description>环境设置： # \begin{center} \end{center} 这样就是一个环境，所有的都是隔离的。
-头部文件 # \documentclass{setting} \usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{graphicx} \usepackage[]{setspace} 在头部设置文件排版样式，导入依赖包，基本在本地
-运行部分 # \begin{document} 选择合适的编译器才可以编译，否则出错
-导入自定义式样 # 更新命令：texhash 式样文件的后缀：.cls文件，在里面自定义命令和样式实现排版布局
-例如下面：
-\newcommand{\role}[2]{ {\par \textit{#1} ~ #2 \par} \vspace{0.5ex} } \newcommand{\biInfo}[2]{ {#1 \quad #2} } \newcommand{\tripleInfo}[3]{ {#1 \quad #2 \quad #3} } </description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/latex/featured.png" />
-    </item>
-    
   </channel>
 </rss>
