@@ -57,7 +57,11 @@ sudo yum install build-essential libxrender-dev xorg-dev libasound2-dev libcups2
 比如下面这个情况
 注意：
 同时，这个方法只能生效一次，躲得过初一躲不过十五
-分代收集机制: # 方法区使用永久代实现</description>
+分代收集机制: # 方法区使用永久代实现
+垃圾收集也分为： Minor GC - 次要垃圾回收，主要进行新生代区域的垃圾收集。
+触发条件：新生代的Eden区容量已满时。
+Major GC - 主要垃圾回收，主要进行老年代的垃圾收集。
+Full GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回收。</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/featured.png" />
     </item>
     

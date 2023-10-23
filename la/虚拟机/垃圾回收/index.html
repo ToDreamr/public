@@ -74,7 +74,11 @@
 比如下面这个情况
 注意：
 同时，这个方法只能生效一次，躲得过初一躲不过十五
-分代收集机制: # 方法区使用永久代实现" />
+分代收集机制: # 方法区使用永久代实现
+垃圾收集也分为： Minor GC - 次要垃圾回收，主要进行新生代区域的垃圾收集。
+触发条件：新生代的Eden区容量已满时。
+Major GC - 主要垃圾回收，主要进行老年代的垃圾收集。
+Full GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回收。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/" /><meta property="og:image" content="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/featured.png"/><meta property="article:section" content="la" />
 <meta property="article:published_time" content="2023-10-12T23:51:04+08:00" />
@@ -91,7 +95,11 @@
 比如下面这个情况
 注意：
 同时，这个方法只能生效一次，躲得过初一躲不过十五
-分代收集机制: # 方法区使用永久代实现"/>
+分代收集机制: # 方法区使用永久代实现
+垃圾收集也分为： Minor GC - 次要垃圾回收，主要进行新生代区域的垃圾收集。
+触发条件：新生代的Eden区容量已满时。
+Major GC - 主要垃圾回收，主要进行老年代的垃圾收集。
+Full GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回收。"/>
 
   
   <script type="application/ld+json">
@@ -102,7 +110,7 @@
     "name": "垃圾回收机制",
     "headline": "垃圾回收机制",
     
-    "abstract": "垃圾回收机制 # 引用计数法 # 创建引用变量\n循环引用,当对象成为null就没办法了\n可达性分析算法：\n最终判定过程，此过程可以最后挽留对象\n重写finalize方法，最后可以救赎被gc的对象\n比如下面这个情况\n注意：\n同时，这个方法只能生效一次，躲得过初一躲不过十五\n分代收集机制: # 方法区使用永久代实现",
+    "abstract": "垃圾回收机制 # 引用计数法 # 创建引用变量\n循环引用,当对象成为null就没办法了\n可达性分析算法：\n最终判定过程，此过程可以最后挽留对象\n重写finalize方法，最后可以救赎被gc的对象\n比如下面这个情况\n注意：\n同时，这个方法只能生效一次，躲得过初一躲不过十五\n分代收集机制: # 方法区使用永久代实现\n垃圾收集也分为： Minor GC - 次要垃圾回收，主要进行新生代区域的垃圾收集。\n触发条件：新生代的Eden区容量已满时。\nMajor GC - 主要垃圾回收，主要进行老年代的垃圾收集。\nFull GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回收。",
     "inLanguage": "en",
     "url" : "\/la\/%E8%99%9A%E6%8B%9F%E6%9C%BA\/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6\/",
     "author" : {
@@ -118,7 +126,7 @@
     "keywords": ["虚拟机"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "15"
+    "wordCount": "39"
   }]
   </script>
 
@@ -813,7 +821,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>15 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-12 23:51:04 &#43;0800 CST">12 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>39 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_la\虚拟机\垃圾回收\index.md" title="likes">0</span> 
     
@@ -1281,16 +1289,91 @@
 
 </p>
 <p>方法区使用永久代实现</p>
+<p>
 
 
 
 
-<div>
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=75
-            src="//music.163.com/outchain/player?type=2&id=65800&auto=-0&height=66" >
-    </iframe>
-</div>
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="../img_9.png" alt="img_9.png" />
+      
+    </figure>
+  
 
+</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_hu1677ffedf42e34b9c678ffe2f7642a4d_281469_330x0_resize_box_3.png 330w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_hu1677ffedf42e34b9c678ffe2f7642a4d_281469_660x0_resize_box_3.png 660w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_hu1677ffedf42e34b9c678ffe2f7642a4d_281469_1024x0_resize_box_3.png 1024w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_hu1677ffedf42e34b9c678ffe2f7642a4d_281469_1320x0_resize_box_3.png 2x"
+        src="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_hu1677ffedf42e34b9c678ffe2f7642a4d_281469_660x0_resize_box_3.png"
+        alt="img.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<blockquote>
+<p>垃圾收集也分为：
+Minor GC - 次要垃圾回收，主要进行新生代区域的垃圾收集。</p>
+<p>触发条件：新生代的Eden区容量已满时。</p>
+<p>Major GC - 主要垃圾回收，主要进行老年代的垃圾收集。</p>
+<p>Full GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回收。</p>
+<p>触发条件1：每次晋升到老年代的对象平均大小大于老年代剩余空间</p>
+<p>触发条件2：Minor GC后存活的对象超过了老年代剩余空间</p>
+<p>触发条件3：永久代内存不足（JDK8之前）</p>
+<p>触发条件4：手动调用System.gc()方法</p>
+</blockquote>
+<p>打印GC日志</p>
+<p>VM选项: -XX:PrintGCDetails</p>
+<p>Minor GC流程</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_1_hu13232075dac5b38551e7e4ef4815f47a_788498_330x0_resize_box_3.png 330w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_1_hu13232075dac5b38551e7e4ef4815f47a_788498_660x0_resize_box_3.png 660w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_1_hu13232075dac5b38551e7e4ef4815f47a_788498_1024x0_resize_box_3.png 1024w,
+        /la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_1_hu13232075dac5b38551e7e4ef4815f47a_788498_1320x0_resize_box_3.png 2x"
+        src="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/img_1_hu13232075dac5b38551e7e4ef4815f47a_788498_660x0_resize_box_3.png"
+        alt="img_1.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
 
         </div>
                 
