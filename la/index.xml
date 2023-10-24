@@ -7,7 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 15:55:16 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Oct 2023 13:58:54 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类加载</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</link>
+      <pubDate>Tue, 24 Oct 2023 13:58:54 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
+      <description>CAFE BABE -&amp;gt;表示这是一个.class文件</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
+    </item>
+    
+    <item>
+      <title>元空间和引用方式</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Tue, 24 Oct 2023 13:28:04 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/</guid>
+      <description>引用类型 # 强引用：new Object(); # JVM不会随意回收强引用对象
+相反，将会尝试回收软引用
+软引用： # SoftReference&amp;lt;Object&amp;gt; soft=new SoftReference(); 设置内存大小：-Xms -Xmx
+ReferenceQueue&amp;lt;Object&amp;gt; queue = new ReferenceQueue&amp;lt;&amp;gt;(); SoftReference&amp;lt;Object&amp;gt; reference = new SoftReference&amp;lt;&amp;gt;(new Object(), queue); System.out.println(reference); try{ List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); while (true) list.</description>
+      
+    </item>
+    
     <item>
       <title>Latex语法</title>
       <link>/la/latex/</link>

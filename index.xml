@@ -7,7 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 15:55:16 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Oct 2023 13:58:54 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>类加载</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</link>
+      <pubDate>Tue, 24 Oct 2023 13:58:54 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
+      <description>CAFE BABE -&amp;gt;表示这是一个.class文件</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
+    </item>
+    
+    <item>
+      <title>元空间和引用方式</title>
+      <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Tue, 24 Oct 2023 13:28:04 +0800</pubDate>
+      
+      <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/</guid>
+      <description>引用类型 # 强引用：new Object(); # JVM不会随意回收强引用对象
+相反，将会尝试回收软引用
+软引用： # SoftReference&amp;lt;Object&amp;gt; soft=new SoftReference(); 设置内存大小：-Xms -Xmx
+ReferenceQueue&amp;lt;Object&amp;gt; queue = new ReferenceQueue&amp;lt;&amp;gt;(); SoftReference&amp;lt;Object&amp;gt; reference = new SoftReference&amp;lt;&amp;gt;(new Object(), queue); System.out.println(reference); try{ List&amp;lt;String&amp;gt; list = new ArrayList&amp;lt;&amp;gt;(); while (true) list.</description>
+      
+    </item>
+    
     <item>
       <title>Latex语法</title>
       <link>/la/latex/</link>
@@ -264,7 +287,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机垃圾回收机制12 October 2023&amp;middot;39 字&amp;middot;1 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;39 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;13 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
+      <description>类加载24 October 2023&amp;middot;3 字&amp;middot;1 分钟&amp;middot;0 虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;39 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;13 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
