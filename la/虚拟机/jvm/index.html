@@ -1541,18 +1541,16 @@ System.out.println(sum(1,2));
 <p>面试题：String的常量池，常量池优化</p>
 </blockquote>
 <blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"></code></pre></div></blockquote>
-<p>String a=&ldquo;I am a student&rdquo;;
-//        String b=&ldquo;I am a student&rdquo;;
-//        String a=new String(&ldquo;I am a student&rdquo;);
-//        String b=new String(&ldquo;I am a student&rdquo;);
-String a=new String(&ldquo;I am &ldquo;)+new String(&ldquo;a student&rdquo;);
-String b=new String(&ldquo;I am &ldquo;)+new String(&ldquo;a student&rdquo;);
-System.out.println(a.intern()==b.intern());
-System.out.println(a.equals(b));</p>
-<blockquote>
-<pre tabindex="0"><code></code></pre></blockquote>
-<div id="new方式" class="anchor"></div>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-latex" data-lang="latex"><span class="line"><span class="cl">String a=&#34;I am a student&#34;;
+</span></span><span class="line"><span class="cl">//        String b=&#34;I am a student&#34;;
+</span></span><span class="line"><span class="cl">//        String a=new String(&#34;I am a student&#34;);
+</span></span><span class="line"><span class="cl">//        String b=new String(&#34;I am a student&#34;);
+</span></span><span class="line"><span class="cl">String a=new String(&#34;I am &#34;)+new String(&#34;a student&#34;);
+</span></span><span class="line"><span class="cl">String b=new String(&#34;I am &#34;)+new String(&#34;a student&#34;);
+</span></span><span class="line"><span class="cl">System.out.println(a.intern()==b.intern());
+</span></span><span class="line"><span class="cl">System.out.println(a.equals(b));
+</span></span></code></pre></div><div id="new方式" class="anchor"></div>
 <h4 class="relative group">new方式 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">

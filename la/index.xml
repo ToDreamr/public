@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Tue, 24 Oct 2023 13:58:54 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Oct 2023 18:23:23 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>面试题</title>
+      <link>/la/%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Wed, 25 Oct 2023 18:23:23 +0800</pubDate>
+      
+      <guid>/la/%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>题目 # 难点：合并
+解决方法：
+实体类：
+package com.atguigu; import lombok.AllArgsConstructor; import lombok.Data; /** * com.atguigu.ItemDO * * @author 春江花朝秋月夜 * @since 2023/10/25 14:45 */ @Data @AllArgsConstructor public class ItemDO { int id;//10011 int type;//具体不确定 double score;//[0，1000] @Override public String toString() { return &amp;#34;ItemDO{&amp;#34; + &amp;#34;id=&amp;#34; + id + &amp;#34;, type=&amp;#34; + type + &amp;#34;, score=&amp;#34; + score + &amp;#39;\n&amp;#39;+ &amp;#39;}&amp;#39;; } } 方法：</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E9%9D%A2%E8%AF%95%E9%A2%98/featured.png" />
+    </item>
+    
     <item>
       <title>类加载</title>
       <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</link>
