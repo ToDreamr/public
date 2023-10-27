@@ -22,12 +22,27 @@ package com.atguigu; import lombok.AllArgsConstructor; import lombok.Data; /** *
     </item>
     
     <item>
+      <title>C&#43;&#43;基本认识</title>
+      <link>/la/c&#43;&#43;/</link>
+      <pubDate>Tue, 24 Oct 2023 13:58:54 +0800</pubDate>
+      
+      <guid>/la/c&#43;&#43;/</guid>
+      <description>C++实现数据结构和初步的认识 # 鉴于未来数据结构和算法的实现我想通过C++来实现，现在简要总结下C++的常用方法和数据结构类型
+头文件和方法声明 # 等同于C语言
+标准输入输出函数 # std::cout &amp;lt;&amp;lt; &amp;#34;Hello, World!&amp;#34; &amp;lt;&amp;lt; std::endl; 引入 using namespace std;这可以避免函数要不断的添加前缀
+using namespace std; ... int input; cout&amp;lt;&amp;lt;&amp;#34;Hello world&amp;#34;&amp;lt;&amp;lt;endl;//输出函数 cin&amp;gt;&amp;gt;input; printf(&amp;#34;%d&amp;#34;,input); ... 传递函数的不同方式 # const修饰指针 # 修饰常量 修饰指针 修饰常量和指针 int main() { int a = 10; int b = 10; //const修饰的是指针，指针指向可以改，指针指向的值不可以更改 const int * p1 = &amp;amp;a; p1 = &amp;amp;b; //正确 //*p1 = 100; 报错 //const修饰的是常量，指针指向不可以改，指针指向的值可以更改 int * const p2 = &amp;amp;a; //p2 = &amp;amp;b; //错误 *p2 = 100; //正确 //const既修饰指针又修饰常量 const int * const p3 = &amp;amp;a; //p3 = &amp;amp;b; //错误 //*p3 = 100; //错误 system(&amp;#34;pause&amp;#34;); return 0; } 空指针和野指针 # NUll Point # int main() { //指针变量p指向内存地址编号为0的空间 int * p = NULL; //访问空指针报错 //内存编号0 ~255为系统占用内存，不允许用户访问 cout &amp;lt;&amp;lt; *p &amp;lt;&amp;lt; endl; system(&amp;#34;pause&amp;#34;); return 0; } Wild Point # int main() { //指针变量p指向内存地址编号为0x1100的空间 int * p = (int *)0x1100; //访问野指针报错 cout &amp;lt;&amp;lt; *p &amp;lt;&amp;lt; endl; system(&amp;#34;pause&amp;#34;); return 0; } 数组作为函数展示： # void array_print(int arr[],int len){ for (int i = 0; i &amp;lt; len; ++i) { cout&amp;lt;&amp;lt;arr[i]&amp;lt;&amp;lt;endl; } } void bubble_sort_(int * arr,int len){ for (int i = 0; i &amp;lt; len; ++i) { for (int j = i; j &amp;lt; len; ++j) { if (arr[i]&amp;gt;=arr[j]){ int tmp=arr[j]; arr[j]=arr[i]; arr[i]=tmp; } } } } int main(){ int arr[]={10,2,4,4,3,5,9,1,3}; bubble_sort_(arr,8); array_print(arr,8); } 当数组名传入到函数作为参数时，被退化为指向首元素的指针</description>
+      
+    </item>
+    
+    <item>
       <title>类加载</title>
       <link>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</link>
       <pubDate>Tue, 24 Oct 2023 13:58:54 +0800</pubDate>
       
       <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
-      <description>CAFE BABE -&amp;gt;表示这是一个.class文件</description>
+      <description>CAFE BABE -&amp;gt;表示这是一个.class文件
+类加载机制 # 类加载的条件：
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
     </item>
     
@@ -300,7 +315,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>面试题25 October 2023&amp;middot;173 字&amp;middot;1 分钟&amp;middot;0 面试题类加载24 October 2023&amp;middot;3 字&amp;middot;1 分钟&amp;middot;0 虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;67 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;17 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
+      <description>面试题25 October 2023&amp;middot;173 字&amp;middot;1 分钟&amp;middot;0 面试题C++基本认识24 October 2023&amp;middot;601 字&amp;middot;3 分钟&amp;middot;0 C&amp;#43;&amp;#43;类加载24 October 2023&amp;middot;11 字&amp;middot;1 分钟&amp;middot;0 虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言学习计划10 October 2023&amp;middot;67 字&amp;middot;1 分钟&amp;middot;0 规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 并发编程Hello7 October 2023&amp;middot;17 字&amp;middot;1 分钟&amp;middot;0 friend如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 post例子1 January 0001&amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     

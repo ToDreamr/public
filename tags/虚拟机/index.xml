@@ -14,7 +14,9 @@
       <pubDate>Tue, 24 Oct 2023 13:58:54 +0800</pubDate>
       
       <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
-      <description>CAFE BABE -&amp;gt;表示这是一个.class文件</description>
+      <description>CAFE BABE -&amp;gt;表示这是一个.class文件
+类加载机制 # 类加载的条件：
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
     </item>
     

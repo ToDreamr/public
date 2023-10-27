@@ -66,7 +66,9 @@
   
   
   <meta property="og:title" content="类加载" />
-<meta property="og:description" content="CAFE BABE -&gt;表示这是一个.class文件" />
+<meta property="og:description" content="CAFE BABE -&gt;表示这是一个.class文件
+类加载机制 # 类加载的条件：
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" /><meta property="og:image" content="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png"/><meta property="article:section" content="la" />
 <meta property="article:published_time" content="2023-10-24T13:58:54+08:00" />
@@ -75,7 +77,9 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png"/>
 <meta name="twitter:title" content="类加载"/>
-<meta name="twitter:description" content="CAFE BABE -&gt;表示这是一个.class文件"/>
+<meta name="twitter:description" content="CAFE BABE -&gt;表示这是一个.class文件
+类加载机制 # 类加载的条件：
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 "/>
 
   
   <script type="application/ld+json">
@@ -86,7 +90,7 @@
     "name": "类加载",
     "headline": "类加载",
     
-    "abstract": "CAFE BABE -\u0026gt;表示这是一个.class文件",
+    "abstract": "CAFE BABE -\u0026gt;表示这是一个.class文件\n类加载机制 # 类加载的条件：\n使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 ",
     "inLanguage": "en",
     "url" : "\/la\/%E8%99%9A%E6%8B%9F%E6%9C%BA\/%E7%B1%BB%E5%8A%A0%E8%BD%BD\/",
     "author" : {
@@ -102,7 +106,7 @@
     "keywords": ["虚拟机"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "3"
+    "wordCount": "11"
   }]
   </script>
 
@@ -800,7 +804,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>3 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>11 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_la\虚拟机\类加载\index.md" title="likes">0</span> 
     
@@ -1062,7 +1066,89 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
     
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#类加载机制">类加载机制</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#类加载机制">类加载机制</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -1099,6 +1185,22 @@
   
 
 </p>
+<div id="类加载机制" class="anchor"></div>
+<h3 class="relative group">类加载机制 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%b1%bb%e5%8a%a0%e8%bd%bd%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a></span>        
+    
+</h3>
+<p>类加载的条件：</p>
+<ul>
+<li>使用new关键字创建对象时</li>
+<li>使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的）</li>
+<li>使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的）</li>
+<li>加载一个类的子类时</li>
+<li>加载接口的实现类，且接口带有default的方法默认实现时</li>
+</ul>
 
         </div>
                 
@@ -1666,7 +1768,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/la/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+            <a class="flex group mr-3" href="/la/c&#43;&#43;/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1678,11 +1780,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >面试题</span
+                  >C++基本认识</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2023-10-25 18:23:23 &#43;0800 CST">25 October 2023</time>
+                    <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time>
                   
                 </span>
               </span>
