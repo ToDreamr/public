@@ -107,7 +107,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
     "keywords": ["C++"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "601"
+    "wordCount": "662"
   }]
   </script>
 
@@ -805,7 +805,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>601 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>662 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_la\C&#43;&#43;\index.md" title="likes">0</span> 
     
@@ -1107,7 +1107,12 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
             <li></li>
           </ul>
         </li>
-        <li><a href="#友元">友元</a></li>
+        <li><a href="#友元">友元</a>
+          <ul>
+            <li><a href="#运算符重载">运算符重载：</a></li>
+            <li><a href="#实现自己的数据类型">实现自己的数据类型</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1150,7 +1155,12 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
             <li></li>
           </ul>
         </li>
-        <li><a href="#友元">友元</a></li>
+        <li><a href="#友元">友元</a>
+          <ul>
+            <li><a href="#运算符重载">运算符重载：</a></li>
+            <li><a href="#实现自己的数据类型">实现自己的数据类型</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1731,6 +1741,64 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 </span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div id="运算符重载" class="anchor"></div>
+<h4 class="relative group">运算符重载： 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%bf%90%e7%ae%97%e7%ac%a6%e9%87%8d%e8%bd%bd" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>作用：<strong>实现对类变量的自定义运算方法</strong></p>
+<p>可实现重载的运算符：</p>
+<ul>
+<li>加号运算符</li>
+<li>左移运算符</li>
+<li>递增运算符</li>
+<li>赋值运算符</li>
+<li>关系运算符</li>
+<li>函数调用运算符</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="c1">//这里是表示对输出流里面的操作符实现重载
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">-</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span><span class="n">Person</span><span class="o">&amp;</span> <span class="n">p</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">&lt;&lt;</span><span class="s">&#34;通过友元实现对私有变量的访问&#34;</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">m_A</span><span class="o">&lt;&lt;</span><span class="n">p</span><span class="p">.</span><span class="n">m_B</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>表示的意义就是对符号进行了自定义</p>
+<p><strong>案例</strong></p>
+<div id="实现自己的数据类型" class="anchor"></div>
+<h4 class="relative group">实现自己的数据类型 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%ae%9e%e7%8e%b0%e8%87%aa%e5%b7%b1%e7%9a%84%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="err">雨山的整型数据</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">RainyInteger</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">friend</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">out</span><span class="p">,</span><span class="n">RainyInteger</span> <span class="n">rainyInteger</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">RainyInteger</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//初始化数据：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">this</span><span class="o">-&gt;</span><span class="n">rainy_num</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//前置++操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">RainyInteger</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">++</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rainy_num</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//后自增操作：???
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">RainyInteger</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">++</span><span class="p">(</span><span class="kt">int</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">RainyInteger</span> <span class="n">tmp</span><span class="o">=</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rainy_num</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span>  <span class="n">tmp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="kt">void</span> <span class="nf">speak</span><span class="p">(</span><span class="n">RainyInteger</span> <span class="o">*</span><span class="n">r</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">r</span><span class="o">-&gt;</span><span class="n">rainy_num</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">rainy_num</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span></code></pre></div>
         </div>
                 
