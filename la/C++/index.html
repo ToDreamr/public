@@ -9,11 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title> &middot; 春江花朝秋月夜</title>
-  <meta name="title" content=" &middot; 春江花朝秋月夜" />
+  <title>C&#43;&#43; &middot; 春江花朝秋月夜</title>
+  <meta name="title" content="C&#43;&#43; &middot; 春江花朝秋月夜" />
   
-  <meta name="description" content="我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，因为我基本很难记住我学过的东西。" />
-  
+  <meta name="description" content="鉴于未来数据结构和算法的实现我想通过C&#43;&#43;来实现，现在简要总结下C&#43;&#43;的常用方法和数据结构类型" />
+  <meta name="keywords" content="语言, " />
   
   
 
@@ -65,23 +65,17 @@
   
   
   
-  <meta property="og:title" content="" />
-<meta property="og:description" content="C&#43;&#43;实现数据结构和初步的认识 # 鉴于未来数据结构和算法的实现我想通过C&#43;&#43;来实现，现在简要总结下C&#43;&#43;的常用方法和数据结构类型
-头文件和方法声明 # 等同于C语言
-标准输入输出函数 # std::cout &lt;&lt; &#34;Hello, World!&#34; &lt;&lt; std::endl; 引入 using namespace std;这可以避免函数要不断的添加前缀
-using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;endl;//输出函数 cin&gt;&gt;input; printf(&#34;%d&#34;,input); ... 传递函数的不同方式 # const修饰指针 # 修饰常量 修饰指针 修饰常量和指针 int main() { int a = 10; int b = 10; //const修饰的是指针，指针指向可以改，指针指向的值不可以更改 const int * p1 = &amp;a; p1 = &amp;b; //正确 //*p1 = 100; 报错 //const修饰的是常量，指针指向不可以改，指针指向的值可以更改 int * const p2 = &amp;a; //p2 = &amp;b; //错误 *p2 = 100; //正确 //const既修饰指针又修饰常量 const int * const p3 = &amp;a; //p3 = &amp;b; //错误 //*p3 = 100; //错误 system(&#34;pause&#34;); return 0; } 空指针和野指针 # NUll Point # int main() { //指针变量p指向内存地址编号为0的空间 int * p = NULL; //访问空指针报错 //内存编号0 ~255为系统占用内存，不允许用户访问 cout &lt;&lt; *p &lt;&lt; endl; system(&#34;pause&#34;); return 0; } Wild Point # int main() { //指针变量p指向内存地址编号为0x1100的空间 int * p = (int *)0x1100; //访问野指针报错 cout &lt;&lt; *p &lt;&lt; endl; system(&#34;pause&#34;); return 0; } 数组作为函数展示： # void array_print(int arr[],int len){ for (int i = 0; i &lt; len; &#43;&#43;i) { cout&lt;&lt;arr[i]&lt;&lt;endl; } } void bubble_sort_(int * arr,int len){ for (int i = 0; i &lt; len; &#43;&#43;i) { for (int j = i; j &lt; len; &#43;&#43;j) { if (arr[i]&gt;=arr[j]){ int tmp=arr[j]; arr[j]=arr[i]; arr[i]=tmp; } } } } int main(){ int arr[]={10,2,4,4,3,5,9,1,3}; bubble_sort_(arr,8); array_print(arr,8); } 当数组名传入到函数作为参数时，被退化为指向首元素的指针" />
+  <meta property="og:title" content="C&#43;&#43;" />
+<meta property="og:description" content="鉴于未来数据结构和算法的实现我想通过C&#43;&#43;来实现，现在简要总结下C&#43;&#43;的常用方法和数据结构类型" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/la/c&#43;&#43;/" /><meta property="article:section" content="la" />
-
-
+<meta property="article:published_time" content="2023-10-27T20:52:20+08:00" />
+<meta property="article:modified_time" content="2023-10-27T20:52:20+08:00" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="C&#43;&#43;实现数据结构和初步的认识 # 鉴于未来数据结构和算法的实现我想通过C&#43;&#43;来实现，现在简要总结下C&#43;&#43;的常用方法和数据结构类型
-头文件和方法声明 # 等同于C语言
-标准输入输出函数 # std::cout &lt;&lt; &#34;Hello, World!&#34; &lt;&lt; std::endl; 引入 using namespace std;这可以避免函数要不断的添加前缀
-using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;endl;//输出函数 cin&gt;&gt;input; printf(&#34;%d&#34;,input); ... 传递函数的不同方式 # const修饰指针 # 修饰常量 修饰指针 修饰常量和指针 int main() { int a = 10; int b = 10; //const修饰的是指针，指针指向可以改，指针指向的值不可以更改 const int * p1 = &amp;a; p1 = &amp;b; //正确 //*p1 = 100; 报错 //const修饰的是常量，指针指向不可以改，指针指向的值可以更改 int * const p2 = &amp;a; //p2 = &amp;b; //错误 *p2 = 100; //正确 //const既修饰指针又修饰常量 const int * const p3 = &amp;a; //p3 = &amp;b; //错误 //*p3 = 100; //错误 system(&#34;pause&#34;); return 0; } 空指针和野指针 # NUll Point # int main() { //指针变量p指向内存地址编号为0的空间 int * p = NULL; //访问空指针报错 //内存编号0 ~255为系统占用内存，不允许用户访问 cout &lt;&lt; *p &lt;&lt; endl; system(&#34;pause&#34;); return 0; } Wild Point # int main() { //指针变量p指向内存地址编号为0x1100的空间 int * p = (int *)0x1100; //访问野指针报错 cout &lt;&lt; *p &lt;&lt; endl; system(&#34;pause&#34;); return 0; } 数组作为函数展示： # void array_print(int arr[],int len){ for (int i = 0; i &lt; len; &#43;&#43;i) { cout&lt;&lt;arr[i]&lt;&lt;endl; } } void bubble_sort_(int * arr,int len){ for (int i = 0; i &lt; len; &#43;&#43;i) { for (int j = i; j &lt; len; &#43;&#43;j) { if (arr[i]&gt;=arr[j]){ int tmp=arr[j]; arr[j]=arr[i]; arr[i]=tmp; } } } } int main(){ int arr[]={10,2,4,4,3,5,9,1,3}; bubble_sort_(arr,8); array_print(arr,8); } 当数组名传入到函数作为参数时，被退化为指向首元素的指针"/>
+<meta name="twitter:title" content="C&#43;&#43;"/>
+<meta name="twitter:description" content="鉴于未来数据结构和算法的实现我想通过C&#43;&#43;来实现，现在简要总结下C&#43;&#43;的常用方法和数据结构类型"/>
 
   
   <script type="application/ld+json">
@@ -89,9 +83,9 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Las",
-    "name": "",
-    "headline": "",
-    
+    "name": "C\u002b\u002b",
+    "headline": "C\u002b\u002b",
+    "description": "鉴于未来数据结构和算法的实现我想通过C\u002b\u002b来实现，现在简要总结下C\u002b\u002b的常用方法和数据结构类型",
     "abstract": "C\u002b\u002b实现数据结构和初步的认识 # 鉴于未来数据结构和算法的实现我想通过C\u002b\u002b来实现，现在简要总结下C\u002b\u002b的常用方法和数据结构类型\n头文件和方法声明 # 等同于C语言\n标准输入输出函数 # std::cout \u0026lt;\u0026lt; \u0026#34;Hello, World!\u0026#34; \u0026lt;\u0026lt; std::endl; 引入 using namespace std;这可以避免函数要不断的添加前缀\nusing namespace std; ... int input; cout\u0026lt;\u0026lt;\u0026#34;Hello world\u0026#34;\u0026lt;\u0026lt;endl;\/\/输出函数 cin\u0026gt;\u0026gt;input; printf(\u0026#34;%d\u0026#34;,input); ... 传递函数的不同方式 # const修饰指针 # 修饰常量 修饰指针 修饰常量和指针 int main() { int a = 10; int b = 10; \/\/const修饰的是指针，指针指向可以改，指针指向的值不可以更改 const int * p1 = \u0026amp;a; p1 = \u0026amp;b; \/\/正确 \/\/*p1 = 100; 报错 \/\/const修饰的是常量，指针指向不可以改，指针指向的值可以更改 int * const p2 = \u0026amp;a; \/\/p2 = \u0026amp;b; \/\/错误 *p2 = 100; \/\/正确 \/\/const既修饰指针又修饰常量 const int * const p3 = \u0026amp;a; \/\/p3 = \u0026amp;b; \/\/错误 \/\/*p3 = 100; \/\/错误 system(\u0026#34;pause\u0026#34;); return 0; } 空指针和野指针 # NUll Point # int main() { \/\/指针变量p指向内存地址编号为0的空间 int * p = NULL; \/\/访问空指针报错 \/\/内存编号0 ~255为系统占用内存，不允许用户访问 cout \u0026lt;\u0026lt; *p \u0026lt;\u0026lt; endl; system(\u0026#34;pause\u0026#34;); return 0; } Wild Point # int main() { \/\/指针变量p指向内存地址编号为0x1100的空间 int * p = (int *)0x1100; \/\/访问野指针报错 cout \u0026lt;\u0026lt; *p \u0026lt;\u0026lt; endl; system(\u0026#34;pause\u0026#34;); return 0; } 数组作为函数展示： # void array_print(int arr[],int len){ for (int i = 0; i \u0026lt; len; \u002b\u002bi) { cout\u0026lt;\u0026lt;arr[i]\u0026lt;\u0026lt;endl; } } void bubble_sort_(int * arr,int len){ for (int i = 0; i \u0026lt; len; \u002b\u002bi) { for (int j = i; j \u0026lt; len; \u002b\u002bj) { if (arr[i]\u0026gt;=arr[j]){ int tmp=arr[j]; arr[j]=arr[i]; arr[i]=tmp; } } } } int main(){ int arr[]={10,2,4,4,3,5,9,1,3}; bubble_sort_(arr,8); array_print(arr,8); } 当数组名传入到函数作为参数时，被退化为指向首元素的指针",
     "inLanguage": "en",
     "url" : "\/la\/c\u002b\u002b\/",
@@ -99,16 +93,16 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       "@type": "Person",
       "name": "春江花朝秋月夜"
     },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-10-27T20:52:20\u002b08:00",
+    "datePublished": "2023-10-27T20:52:20\u002b08:00",
     
+    "dateModified": "2023-10-27T20:52:20\u002b08:00",
     
-    
-    
-    
-    
-    
+    "keywords": ["语言"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "828"
+    "wordCount": "1127"
   }]
   </script>
 
@@ -748,7 +742,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
       href="/la/c&#43;&#43;/"
-      >la</a
+      >C&#43;&#43;</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -757,7 +751,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      
+      C++
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -806,7 +800,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>828 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2023-10-27 20:52:20 &#43;0800 CST">27 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>1127 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
     
     <span id="likes_la\C&#43;&#43;\index.md" title="likes">0</span> 
     
@@ -891,6 +885,16 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
   
   
   
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%AD%E8%A8%80/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    语言
+  </span>
+</span>
+
+  </span>
   
   
   
@@ -900,6 +904,22 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
   
   
   
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%AF%AD%E8%A8%80/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    语言
+  </span>
+</span>
+
+  </span>
   
   
   
@@ -1107,6 +1127,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
           <ul>
             <li><a href="#运算符重载">运算符重载：</a></li>
             <li><a href="#实现自己的数据类型">实现自己的数据类型</a></li>
+            <li><a href="#内联函数inline">内联函数inline</a></li>
           </ul>
         </li>
         <li><a href="#继承">继承</a>
@@ -1114,7 +1135,21 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
             <li><a href="#构造和析构顺序">构造和析构顺序：</a></li>
             <li><a href="#菱形继承问题">菱形继承问题</a></li>
             <li><a href="#继承之后子类获得了什么">继承之后子类获得了什么？</a></li>
+            <li><a href="#多态">多态</a></li>
             <li><a href="#虚函数和纯虚析构">虚函数和纯虚析构</a></li>
+            <li><a href="#虚函数的前提">虚函数的前提：</a></li>
+            <li><a href="#虚析构函数">虚析构函数</a></li>
+            <li><a href="#纯虚函数">纯虚函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#c模板">C++模板</a>
+          <ul>
+            <li><a href="#函数模板">函数模板</a></li>
+          </ul>
+        </li>
+        <li><a href="#stl基本认识">STL基本认识</a>
+          <ul>
+            <li><a href="#常见的容器">常见的容器</a></li>
           </ul>
         </li>
       </ul>
@@ -1170,6 +1205,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
           <ul>
             <li><a href="#运算符重载">运算符重载：</a></li>
             <li><a href="#实现自己的数据类型">实现自己的数据类型</a></li>
+            <li><a href="#内联函数inline">内联函数inline</a></li>
           </ul>
         </li>
         <li><a href="#继承">继承</a>
@@ -1177,7 +1213,21 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
             <li><a href="#构造和析构顺序">构造和析构顺序：</a></li>
             <li><a href="#菱形继承问题">菱形继承问题</a></li>
             <li><a href="#继承之后子类获得了什么">继承之后子类获得了什么？</a></li>
+            <li><a href="#多态">多态</a></li>
             <li><a href="#虚函数和纯虚析构">虚函数和纯虚析构</a></li>
+            <li><a href="#虚函数的前提">虚函数的前提：</a></li>
+            <li><a href="#虚析构函数">虚析构函数</a></li>
+            <li><a href="#纯虚函数">纯虚函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#c模板">C++模板</a>
+          <ul>
+            <li><a href="#函数模板">函数模板</a></li>
+          </ul>
+        </li>
+        <li><a href="#stl基本认识">STL基本认识</a>
+          <ul>
+            <li><a href="#常见的容器">常见的容器</a></li>
           </ul>
         </li>
       </ul>
@@ -1903,6 +1953,17 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 </span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">rainy_num</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><div id="内联函数inline" class="anchor"></div>
+<h4 class="relative group">内联函数inline 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%86%85%e8%81%94%e5%87%bd%e6%95%b0inline" aria-label="锚点">#</a></span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"> <span class="kr">inline</span> <span class="kt">int</span> <span class="nf">max</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
 </span></span></code></pre></div><div id="继承" class="anchor"></div>
 <h3 class="relative group">继承 
     <span
@@ -1991,12 +2052,262 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 <blockquote>
 <p>父类中私有成员也是被子类继承下去了，只是由编译器给隐藏后访问不到</p>
 </blockquote>
-<div id="虚函数和纯虚析构" class="anchor"></div>
+<div id="多态" class="anchor"></div>
+<h4 class="relative group">多态 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%a4%9a%e6%80%81" aria-label="锚点">#</a></span>        
+    
+</h4>
+<ul>
+<li>静态多态: 函数重载 和 运算符重载属于静态多态，复用函数名</li>
+<li>动态多态: 派生类和虚函数实现运行时多态</li>
+</ul>
+<p>区别：</p>
+<ul>
+<li>静态多态的函数地址早绑定 - 编译阶段确定函数地址</li>
+<li>动态多态的函数地址晚绑定 - 运行阶段确定函数地址</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Animal</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//Speak函数就是虚函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//函数前面加上virtual关键字，变成虚函数，那么编译器在编译的时候就不能确定函数调用了。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">speak</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;动物在说话&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Cat</span> <span class="o">:</span><span class="k">public</span> <span class="n">Animal</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="n">speak</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;小猫在说话&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Dog</span> <span class="o">:</span><span class="k">public</span> <span class="n">Animal</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="n">speak</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;小狗在说话&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//我们希望传入什么对象，那么就调用什么对象的函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">//如果函数地址在编译阶段就能确定，那么静态联编
+</span></span></span><span class="line"><span class="cl"><span class="c1">//如果函数地址在运行阶段才能确定，就是动态联编
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">DoSpeak</span><span class="p">(</span><span class="n">Animal</span> <span class="o">&amp;</span> <span class="n">animal</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">animal</span><span class="p">.</span><span class="n">speak</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1">//多态满足条件： 
+</span></span></span><span class="line"><span class="cl"><span class="c1">//1、有继承关系
+</span></span></span><span class="line"><span class="cl"><span class="c1">//2、子类重写父类中的虚函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">//多态使用：
+</span></span></span><span class="line"><span class="cl"><span class="c1">//父类指针或引用指向子类对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">test01</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Cat</span> <span class="n">cat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">DoSpeak</span><span class="p">(</span><span class="n">cat</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">Dog</span> <span class="n">dog</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">DoSpeak</span><span class="p">(</span><span class="n">dog</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">test01</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div id="虚函数和纯虚析构" class="anchor"></div>
 <h4 class="relative group">虚函数和纯虚析构 
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
             style="text-decoration-line: none !important;" href="#%e8%99%9a%e5%87%bd%e6%95%b0%e5%92%8c%e7%ba%af%e8%99%9a%e6%9e%90%e6%9e%84" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>在多态中，通常父类中虚函数的实现是毫无意义的，主要都是调用子类重写的内容</p>
+<p>因此可以将虚函数改为纯虚函数</p>
+<p>纯虚函数语法：virtual 返回值类型 函数名 （参数列表）= 0 ;</p>
+<p>当类中有了纯虚函数，这个类也称为==抽象类==</p>
+<div id="虚函数的前提" class="anchor"></div>
+<h4 class="relative group">虚函数的前提： 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%99%9a%e5%87%bd%e6%95%b0%e7%9a%84%e5%89%8d%e6%8f%90" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>-</p>
+<ul>
+<li>基类，派生类拥有原型相同的成员函数</li>
+<li>virtual关键字</li>
+</ul>
+<div id="虚析构函数" class="anchor"></div>
+<h4 class="relative group">虚析构函数 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e8%99%9a%e6%9e%90%e6%9e%84%e5%87%bd%e6%95%b0" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>-</p>
+<ul>
+<li>虚析构函数是为了解决基类指针指向派生类对象，并用基类的指针销毁派生类对象</li>
+</ul>
+<div id="纯虚函数" class="anchor"></div>
+<h4 class="relative group">纯虚函数 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e7%ba%af%e8%99%9a%e5%87%bd%e6%95%b0" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>多态使用时，如果子类中有属性开辟到堆区，那么父类指针在释放时无法调用到子类的析构代码</p>
+<p>解决方式：将父类中的析构函数改为虚析构或者纯虚析构</p>
+<p>虚析构和纯虚析构共性：</p>
+<p>可以解决父类指针释放子类对象
+都需要有具体的函数实现
+虚析构和纯虚析构区别：</p>
+<p>如果是纯虚析构，该类属于抽象类，无法实例化对象
+虚析构语法：</p>
+<p>virtual ~类名(){}</p>
+<p>纯虚析构语法：</p>
+<p>virtual ~类名() = 0;</p>
+<p>类名::~类名(){}</p>
+<p>-</p>
+<ul>
+<li>纯虚函数没有函数体，其作用实在基类中为派生类保留一个函数接口，方便派生类根据需要对它实现，实现多态。</li>
+</ul>
+<p>函数的可变长参数：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="n">flaot</span> <span class="nf">avg</span><span class="p">(</span><span class="kt">int</span> <span class="n">size</span><span class="p">,...){</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div id="c模板" class="anchor"></div>
+<h3 class="relative group">C++模板 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#c%e6%a8%a1%e6%9d%bf" aria-label="锚点">#</a></span>        
+    
+</h3>
+<div id="函数模板" class="anchor"></div>
+<h4 class="relative group">函数模板 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%87%bd%e6%95%b0%e6%a8%a1%e6%9d%bf" aria-label="锚点">#</a></span>        
+    
+</h4>
+<p>建立一个通用函数，其函数返回值类型和形参类型可以不具体制定，用一个虚拟的类型来代表。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">函数声明或定义</span>
+</span></span></code></pre></div><p>template — 声明创建模板</p>
+<p>typename — 表面其后面的符号是一种数据类型，可以用class代替</p>
+<p>T — 通用的数据类型，名称可以替换，通常为大写字母</p>
+<p>看起来和java里面的泛型比较像</p>
+<p>注意事项：</p>
+<ul>
+<li>自动类型推导，必须推导出一致的数据类型T,才可以使用</li>
+<li>模板必须要确定出T的数据类型，才可以使用</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//1、指定传入的类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">printPerson1</span><span class="p">(</span><span class="n">Person</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">p</span><span class="p">.</span><span class="n">showPerson</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">test01</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Person</span> <span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span><span class="n">p</span><span class="p">(</span><span class="s">&#34;孙悟空&#34;</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">printPerson1</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>类模板成员类外实现：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//类模板中成员函数类外实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T1</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T2</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//成员函数类内声明
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Person</span><span class="p">(</span><span class="n">T1</span> <span class="n">name</span><span class="p">,</span> <span class="n">T2</span> <span class="n">age</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">showPerson</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">T1</span> <span class="n">m_Name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">T2</span> <span class="n">m_Age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//构造函数 类外实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T1</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T2</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Person</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;::</span><span class="n">Person</span><span class="p">(</span><span class="n">T1</span> <span class="n">name</span><span class="p">,</span> <span class="n">T2</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">this</span><span class="o">-&gt;</span><span class="n">m_Name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">this</span><span class="o">-&gt;</span><span class="n">m_Age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//成员函数 类外实现
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T1</span><span class="p">,</span> <span class="k">class</span> <span class="nc">T2</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">Person</span><span class="o">&lt;</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="o">&gt;::</span><span class="n">showPerson</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;姓名: &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">m_Name</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; 年龄:&#34;</span> <span class="o">&lt;&lt;</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">m_Age</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div id="stl基本认识" class="anchor"></div>
+<h3 class="relative group">STL基本认识 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#stl%e5%9f%ba%e6%9c%ac%e8%ae%a4%e8%af%86" aria-label="锚点">#</a></span>        
+    
+</h3>
+<ul>
+<li>STL(Standard Template Library,标准模板库)</li>
+<li>STL 从广义上分为: 容器(container) 算法(algorithm) 迭代器(iterator)</li>
+<li>容器和算法之间通过迭代器进行无缝连接。</li>
+<li>STL 几乎所有的代码都采用了模板类或者模板函数</li>
+</ul>
+<p>STL大体分为六大组件，分别是:容器、算法、迭代器、仿函数、适配器（配接器）、空间配置器</p>
+<ul>
+<li>容器：各种数据结构，如vector、list、deque、set、map等,用来存放数据。</li>
+<li>算法：各种常用的算法，如sort、find、copy、for_each等</li>
+<li>迭代器：扮演了容器与算法之间的胶合剂。</li>
+<li>仿函数：行为类似函数，可作为算法的某种策略。</li>
+<li>适配器：一种用来修饰容器或者仿函数或迭代器接口的东西。</li>
+<li>空间配置器：负责空间的配置与管理。</li>
+</ul>
+<p>容器：置物之所也</p>
+<p>STL容器就是将运用最广泛的一些数据结构实现出来</p>
+<p>常用的数据结构：数组, 链表,树, 栈, 队列, 集合, 映射表 等</p>
+<p>这些容器分为序列式容器和关联式容器两种:</p>
+<p>序列式容器:强调值的排序，序列式容器中的每个元素均有固定的位置。
+关联式容器:二叉树结构，各元素之间没有严格的物理上的顺序关系</p>
+<p>算法：问题之解法也</p>
+<p>有限的步骤，解决逻辑或数学上的问题，这一门学科我们叫做算法(Algorithms)</p>
+<p>算法分为:质变算法和非质变算法。</p>
+<p>质变算法：是指运算过程中会更改区间内的元素的内容。例如拷贝，替换，删除等等</p>
+<p>非质变算法：是指运算过程中不会更改区间内的元素内容，例如查找、计数、遍历、寻找极值等等</p>
+<p>迭代器：容器和算法之间粘合剂</p>
+<p>提供一种方法，使之能够依序寻访某个容器所含的各个元素，而又无需暴露该容器的内部表示方式。</p>
+<p>每个容器都有自己专属的迭代器</p>
+<p>迭代器使用非常类似于指针，初学阶段我们可以先理解迭代器为指针</p>
+<div id="常见的容器" class="anchor"></div>
+<h4 class="relative group">常见的容器 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%e5%b8%b8%e8%a7%81%e7%9a%84%e5%ae%b9%e5%99%a8" aria-label="锚点">#</a></span>        
     
 </h4>
 <script src="https://giscus.app/client.js"
@@ -2027,7 +2338,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/la/c&#43;&#43;/&amp;title="
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/la/c&#43;&#43;/&amp;title=C&#43;&#43;"
       title="分享到 LinkedIn"
       aria-label="分享到 LinkedIn"
       >
@@ -2046,7 +2357,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=/la/c&#43;&#43;/&amp;text="
+      href="https://twitter.com/intent/tweet/?url=/la/c&#43;&#43;/&amp;text=C&#43;&#43;"
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
@@ -2065,7 +2376,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=/la/c&#43;&#43;/&amp;resubmit=true&amp;title="
+      href="https://t.me/share/url?url=/la/c&#43;&#43;/&amp;resubmit=true&amp;title=C&#43;&#43;"
       title=""
       aria-label=""
       >
@@ -2084,7 +2395,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.facebook.com/sharer/sharer.php?u=/la/c&#43;&#43;/&amp;quote="
+      href="https://www.facebook.com/sharer/sharer.php?u=/la/c&#43;&#43;/&amp;quote=C&#43;&#43;"
       title="分享到 Facebook"
       aria-label="分享到 Facebook"
       >
@@ -2103,7 +2414,7 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=/la/c&#43;&#43;/&amp;subject="
+      href="mailto:?body=/la/c&#43;&#43;/&amp;subject=C&#43;&#43;"
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
@@ -2125,6 +2436,476 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
 
         
 
+
+<h2 class="mt-8 text-2xl font-extrabold mb-10">相关文章</h2>
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  
+  
+
+  <a href="/la/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/la/%E9%9D%A2%E8%AF%95%E9%A2%98/featured_hudb063fd96b0863c8427eb25f55b23049_1428542_600x0_resize_box_3.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/la/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2023-10-25 18:23:23 &#43;0800 CST">25 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>173 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_la\面试题\index.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    面试题
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    面试题
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+  
+  
+
+  <a href="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured_hu0bd891bf399d5a7ed56fb586cf81d014_25628_600x0_resize_box_3.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/">类加载</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2023-10-24 13:58:54 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>11 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_la\虚拟机\类加载\index.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    虚拟机
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    虚拟机
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+  
+  
+
+  <a href="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative backdrop-blur">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/img/info/107706430_p0_hu46370d4ccd3481872546da16224d0daa_1972225_600x0_resize_box_3.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%85%83%E7%A9%BA%E9%97%B4/%E5%85%83%E7%A9%BA%E9%97%B4/">元空间和引用方式</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2023-10-24 13:28:04 &#43;0800 CST">24 October 2023</time><span class="px-2 text-primary-500">&middot;</span><span>72 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+    
+    <span id="likes_la\虚拟机\元空间\元空间.md" title="likes">0</span> 
+    
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path fill="currentColor" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+  </span>
+
+</span>
+</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    虚拟机
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    虚拟机
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+  
+</section>
 
   
       </div>
@@ -2153,30 +2934,30 @@ using namespace std; ... int input; cout&lt;&lt;&#34;Hello world&#34;&lt;&lt;end
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/la/post/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/la/%E9%9D%A2%E8%AF%95%E9%A2%98/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Hello Friend</span
+                  >面试题</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2003-10-03 00:00:00 &#43;0000 UTC">3 October 2003</time>
+                    <time datetime="2023-10-25 18:23:23 &#43;0800 CST">25 October 2023</time>
                   
                 </span>
               </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
             </a>
-          
-        </span>
-        <span>
           
         </span>
       </div>
