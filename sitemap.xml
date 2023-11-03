@@ -5,10 +5,32 @@
     
       <url>
             <loc>/</loc>
-            <lastmod>2023-10-27T20:52:20+08:00</lastmod>
+            <lastmod>2023-11-03T11:31:54+08:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
+    
+      <url>
+            <loc>/la/</loc>
+            <lastmod>2023-11-03T11:31:54+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>/la/%E4%BA%8B%E5%8A%A1/</loc>
+            <lastmod>2023-11-03T11:31:54+08:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
     
   
     
@@ -18,17 +40,6 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
-    
-      <url>
-            <loc>/la/</loc>
-            <lastmod>2023-10-27T20:52:20+08:00</lastmod>
-            <changefreq>always</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
     
   
     
