@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sat, 04 Nov 2023 11:31:54 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Nov 2023 17:06:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建图床</title>
+      <link>/la/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Sun, 05 Nov 2023 17:06:18 +0800</pubDate>
+      
+      <guid>/la/%E5%9B%BE%E5%BA%8A/</guid>
+      <description>通过GitHub+PicGo+CDN搭建自己的图床 # 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。 # CDN 是构建在数据网络上的一种分布式的内容分发网。 CDN 的作用是采用流媒体服务器集群技术，克服单机系统输出带宽及并发能力不足的缺点，可极大提升系统支持的并发流数目，减少或避免单点失效带来的不良影响。 # github搭建仓库 下载PicGO 配置CDN 搭建仓库 # 下载picGo
+配置CDN格式：</description>
+      
+    </item>
+    
     <item>
       <title>Vue3 响应式Api开发笔记</title>
       <link>/la/vue/</link>
@@ -346,7 +357,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Vue3 响应式Api开发笔记4 November 2023&amp;middot;317 字&amp;middot;2 分钟&amp;middot;0 vuevueSpring事务传播机制3 November 2023&amp;middot;108 字&amp;middot;1 分钟&amp;middot;0 springspringC++27 October 2023&amp;middot;1127 字&amp;middot;6 分钟&amp;middot;0 语言语言面试题25 October 2023&amp;middot;173 字&amp;middot;1 分钟&amp;middot;0 面试题面试题类加载24 October 2023&amp;middot;11 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexlatexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言硬件语言学习计划10 October 2023&amp;middot;67 字&amp;middot;1 分钟&amp;middot;0 规划规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 juc并发编程并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 juc并发编程并发编程Hello7 October 2023&amp;middot;19 字&amp;middot;1 分钟&amp;middot;0 朋友们朋友们如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complexcomplex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SEJava SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SEJava SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 postpost例子1 January 0001&amp;middot;0 </description>
+      <description>搭建图床5 November 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 云存储云存储Vue3 响应式Api开发笔记4 November 2023&amp;middot;317 字&amp;middot;2 分钟&amp;middot;0 vuevueSpring事务传播机制3 November 2023&amp;middot;108 字&amp;middot;1 分钟&amp;middot;0 springspringC++27 October 2023&amp;middot;1127 字&amp;middot;6 分钟&amp;middot;0 语言语言面试题25 October 2023&amp;middot;173 字&amp;middot;1 分钟&amp;middot;0 面试题面试题类加载24 October 2023&amp;middot;11 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexlatexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言硬件语言学习计划10 October 2023&amp;middot;67 字&amp;middot;1 分钟&amp;middot;0 规划规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 juc并发编程并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 juc并发编程并发编程Hello7 October 2023&amp;middot;19 字&amp;middot;1 分钟&amp;middot;0 朋友们朋友们如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complexcomplex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SEJava SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SEJava SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 postpost例子1 January 0001&amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
