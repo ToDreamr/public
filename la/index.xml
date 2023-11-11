@@ -7,16 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 17:06:18 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 10:52:20 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>搭建图床</title>
-      <link>/la/%E5%9B%BE%E5%BA%8A/</link>
-      <pubDate>Sun, 05 Nov 2023 17:06:18 +0800</pubDate>
+      <title>没备份笔记的后果</title>
+      <link>/la/%E9%9A%8F%E8%AE%B0/</link>
+      <pubDate>Sat, 11 Nov 2023 10:52:20 +0800</pubDate>
       
-      <guid>/la/%E5%9B%BE%E5%BA%8A/</guid>
-      <description>通过GitHub+PicGo+CDN搭建自己的图床 # 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。 # CDN 是构建在数据网络上的一种分布式的内容分发网。 CDN 的作用是采用流媒体服务器集群技术，克服单机系统输出带宽及并发能力不足的缺点，可极大提升系统支持的并发流数目，减少或避免单点失效带来的不良影响。 # github搭建仓库 下载PicGO 配置CDN 搭建仓库 # 下载picGo
-配置CDN格式：</description>
+      <guid>/la/%E9%9A%8F%E8%AE%B0/</guid>
+      <description>由于之前Vscode误删这个博客的笔记了，现在又要从仓库拉原来的笔记，实在是烦心。
+现在总算知道备份的重要性了。
+开科技也不行，github是真慢啊！！！又要先fetch再push了。。。。
+龟祖宗，好了没啊！！！</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E9%9A%8F%E8%AE%B0/featured.png" />
+    </item>
+    
+    <item>
+      <title>RabbitMq</title>
+      <link>/la/mq/</link>
+      <pubDate>Tue, 07 Nov 2023 20:52:20 +0800</pubDate>
       
+      <guid>/la/mq/</guid>
+      <description>认识RabbitMQ # 环境：ubangtu # 访问协议： amqp
+了解安装（反正也记不住）：
+sudo apt install erlang sudo apt install rabbitmq-server sudo rabbitmqctl status sudo rabbitmq-plugins enable rabbitmq_management sudo rabbitmqctl add_user 用户名 密码 sudo rabbitmqctl set_user_tags admin administrator 设计架构图：</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/mq/featured.png" />
     </item>
     
     <item>
@@ -36,17 +50,31 @@ vue3创建应用 # 实际案例 # 语法： const app = Vue.</description>
     </item>
     
     <item>
+      <title>搭建图床</title>
+      <link>/la/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 03 Nov 2023 22:43:25 +0800</pubDate>
+      
+      <guid>/la/%E5%9B%BE%E5%BA%8A/</guid>
+      <description>通过GitHub+PicGo+CDN搭建自己的图床 # 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有 空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、 多线空间和cdn加速三种。# CDN 是构建在数据网络上的一种分布式的内容分发网。 CDN 的作用是采用 流媒体服务器 集群技术，克服单机系统输出带宽及并发能力不足的缺点，可极大提升系统支持的 并发流数目，减少或避免 单点失效带来的不良影响。# github搭建仓库
+下载 PicGO 配置 CDN
+创建仓库 # PICGO # 配置加速</description>
+      
+    </item>
+    
+    <item>
       <title>Spring事务传播机制</title>
       <link>/la/%E4%BA%8B%E5%8A%A1/</link>
       <pubDate>Fri, 03 Nov 2023 11:31:54 +0800</pubDate>
       
       <guid>/la/%E4%BA%8B%E5%8A%A1/</guid>
-      <description>Spring事务传播机制： # 事务传播的定义： # 事务传播行为主要用来描述由某一个事务传播行为修饰的方法被嵌套进另一个方法的事务中，该 事务如何传播。这个概述可能不好理解，换句话就是当一个事务方法被另一个事务方法调用时，这个事务方法应该如何进行。
-spring中的事务级别 # REQUIRED # REQUIRED是Spring默认的传播机制。如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新事务。 REQUIRED传播机制最常用的情况是在一个事务 中进行多个操作，要么全部成功，要么全部失败。如果其中一个操作失败，整个事务都将被回滚。
-SUPPORTS # SUPPORTS传播机制表示当前方法如果在一个事务中被调用，则加入该事务； 否则，以非事务的方式运行。SUPPORTS传播机制适用于对事务要求不高的操作，例如读取操作。
-MANDATORY # MANDATORY传播机制表示当前方法必须在一个事务中被调用，否则将抛出异常。 MANDATORY传播机制适用于在需要事务的情况下调用方法。
-REQUIRES_NEW # REQUIRES_NEW传播机制表示当前方法必须开启一个新事务运行，如果当前存在事务，则挂起该事务。 REQUIRES_NEW传播机制适用于对事务要求较高的操作，例如更新操作。
-NOT_SUPPORTED # NOT_SUPPORTED传播机制表示当前方法不应该在事务中运行，如果存在事务，则挂起该事务。 NOT_SUPPORTED传播机制适用于对事务没有要求的操作，例如日志记录等。</description>
+      <description>Spring事务传播机制：# # 事务传播的定义：# # 事务传播行为主要用来描述由某一个事务传播行为修饰的方法被嵌套进另一个方法的事务中，该 事务如何传播。这个概述可能不好理解，换句话就是当一个事务方法被另一个事务方法调用时，这个事务方法应该如何进行。
+spring中的事务级别#
+REQUIRED# # REQUIRED是Spring默认的传播机制。如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新事务。 REQUIRED传播机制最常用的情况是在一个事务 中进行多个操作，要么全部成功，要么全部失败。如果其中一个操作失败，整个事务都将被回滚。
+SUPPORTS# # SUPPORTS传播机制表示当前方法如果在一个事务中被调用，则加入该事务； 否则，以非事务的方式运行。SUPPORTS传播机制适用于对事务要求不高的操作，例如读取操作。
+MANDATORY# # MANDATORY传播机制表示当前方法必须在一个事务中被调用，否则将抛出异常。 MANDATORY传播机制适用于在需要事务的情况下调用方法。
+REQUIRES_NEW# # REQUIRES_NEW传播机制表示当前方法必须开启一个新事务运行，如果当前存在事务，则挂起该事务。 REQUIRES_NEW传播机制适用于对事务要求较高的操作，例如更新操作。
+NOT_SUPPORTED# # NOT_SUPPORTED传播机制表示当前方法不应该在事务中运行，如果存在事务，则挂起该事务。 NOT_SUPPORTED传播机制适用于对事务没有要求的操作，例如日志记录等。
+NEVER# # NEVER传播机制表示当前方法不应该在事务中运行，如果存在事务，则抛出异常。 NEVER传播机制适用于禁止在事务中运行的操作，例如安全检查等。</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E4%BA%8B%E5%8A%A1/featured.png" />
     </item>
     
@@ -84,7 +112,10 @@ package com.atguigu; import lombok.AllArgsConstructor; import lombok.Data; /** *
       <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
       <description>CAFE BABE -&amp;gt;表示这是一个.class文件
 类加载机制 # 类加载的条件：
-使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 </description>
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 字节码指令 # 先返回结果再进行自增或者先自增再给出结果
+Asm字节码框架 # 劝退，还是算了。。。
+Spring实现的CGLib就是基于这个实现的。
+类加载机制 # </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
     </item>
     
@@ -183,6 +214,19 @@ CAS（无锁算法） # 显然，当cas失败的时候，说明有线程进入�
 锁消除和锁优化 # 代码块中有可能不会总是出现请求锁和释放锁的问题，（比如循环中加锁），此时锁为了优化出现锁消除和锁优化
 Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内存：虚拟机栈的部分，放入cpu的高速缓存里面。 自增操作不是由一个指令实现的！！！包括获取，修改和保存</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/java/%E5%B9%B6%E5%8F%91/featured.png" />
+    </item>
+    
+    <item>
+      <title>科学上网</title>
+      <link>/la/%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
+      
+      <guid>/la/%E6%9D%82%E8%AE%B0/</guid>
+      <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
+这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
+如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
+红色款（强烈推荐！！！）：这里我直接放上zip，因为国内无法下载，我已经提前翻墙下载好咯。 # 下好后： # 先复制下面的链接，然后点击ShadowssocksR-dotnet4.0.exe！！！！ # 首先准备好ssr链接。这个方法最简单。 # ssr://Y20xLWhrLmh1dGFvbm9kZTIudG9wOjEyNDA1OmF1dGhfYWVzMTI4X3 NoYTE6Y2hhY2hhMjAtaWV0ZjpodHRwX3NpbXBsZTpTSFZVWVc5RGJHOTFaQS8_b 2Jmc3BhcmFtPU16WmhNV0V6TWpVd05TNXRhV055YjNOdlpuUXVZMjl0JnByb3RvcGFyYW0 9TXpJMU1EVTZTSEF6VlVVNE5YTmhWMjl2UjFOTlJnJnJlbWFya3M9NmFhWjVyaXZJQzBnU1VWUVRDQXRJ Rk5UTDFOVFVpQXRJREExJmdyb3VwPTVhU0g1NVNvVVZIdnZKb3pORFF6T1RVMk5qRXk 这里我们选择用SSR,影梭的粉红色飞机。 出现飞机图标后，左键点击它！！！ 选择剪贴板导入SSR链接。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E6%9D%82%E8%AE%B0/featured.png" />
     </item>
     
     <item>

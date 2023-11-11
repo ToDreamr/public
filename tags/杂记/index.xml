@@ -7,31 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Tue, 03 Oct 2023 22:43:25 +0800</lastBuildDate><atom:link href="/tags/%E6%9D%82%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Oct 2023 23:44:01 +0800</lastBuildDate><atom:link href="/tags/%E6%9D%82%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>科学上网</title>
-      <link>/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
-      <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
+      <title>如何通过hugo搭建自己的博客</title>
+      <link>/%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>/all/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
-      <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
-这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
-如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
-红色款（强烈推荐！！！）：这里我直接放上zip，因为国内无法下载，我已经提前翻墙下载好咯。 # 下好后： # 先复制下面的链接，然后点击ShadowssocksR-dotnet4.0.exe！！！！ # 首先准备好ssr链接。这个方法最简单。 # ssr://Y20xLWhrLmh1dGFvbm9kZTIudG9wOjEyNDA1OmF1dGhfYWVzMTI4X3 NoYTE6Y2hhY2hhMjAtaWV0ZjpodHRwX3NpbXBsZTpTSFZVWVc5RGJHOTFaQS8_b 2Jmc3BhcmFtPU16WmhNV0V6TWpVd05TNXRhV055YjNOdlpuUXVZMjl0JnByb3RvcGFyYW0 9TXpJMU1EVTZTSEF6VlVVNE5YTmhWMjl2UjFOTlJnJnJlbWFya3M9NmFhWjVyaXZJQzBnU1VWUVRDQXRJ Rk5UTDFOVFVpQXRJREExJmdyb3VwPTVhU0g1NVNvVVZIdnZKb3pORFF6T1RVMk5qRXk 这里我们选择用SSR,影梭的粉红色飞机。 出现飞机图标后，左键点击它！！！ 选择剪贴板导入SSR链接。</description>
-      
+      <guid>/%E6%9D%82%E8%AE%B0/</guid>
+      <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
+一是：小棉尾巴
+事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
+如下就是大佬的博客（这个主题本来尝试用，后续发现比较花哨就不采用了）
+本人搭建的博客：
+第一步下载HuGo框架： # 以Windows为例：只需打开CMD执行下面这个命令
+winget install Hugo.Hugo.Extended 等待下载完成重启Shell命令窗口即可，Hugo将会自动配置环境变量。
+检查是否安装成功：
+hugo version 第二部创建Hugo博客项目 # 只需要在文件夹下面新建终端使用如下命令，hugo将会自动创建你的项目名称文件夹 ，同时弹出一个主题链接
+hugo new site +你的项目名称 现在你需要进入你的项目也就是命令： cd 你的项目名称</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/%E6%9D%82%E8%AE%B0/featured.jpg" />
     </item>
     
     <item>
       <title>科学上网</title>
-      <link>/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <link>/la/%E6%9D%82%E8%AE%B0/</link>
       <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
       
-      <guid>/java/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <guid>/la/%E6%9D%82%E8%AE%B0/</guid>
       <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
 这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
 如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
 红色款（强烈推荐！！！）：这里我直接放上zip，因为国内无法下载，我已经提前翻墙下载好咯。 # 下好后： # 先复制下面的链接，然后点击ShadowssocksR-dotnet4.0.exe！！！！ # 首先准备好ssr链接。这个方法最简单。 # ssr://Y20xLWhrLmh1dGFvbm9kZTIudG9wOjEyNDA1OmF1dGhfYWVzMTI4X3 NoYTE6Y2hhY2hhMjAtaWV0ZjpodHRwX3NpbXBsZTpTSFZVWVc5RGJHOTFaQS8_b 2Jmc3BhcmFtPU16WmhNV0V6TWpVd05TNXRhV055YjNOdlpuUXVZMjl0JnByb3RvcGFyYW0 9TXpJMU1EVTZTSEF6VlVVNE5YTmhWMjl2UjFOTlJnJnJlbWFya3M9NmFhWjVyaXZJQzBnU1VWUVRDQXRJ Rk5UTDFOVFVpQXRJREExJmdyb3VwPTVhU0g1NVNvVVZIdnZKb3pORFF6T1RVMk5qRXk 这里我们选择用SSR,影梭的粉红色飞机。 出现飞机图标后，左键点击它！！！ 选择剪贴板导入SSR链接。</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E6%9D%82%E8%AE%B0/featured.png" />
     </item>
     
   </channel>

@@ -1,22 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>_Index on 春江花朝秋月夜</title>
+    <title>春江花朝秋月夜</title>
     <link>/</link>
-    <description>Recent content in _Index on 春江花朝秋月夜</description>
+    <description>Recent content on 春江花朝秋月夜</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sun, 05 Nov 2023 17:06:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 10:52:20 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>搭建图床</title>
-      <link>/la/%E5%9B%BE%E5%BA%8A/</link>
-      <pubDate>Sun, 05 Nov 2023 17:06:18 +0800</pubDate>
+      <title>没备份笔记的后果</title>
+      <link>/la/%E9%9A%8F%E8%AE%B0/</link>
+      <pubDate>Sat, 11 Nov 2023 10:52:20 +0800</pubDate>
       
-      <guid>/la/%E5%9B%BE%E5%BA%8A/</guid>
-      <description>通过GitHub+PicGo+CDN搭建自己的图床 # 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。 # CDN 是构建在数据网络上的一种分布式的内容分发网。 CDN 的作用是采用流媒体服务器集群技术，克服单机系统输出带宽及并发能力不足的缺点，可极大提升系统支持的并发流数目，减少或避免单点失效带来的不良影响。 # github搭建仓库 下载PicGO 配置CDN 搭建仓库 # 下载picGo
-配置CDN格式：</description>
+      <guid>/la/%E9%9A%8F%E8%AE%B0/</guid>
+      <description>由于之前Vscode误删这个博客的笔记了，现在又要从仓库拉原来的笔记，实在是烦心。
+现在总算知道备份的重要性了。
+开科技也不行，github是真慢啊！！！又要先fetch再push了。。。。
+龟祖宗，好了没啊！！！</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E9%9A%8F%E8%AE%B0/featured.png" />
+    </item>
+    
+    <item>
+      <title>RabbitMq</title>
+      <link>/la/mq/</link>
+      <pubDate>Tue, 07 Nov 2023 20:52:20 +0800</pubDate>
       
+      <guid>/la/mq/</guid>
+      <description>认识RabbitMQ # 环境：ubangtu # 访问协议： amqp
+了解安装（反正也记不住）：
+sudo apt install erlang sudo apt install rabbitmq-server sudo rabbitmqctl status sudo rabbitmq-plugins enable rabbitmq_management sudo rabbitmqctl add_user 用户名 密码 sudo rabbitmqctl set_user_tags admin administrator 设计架构图：</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/mq/featured.png" />
     </item>
     
     <item>
@@ -36,17 +50,31 @@ vue3创建应用 # 实际案例 # 语法： const app = Vue.</description>
     </item>
     
     <item>
+      <title>搭建图床</title>
+      <link>/la/%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 03 Nov 2023 22:43:25 +0800</pubDate>
+      
+      <guid>/la/%E5%9B%BE%E5%BA%8A/</guid>
+      <description>通过GitHub+PicGo+CDN搭建自己的图床 # 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有 空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、 多线空间和cdn加速三种。# CDN 是构建在数据网络上的一种分布式的内容分发网。 CDN 的作用是采用 流媒体服务器 集群技术，克服单机系统输出带宽及并发能力不足的缺点，可极大提升系统支持的 并发流数目，减少或避免 单点失效带来的不良影响。# github搭建仓库
+下载 PicGO 配置 CDN
+创建仓库 # PICGO # 配置加速</description>
+      
+    </item>
+    
+    <item>
       <title>Spring事务传播机制</title>
       <link>/la/%E4%BA%8B%E5%8A%A1/</link>
       <pubDate>Fri, 03 Nov 2023 11:31:54 +0800</pubDate>
       
       <guid>/la/%E4%BA%8B%E5%8A%A1/</guid>
-      <description>Spring事务传播机制： # 事务传播的定义： # 事务传播行为主要用来描述由某一个事务传播行为修饰的方法被嵌套进另一个方法的事务中，该 事务如何传播。这个概述可能不好理解，换句话就是当一个事务方法被另一个事务方法调用时，这个事务方法应该如何进行。
-spring中的事务级别 # REQUIRED # REQUIRED是Spring默认的传播机制。如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新事务。 REQUIRED传播机制最常用的情况是在一个事务 中进行多个操作，要么全部成功，要么全部失败。如果其中一个操作失败，整个事务都将被回滚。
-SUPPORTS # SUPPORTS传播机制表示当前方法如果在一个事务中被调用，则加入该事务； 否则，以非事务的方式运行。SUPPORTS传播机制适用于对事务要求不高的操作，例如读取操作。
-MANDATORY # MANDATORY传播机制表示当前方法必须在一个事务中被调用，否则将抛出异常。 MANDATORY传播机制适用于在需要事务的情况下调用方法。
-REQUIRES_NEW # REQUIRES_NEW传播机制表示当前方法必须开启一个新事务运行，如果当前存在事务，则挂起该事务。 REQUIRES_NEW传播机制适用于对事务要求较高的操作，例如更新操作。
-NOT_SUPPORTED # NOT_SUPPORTED传播机制表示当前方法不应该在事务中运行，如果存在事务，则挂起该事务。 NOT_SUPPORTED传播机制适用于对事务没有要求的操作，例如日志记录等。</description>
+      <description>Spring事务传播机制：# # 事务传播的定义：# # 事务传播行为主要用来描述由某一个事务传播行为修饰的方法被嵌套进另一个方法的事务中，该 事务如何传播。这个概述可能不好理解，换句话就是当一个事务方法被另一个事务方法调用时，这个事务方法应该如何进行。
+spring中的事务级别#
+REQUIRED# # REQUIRED是Spring默认的传播机制。如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新事务。 REQUIRED传播机制最常用的情况是在一个事务 中进行多个操作，要么全部成功，要么全部失败。如果其中一个操作失败，整个事务都将被回滚。
+SUPPORTS# # SUPPORTS传播机制表示当前方法如果在一个事务中被调用，则加入该事务； 否则，以非事务的方式运行。SUPPORTS传播机制适用于对事务要求不高的操作，例如读取操作。
+MANDATORY# # MANDATORY传播机制表示当前方法必须在一个事务中被调用，否则将抛出异常。 MANDATORY传播机制适用于在需要事务的情况下调用方法。
+REQUIRES_NEW# # REQUIRES_NEW传播机制表示当前方法必须开启一个新事务运行，如果当前存在事务，则挂起该事务。 REQUIRES_NEW传播机制适用于对事务要求较高的操作，例如更新操作。
+NOT_SUPPORTED# # NOT_SUPPORTED传播机制表示当前方法不应该在事务中运行，如果存在事务，则挂起该事务。 NOT_SUPPORTED传播机制适用于对事务没有要求的操作，例如日志记录等。
+NEVER# # NEVER传播机制表示当前方法不应该在事务中运行，如果存在事务，则抛出异常。 NEVER传播机制适用于禁止在事务中运行的操作，例如安全检查等。</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E4%BA%8B%E5%8A%A1/featured.png" />
     </item>
     
@@ -84,7 +112,10 @@ package com.atguigu; import lombok.AllArgsConstructor; import lombok.Data; /** *
       <guid>/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/</guid>
       <description>CAFE BABE -&amp;gt;表示这是一个.class文件
 类加载机制 # 类加载的条件：
-使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 </description>
+使用new关键字创建对象时 使用某个类的静态成员（包括方法和字段）的时候（当然，final类型的静态字段有可能在编译的时候被放到了当前类的常量池中，这种情况下是不会触发自动加载的） 使用反射对类信息进行获取的时候（之前的数据库驱动就是这样的） 加载一个类的子类时 加载接口的实现类，且接口带有default的方法默认实现时 字节码指令 # 先返回结果再进行自增或者先自增再给出结果
+Asm字节码框架 # 劝退，还是算了。。。
+Spring实现的CGLib就是基于这个实现的。
+类加载机制 # </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD/featured.png" />
     </item>
     
@@ -181,7 +212,7 @@ Full GC - 完全垃圾回收，对整个Java堆内存和方法区进行垃圾回
       <description>希望会完成，南无阿弥陀佛🥲🥲🥲 # 1:主线学习内容，消息队列，操作系统，计算机网络（理论），分布式微服务，安全框架（Spring-Security)
 2:支线学习内容，了解csrf跨域问题，RBAC权限控制，防XSS攻击，JVM虚拟机，oauth2第三方登录（微信登录这块），ElasticSearch搜索引擎（ELK）。Zookeeper,Dubbo。容器技术Docker，K8s。
 3：深入了解（底层）：Redis底层数据结构与实现，Redis集群，哨兵模式，Redis协议，Mysql隔离级别，日志，锁，事务
-学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ✔️ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ JUC 这学期 ✔️ ❌ JVM 这学期 ✔️ ❌ GateWay 这学期 ❌ ✔️ Nacos 这学期 ❌ ✔️ 微服务 这学期 ❌ ✔️ 数据结构-图，哈希 这学期 ❌ ❌ 期中复习 这学期 ❌ ❌ 近期计划 AWESOME数据算法课程 date - presentAwesome Subheader插入代码 垃圾回收算法 Full GC Mino GC </description>
+学习内容 计划日期 是否完成 延期 Redis黑马点评项目完结 这学期 ✔️ ❌ 消息队列 这学期 ✔️ ❌ SpringSecurity安全框架 这学期 ✔️ ❌ Redis底层 这学期 ❌ ❌ JUC 这学期 ✔️ ❌ JVM 这学期 ✔️ ❌ GateWay 这学期 ❌ ✔️ Nacos 这学期 ❌ ✔️ 微服务 这学期 ❌ ✔️ 数据结构-图，哈希 这学期 ❌ ❌ 期中复习 这学期 ❌ ❌ </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/tasks/featured.png" />
     </item>
     
@@ -219,15 +250,15 @@ Java内存模型（JMM） # 主内存： 存放对象实例的部分 工作内�
       
       <guid>/friend/</guid>
       <description>你好我的朋友！！ # 我的朋友们： # 与你分享我的眼睛： https://viyi.cc/ 小绵尾巴： https://cuttontail.blog/ AncientElement https://ancientelement.github.io/或者https://ancientelement.gitee.io/ fansea https://fansea.gitee.io/ 笔记： # markdown：https://xianbai.me/learn-md/index.html 需要添加友链请联系我的邮箱：aruixrain@gmail.com。</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/friend/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/friend/featured.png" />
     </item>
     
     <item>
       <title>如何通过hugo搭建自己的博客</title>
-      <link>/complex/</link>
+      <link>/%E6%9D%82%E8%AE%B0/</link>
       <pubDate>Tue, 03 Oct 2023 23:44:01 +0800</pubDate>
       
-      <guid>/complex/</guid>
+      <guid>/%E6%9D%82%E8%AE%B0/</guid>
       <description>如何通过Hugo这个框架来搭建一款属于自己的博客呢？ # 观前提醒：这篇笔记借鉴了下面两个作者：
 一是：小棉尾巴
 事件契机 # 我其实原本就知道github的pages自动部署博客功能，当时大二不熟练，今天目睹专业大佬的博客，自然也就重新搞起来了。
@@ -238,7 +269,20 @@ winget install Hugo.Hugo.Extended 等待下载完成重启Shell命令窗口即�
 检查是否安装成功：
 hugo version 第二部创建Hugo博客项目 # 只需要在文件夹下面新建终端使用如下命令，hugo将会自动创建你的项目名称文件夹 ，同时弹出一个主题链接
 hugo new site +你的项目名称 现在你需要进入你的项目也就是命令： cd 你的项目名称</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/complex/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/%E6%9D%82%E8%AE%B0/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>科学上网</title>
+      <link>/la/%E6%9D%82%E8%AE%B0/</link>
+      <pubDate>Tue, 03 Oct 2023 22:43:25 +0800</pubDate>
+      
+      <guid>/la/%E6%9D%82%E8%AE%B0/</guid>
+      <description>先放一张跳墙成功的画面： # 科学上网难吗？ # 结论：很简单！！！ 首先是我在配置代理时候发现的几个好的站点：如下 # 科学上网主要有两个代理方法，但实际内核应该是一样的：
+这里有关于两个不同的翻墙方法的说明链接 # 第一个：第二个：参考链接：SSR配置说明 ssr链接方式
+如何翻墙啊，说了那么多。 # 第一步：下载 # 下载链接 蓝色款（不推荐，本文也不采用）：然后点击zip下载即可。ss的好处是没被墙，可以直接到git上下载。
+红色款（强烈推荐！！！）：这里我直接放上zip，因为国内无法下载，我已经提前翻墙下载好咯。 # 下好后： # 先复制下面的链接，然后点击ShadowssocksR-dotnet4.0.exe！！！！ # 首先准备好ssr链接。这个方法最简单。 # ssr://Y20xLWhrLmh1dGFvbm9kZTIudG9wOjEyNDA1OmF1dGhfYWVzMTI4X3 NoYTE6Y2hhY2hhMjAtaWV0ZjpodHRwX3NpbXBsZTpTSFZVWVc5RGJHOTFaQS8_b 2Jmc3BhcmFtPU16WmhNV0V6TWpVd05TNXRhV055YjNOdlpuUXVZMjl0JnByb3RvcGFyYW0 9TXpJMU1EVTZTSEF6VlVVNE5YTmhWMjl2UjFOTlJnJnJlbWFya3M9NmFhWjVyaXZJQzBnU1VWUVRDQXRJ Rk5UTDFOVFVpQXRJREExJmdyb3VwPTVhU0g1NVNvVVZIdnZKb3pORFF6T1RVMk5qRXk 这里我们选择用SSR,影梭的粉红色飞机。 出现飞机图标后，左键点击它！！！ 选择剪贴板导入SSR链接。</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E6%9D%82%E8%AE%B0/featured.png" />
     </item>
     
     <item>
@@ -318,12 +362,12 @@ Mset 批量 添加key-value</description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
+      <title>应该没人来这里吧</title>
+      <link>/info/</link>
       <pubDate>Tue, 03 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
-      <description>Hi ，你好！ # 我的名字是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记，这样很有成就感。 我们都知道在网络上开始做一些事情有多难，尤其是现在。但是，为了自己的头发没有白掉，加油吧，大家！
+      <guid>/info/</guid>
+      <description>Hi ，你好！ # 你好，我是春江花朝秋月夜，我是这个博客的作者。我这样做是为了记录之前学习的笔记 因为我基本很难记住我学过的东西&amp;hellip;. 我关心后端技术，也喜欢做一些前端效果，我偶尔写一些笔记和心得并且定期分享到哔哩哔哩和我的语雀频道 世界充满了很多不确定的东西，希望大家保持独立的思考。如果你好奇我目前在做的事情,也可以了解更多关于我的信息。
 这个博客网站在下面的支持下完成
 白天/夜晚 模式, 依赖于UI设计 非常感谢下面的几个网站支持我Inter UI font,由Rasmus Andersson制作 非常感谢这位提供的帮助PrismJS 以及我同专业的前辈：AncientElement 所以，希望你在这儿可以玩的开心！！！
 本人简历： # 本人简历</description>
@@ -357,7 +401,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>搭建图床5 November 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 云存储云存储Vue3 响应式Api开发笔记4 November 2023&amp;middot;317 字&amp;middot;2 分钟&amp;middot;0 vuevueSpring事务传播机制3 November 2023&amp;middot;108 字&amp;middot;1 分钟&amp;middot;0 springspringC++27 October 2023&amp;middot;1127 字&amp;middot;6 分钟&amp;middot;0 语言语言面试题25 October 2023&amp;middot;173 字&amp;middot;1 分钟&amp;middot;0 面试题面试题类加载24 October 2023&amp;middot;11 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机元空间和引用方式24 October 2023&amp;middot;72 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机Latex语法19 October 2023&amp;middot;42 字&amp;middot;1 分钟&amp;middot;0 latexlatexJvm12 October 2023&amp;middot;326 字&amp;middot;2 分钟&amp;middot;0 虚拟机虚拟机垃圾回收机制12 October 2023&amp;middot;55 字&amp;middot;1 分钟&amp;middot;0 虚拟机虚拟机状态机12 October 2023&amp;middot;10 字&amp;middot;1 分钟&amp;middot;0 硬件语言硬件语言学习计划10 October 2023&amp;middot;67 字&amp;middot;1 分钟&amp;middot;0 规划规划并发进阶9 October 2023&amp;middot;728 字&amp;middot;4 分钟&amp;middot;0 juc并发编程并发编程Java-Concurrent9 October 2023&amp;middot;577 字&amp;middot;3 分钟&amp;middot;0 juc并发编程并发编程Hello7 October 2023&amp;middot;19 字&amp;middot;1 分钟&amp;middot;0 朋友们朋友们如何通过hugo搭建自己的博客3 October 2023&amp;middot;68 字&amp;middot;1 分钟&amp;middot;0 complexcomplex对象间的关系3 October 2023&amp;middot;21 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE关键字3 October 2023&amp;middot;853 字&amp;middot;5 分钟&amp;middot;0 Java SEJava SE实例化Node3 October 2023&amp;middot;75 字&amp;middot;1 分钟&amp;middot;0 Java SEJava SE数据结构篇3 October 2023&amp;middot;126 字&amp;middot;1 分钟&amp;middot;0 算法算法ThreadLocal3 October 2023&amp;middot;229 字&amp;middot;2 分钟&amp;middot;0 Java SEJava SERedis3 October 2023&amp;middot;357 字&amp;middot;2 分钟&amp;middot;0 缓存缓存About3 October 2023&amp;middot;24 字&amp;middot;1 分钟&amp;middot;0 Hello Friend3 October 2003&amp;middot;5 字&amp;middot;1 分钟&amp;middot;0 postpost例子1 January 0001&amp;middot;0 </description>
+      <description>Recent没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
