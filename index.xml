@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sat, 11 Nov 2023 10:52:20 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 23:55:26 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eureka</title>
+      <link>/la/spring/eureka/</link>
+      <pubDate>Sat, 11 Nov 2023 23:55:26 +0800</pubDate>
+      
+      <guid>/la/spring/eureka/</guid>
+      <description>整个项目很简单，主要需要注意版本的问题,这也是微服务的主要问题
+启动成功
+还是贴一下maven好
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.2&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;groupId&amp;gt;com.example&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;eureka&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;name&amp;gt;eureka&amp;lt;/name&amp;gt; &amp;lt;description&amp;gt;eureka&amp;lt;/description&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;java.</description>
+      
+    </item>
+    
     <item>
       <title>没备份笔记的后果</title>
       <link>/la/%E9%9A%8F%E8%AE%B0/</link>
@@ -18,7 +31,7 @@
 现在总算知道备份的重要性了。
 开科技也不行，github是真慢啊！！！又要先fetch再push了。。。。
 龟祖宗，好了没啊！！！
-总算好咯 </description>
+总算好咯</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E9%9A%8F%E8%AE%B0/featured.png" />
     </item>
     
@@ -402,7 +415,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Recent没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
+      <description>RecentEureka1 min&amp;middot;0 &amp;middot;0 微服务没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     

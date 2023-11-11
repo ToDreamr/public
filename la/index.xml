@@ -7,7 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Sat, 11 Nov 2023 10:52:20 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 23:55:26 +0800</lastBuildDate><atom:link href="/la/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Eureka</title>
+      <link>/la/spring/eureka/</link>
+      <pubDate>Sat, 11 Nov 2023 23:55:26 +0800</pubDate>
+      
+      <guid>/la/spring/eureka/</guid>
+      <description>整个项目很简单，主要需要注意版本的问题,这也是微服务的主要问题
+启动成功
+还是贴一下maven好
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt; &amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.2&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; &amp;lt;groupId&amp;gt;com.example&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;eureka&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;name&amp;gt;eureka&amp;lt;/name&amp;gt; &amp;lt;description&amp;gt;eureka&amp;lt;/description&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;java.</description>
+      
+    </item>
+    
     <item>
       <title>没备份笔记的后果</title>
       <link>/la/%E9%9A%8F%E8%AE%B0/</link>
@@ -18,7 +31,7 @@
 现在总算知道备份的重要性了。
 开科技也不行，github是真慢啊！！！又要先fetch再push了。。。。
 龟祖宗，好了没啊！！！
-总算好咯 </description>
+总算好咯</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E9%9A%8F%E8%AE%B0/featured.png" />
     </item>
     
