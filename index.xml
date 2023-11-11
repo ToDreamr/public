@@ -22,6 +22,17 @@
     </item>
     
     <item>
+      <title>写点脚本</title>
+      <link>/la/%E6%8E%A8%E9%80%81%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 11 Nov 2023 23:55:26 +0800</pubDate>
+      
+      <guid>/la/%E6%8E%A8%E9%80%81%E7%AC%94%E8%AE%B0/</guid>
+      <description>懒得点点了，写个脚本维护笔记
+目前来看效果还行</description>
+      
+    </item>
+    
+    <item>
       <title>没备份笔记的后果</title>
       <link>/la/%E9%9A%8F%E8%AE%B0/</link>
       <pubDate>Sat, 11 Nov 2023 10:52:20 +0800</pubDate>
@@ -415,7 +426,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>RecentEureka1 min&amp;middot;0 &amp;middot;0 微服务没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
+      <description>RecentEureka1 min&amp;middot;0 &amp;middot;0 微服务写点脚本1 min&amp;middot;0 &amp;middot;0 随机没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
