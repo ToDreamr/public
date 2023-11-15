@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Tue, 14 Nov 2023 13:47:44 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2023 18:25:34 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>生活</title>
+      <link>/tags/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Wed, 15 Nov 2023 18:25:34 +0800</pubDate>
+      
+      <guid>/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>NIhao</title>
+      <link>/tags/nihao/</link>
+      <pubDate>Wed, 15 Nov 2023 18:04:56 +0800</pubDate>
+      
+      <guid>/tags/nihao/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>leetcode</title>
       <link>/tags/leetcode/</link>
