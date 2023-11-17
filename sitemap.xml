@@ -4,30 +4,36 @@
 
   <url>
     <loc>/</loc>
-    <lastmod>2023-11-15T18:25:34+08:00</lastmod>
+    <lastmod>2023-11-15T20:43:25+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>/la/</loc>
-    <lastmod>2023-11-15T18:25:34+08:00</lastmod>
+    <lastmod>2023-11-15T20:43:25+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>/tags/</loc>
-    <lastmod>2023-11-15T18:25:34+08:00</lastmod>
+    <lastmod>2023-11-15T20:43:25+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>/la/birth/</loc>
-    <lastmod>2023-11-15T18:25:34+08:00</lastmod>
+    <loc>/la/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2023-11-15T20:43:25+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2023-11-15T20:43:25+08:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/la/birth/</loc>
     <lastmod>2023-11-15T18:25:34+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
