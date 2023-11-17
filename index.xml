@@ -7,20 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Wed, 15 Nov 2023 20:43:25 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>今天是我的生日</title>
-      <link>/la/%E7%94%9F%E6%B4%BB/</link>
-      <pubDate>Wed, 15 Nov 2023 20:43:25 +0800</pubDate>
-      
-      <guid>/la/%E7%94%9F%E6%B4%BB/</guid>
-      <description>今天是我的生日 # 其实早上起来都不记得我的生日了，但是微信还是有女朋友和妈妈和爸爸还有姐姐的关心问候。
-下雨的天气，在女朋友的催促下去拿了北校的快递，是花，我猜到了，但是打开还是惊艳到我了，白玫瑰真的太漂亮了！！！谢谢你我最爱的Miss Liu
-回来的时候，把花花立起来了，黄灯照起来真的太有氛围感了。
-在雨中，我途径北校的荷塘。</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/%E7%94%9F%E6%B4%BB/featured.jpg" />
-    </item>
-    
+    <lastBuildDate>Wed, 15 Nov 2023 18:25:34 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的生日</title>
       <link>/la/birth/</link>
@@ -34,16 +21,6 @@
 朋友送的蛋糕
 在雨中，我途径北校的荷塘。</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/birth/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>Nihao</title>
-      <link>/nihao/</link>
-      <pubDate>Wed, 15 Nov 2023 18:04:56 +0800</pubDate>
-      
-      <guid>/nihao/</guid>
-      <description>fdsafds</description>
-      
     </item>
     
     <item>
@@ -493,7 +470,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Recent今天是我的生日1 min&amp;middot;0 &amp;middot;0 生活我的生日1 min&amp;middot;0 &amp;middot;0 生活Nihao1 min&amp;middot;0 &amp;middot;0 NIhao区间个位和1 min&amp;middot;0 &amp;middot;0 leetcode数之和1 min&amp;middot;0 &amp;middot;0 leetcodeEureka1 min&amp;middot;0 &amp;middot;0 微服务写点脚本1 min&amp;middot;0 &amp;middot;0 随机没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
+      <description>Recent我的生日1 min&amp;middot;0 &amp;middot;0 生活区间个位和1 min&amp;middot;0 &amp;middot;0 leetcode数之和1 min&amp;middot;0 &amp;middot;0 leetcodeEureka1 min&amp;middot;0 &amp;middot;0 微服务写点脚本1 min&amp;middot;0 &amp;middot;0 随机没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 杂记Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
