@@ -7,20 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 春江花朝秋月夜</copyright>
-    <lastBuildDate>Wed, 15 Nov 2023 18:25:34 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Dec 2023 23:55:26 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>我的生日</title>
-      <link>/la/birth/</link>
-      <pubDate>Wed, 15 Nov 2023 18:25:34 +0800</pubDate>
+      <title>微服务基础</title>
+      <link>/la/spring/cloud/</link>
+      <pubDate>Fri, 01 Dec 2023 23:55:26 +0800</pubDate>
       
-      <guid>/la/birth/</guid>
-      <description>今天是我的生日 # 其实早上起来都不记得我的生日了，但是微信还是有女朋友和妈妈和爸爸还有姐姐的关心问候。
-下雨的天气，在女朋友的催促下去拿了北校的快递，是花，我猜到了，但是打开还是惊艳到我了，白玫瑰真的太漂亮了！！！谢谢你我最爱的Miss Liu
-回来的时候，把花花立起来了，黄灯照起来真的太有氛围感了。
-最后收到了朋友的蛋糕，实在感动，但没说上几句话，很感动，谢谢大家😸🦢
-朋友送的蛋糕
-在雨中，我途径北校的荷塘。</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/la/birth/featured.jpg" />
+      <guid>/la/spring/cloud/</guid>
+      <description>所有的服务都需要保证职责的单一原则
+RestTemplate实现远程调用
+服务注册和发现 # Eureka能够自动注册并发现微服务，然后对服务的状态、信息进行集中管理，这样当我们需要获取其他服务的信息时，我们只需要向Eureka进行查询就可以了。
+通过Eureka服务器进行服务注册与发现，那么现在我们来看看，它的负载均衡到底是如何实现的，实际上之前演示的负载均衡是依靠LoadBalancer实现的。
+在2020年前的SpringCloud版本是采用Ribbon作为负载均衡实现，但是2020年的版本之后SpringCloud把Ribbon移除了，进而用自己编写的LoadBalancer替代。
+负载均衡 # Spring实现了一套自己的负载均衡LoadBalancer. 实际上在进行负载均衡的时候，会向Eureka发起请求，选择一个可用的对应服务，然后会返回此服务的主机地址等信息,然后才进行实际的服务调用。
+添加依赖：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-loadbalancer&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt; 自定义负载均衡策略 LoadBalancer默认提供了两种负载均衡策略：
+RandomLoadBalancer - 随机分配策略 (默认) RoundRobinLoadBalancer - 轮询分配策略
+对指定服务进行配置
+@Configuration @LoadBalancerClient(value = &amp;#34;userservice&amp;#34;, //指定为 userservice 服务，只要是调用此服务都会使用我们指定的策略 configuration = LoadBalancerConfig.</description>
+      
     </item>
     
     <item>
@@ -470,7 +475,7 @@ Mset 批量 添加key-value</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/all/</guid>
-      <description>Recent我的生日1 min&amp;middot;0 &amp;middot;0 生活区间个位和1 min&amp;middot;0 &amp;middot;0 leetcode数之和1 min&amp;middot;0 &amp;middot;0 leetcodeEureka1 min&amp;middot;0 &amp;middot;0 微服务写点脚本1 min&amp;middot;0 &amp;middot;0 随机没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 杂记Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
+      <description>Recent微服务基础1 min&amp;middot;0 &amp;middot;0 微服务区间个位和1 min&amp;middot;0 &amp;middot;0 leetcode数之和1 min&amp;middot;0 &amp;middot;0 leetcodeEureka1 min&amp;middot;0 &amp;middot;0 微服务写点脚本1 min&amp;middot;0 &amp;middot;0 随机没备份笔记的后果1 min&amp;middot;0 &amp;middot;0 随记RabbitMq2 mins&amp;middot;0 &amp;middot;0 消息队列Vue3 响应式Api开发笔记2 mins&amp;middot;0 &amp;middot;0 vue搭建图床1 min&amp;middot;0 &amp;middot;0 杂记Spring事务传播机制1 min&amp;middot;0 &amp;middot;0 springC++6 mins&amp;middot;0 &amp;middot;0 语言面试题1 min&amp;middot;0 &amp;middot;0 面试题类加载1 min&amp;middot;0 &amp;middot;0 虚拟机元空间和引用方式1 min&amp;middot;0 &amp;middot;0 虚拟机Latex语法1 min&amp;middot;0 &amp;middot;0 latexJvm2 mins&amp;middot;0 &amp;middot;0 虚拟机垃圾回收机制1 min&amp;middot;0 &amp;middot;0 虚拟机状态机1 min&amp;middot;0 &amp;middot;0 硬件语言学习计划1 min&amp;middot;0 &amp;middot;0 规划并发进阶4 mins&amp;middot;0 &amp;middot;0 并发编程Java-Concurrent3 mins&amp;middot;0 &amp;middot;0 并发编程Hello1 min&amp;middot;0 &amp;middot;0 朋友们如何通过hugo搭建自己的博客1 min&amp;middot;0 &amp;middot;0 杂记科学上网1 min&amp;middot;0 &amp;middot;0 杂记对象间的关系1 min&amp;middot;0 &amp;middot;0 Java SE关键字5 mins&amp;middot;0 &amp;middot;0 Java SE实例化Node1 min&amp;middot;0 &amp;middot;0 Java SE数据结构篇1 min&amp;middot;0 &amp;middot;0 算法ThreadLocal2 mins&amp;middot;0 &amp;middot;0 Java SERedis2 mins&amp;middot;0 &amp;middot;0 缓存应该没人来这里吧1 min&amp;middot;0 &amp;middot;0 Hello Friend1 min&amp;middot;0 &amp;middot;0 post例子0 &amp;middot;0 </description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/all/featured.png" />
     </item>
     
